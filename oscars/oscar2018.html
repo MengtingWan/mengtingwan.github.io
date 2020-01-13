@@ -1,0 +1,925 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>Who Will Win at the Academy Awards, 2018?</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+      <link rel="stylesheet" href="../assets/css/main.css" />
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" href="../assets/css/ie9.css" />
+      <![endif]-->
+      <!--[if lte IE 8]>
+      <link rel="stylesheet" href="../assets/css/ie8.css" />
+      <![endif]-->
+      <script>
+         function getVote(int) {
+         	if (window.XMLHttpRequest) {
+         // code for IE7+, Firefox, Chrome, Opera, Safari
+         xmlhttp=new XMLHttpRequest();
+         } else {  // code for IE6, IE5
+         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+         }
+         xmlhttp.onreadystatechange=function() {
+         if (this.readyState==4 && this.status==200) {
+         document.getElementById("poll").innerHTML=this.responseText;
+         }
+         }
+         xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+         xmlhttp.send();
+         }
+      </script>
+   </head>
+   <body>
+      <!-- Wrapper -->
+      <div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+      <div class="inner">
+      <!-- Header -->
+      <header id="header">
+         <h2>Who Will Win at the Academy Awards, 2018? </h2>
+      </header>
+      <a href="oscar2018.html"> English </a> / <a href="oscar2018_cn.html"> 中文版 </a> <br><br>
+      <font color="red"><small>3/3/2018: ISA results were out today. The model was re-trained and numbers have been updated. </small></font> <br>
+      Similar to <a href="oscar2017.html"> last year</a>, I trained a linear classifier to predict the winners at this year's academy awards. A couple of <a href="https://github.com/MengtingWan/oscar/blob/master/award_code.csv">pre-Oscar awards</a> were included as features. A brief summary of the results are included as below (I've created polls as well so that you can vote for your favorites). <br>
+      I've released all the <a href="https://github.com/MengtingWan/oscar/tree/master/data">data</a>, <a href="https://github.com/MengtingWan/oscar">source code</a>, <a href="https://github.com/MengtingWan/oscar/blob/master/results_flat.csv">detailed results</a> and <a href="https://github.com/MengtingWan/oscar/blob/master/evidence_flat.csv"> associated evidences</a>. Feel free to check out and hope you're having fun in exploring this mini-project.
+
+      <!-- Section -->
+      <section id="picture">
+         <h3> Best Motion Picture of the Year: </h3>
+         <div class="row">
+            <div class="9u 12u$(small)">
+               <div class="row">
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt5726616/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@._V1_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt5726616/">Call Me by Your Name</a></h5>
+                        <p>Chance: 0.10%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt4555426/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNTU4MjMwOTgyMV5BMl5BanBnXkFtZTgwODQzNjY2NDM@._V1_SY1000_SX675_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt4555426/">Darkest Hour</a></h5>
+                        <p>Chance: 0.10%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt5013056/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt5013056/">Dunkirk</a></h5>
+                        <p>Chance: 0.11%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt5052448/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt5052448/">Get Out</a></h5>
+                        <p>Chance: 0.01%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt4925292/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX677_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt4925292/">Lady Bird</a></h5>
+                        <p>Chance: 0.01%</p>
+                     </span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt5776858/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxODcwOTU2Nl5BMl5BanBnXkFtZTgwOTUzNjY2NDM@._V1_SY1000_SX675_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt5776858/">Phantom Thread</a></h5>
+                        <p>Chance: 0.36%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt6294822/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjQyMjEwOTIwNV5BMl5BanBnXkFtZTgwOTkzNTMxNDM@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt6294822/">The Post</a></h5>
+                        <p>Chance: 0.13%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt5580390/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNGNiNWQ5M2MtNGI0OC00MDA2LWI5NzEtMmZiYjVjMDEyOWYzXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt5580390/">The Shape of Water</a></h5>
+                        <p>Chance: 97.19%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt5027774/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BZTZjYzU2NTktNTdmNi00OTM0LTg5MDgtNGFjOGMzNjY0MDk5XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX675_CR0,0,675,999_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt5027774/">Three Billboards Outside Ebbing, Missouri</a></h5>
+                        <p>Chance: 1.98%</p>
+                     </span>
+                  </div>
+               </div>
+               <h5> Strong Signals:</h5>
+               <li> Directors Guild of America, USA (DGA) -- outstanding directorial, motion pictures -- winner </li>
+               <li> Critics’ Choice Awards (CCA) -- best motion picture -- winner </li>
+               <li> Washington DC Area Film Critics Awards (WAFCA) -- best acting ensemble -- winner </li>
+            </div>
+            <div class="3u 12u$(small)">
+<script type="text/javascript">
+(function(d, s, id){
+  var js,
+      fjs = d.getElementsByTagName(s)[0],
+      r = Math.floor(new Date().getTime() / 1000000);
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async=1;
+  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'os-widget-jssdk'));
+</script><div class="os_poll" data-path="/polls/2490275" id="os-widget-2490275"></div>
+            </div>
+         </div>
+      </section>
+      <section id="director">
+         <h3> Best Achievement in Directing: </h3>
+         <div class="row">
+            <div class="9u 12u$(small)">
+               <div class="row">
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt5013056/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt5013056/">Christopher Nolan <br>(Dunkirk)</a></h5>
+                        <p>Chance: 0.02%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt4925292/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX677_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt4925292/">Greta Gerwig <br> 
+                           (Lady Bird)</a>
+                        </h5>
+                        <p>Chance: 0.00%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt5580390/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNGNiNWQ5M2MtNGI0OC00MDA2LWI5NzEtMmZiYjVjMDEyOWYzXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt5580390/">Guillermo del Toro <br>
+                           (The Shape of Water)</a>
+                        </h5>
+                        <p>Chance: 98.67%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt5052448/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt5052448/">Jordan Peele <br>(Get Out)</a></h5>
+                        <p>Chance: 0.00%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt5776858/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxODcwOTU2Nl5BMl5BanBnXkFtZTgwOTUzNjY2NDM@._V1_SY1000_SX675_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt5776858/">Paul Thomas Anderson <br> 
+                           (Phantom Thread)</a>
+                        </h5>
+                        <p>Chance: 1.31%</p>
+                     </span>
+                  </div>
+               </div>
+               <h5>Strong Signals:</h5>
+               <li>Directors Guild of America, USA (DGA) -- outstanding directorial, motion pictures -- winner </li>
+               <li>British Academy of Film and Television Arts (BAFTA) -- best cinematography -- winner </li>
+               <li>British Academy of Film and Television Arts (BAFTA) -- best film -- winner </li>
+            </div>
+            <div class="3u 12u$(small)">
+<script type="text/javascript">
+(function(d, s, id){
+  var js,
+      fjs = d.getElementsByTagName(s)[0],
+      r = Math.floor(new Date().getTime() / 1000000);
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async=1;
+  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'os-widget-jssdk'));
+</script><div class="os_poll" data-path="/polls/2490276" id="os-widget-2490276"></div>
+            </div>
+            </div>
+      </section>
+      <section id="actor1">
+      <h3> Best Performance by an Actor in a Leading Role: </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://www.imdb.com/name/nm0000358/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2NDY2NDc1Ml5BMl5BanBnXkFtZTcwNjAyMjkwOQ@@._V1_SY1000_CR0,0,759,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://www.imdb.com/name/nm0000358/">Daniel Day-Lewis <br>(Phantom Thread)</a></h5>
+      <p>Chance: 1.84%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm2257207/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BOTk1MzgzOTg5OV5BMl5BanBnXkFtZTcwNDQ4NjMxOA@@._V1_SY1000_CR0,0,681,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm2257207/">Daniel Kaluuya <br> 
+      (Get Out)</a></h5>
+      <p>Chance: 4.18%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000243/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjE5NDU2Mzc3MV5BMl5BanBnXkFtZTcwNjAwNTE5OQ@@._V1_SY1000_SX750_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0000243/">Denzel Washington <br>
+      (Roman J. Israel, Esq.)</a></h5>
+      <p>Chance: 4.02%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000198/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc3NTM4MzQ5MV5BMl5BanBnXkFtZTcwOTE4MDczNw@@._V1_SY1000_CR0,0,678,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0000198/">Gary Oldman <br>(Darkest Hour)</a></h5>
+      <p>Chance: 87.87%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm3154303/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BOWU1Nzg0M2ItYjEzMi00ODliLThkODAtNGEyYzRkZTBmMmEzXkEyXkFqcGdeQXVyNDk2Mzk2NDg@._V1_SY1000_CR0,0,755,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm3154303/">Timothée Chalamet <br> 
+      (Call Me by Your Name)</a></h5>
+      <p>Chance: 2.10%</p>
+      </span>
+      </div>
+      </div>
+      <h5>Strong Signals:</h5>
+      <li> Screen Actors Guild Awards (SAG) -- outstanding male actor, leading role -- winner </li>
+      <li> British Academy of Film and Television Arts (BAFTA) -- best film -- winner </li>
+      <li> British Academy of Film and Television Arts (BAFTA) -- best leading actor -- winner </li>
+      </div>
+      <div class="3u 12u$(small)">
+<script type="text/javascript">
+(function(d, s, id){
+  var js,
+      fjs = d.getElementsByTagName(s)[0],
+      r = Math.floor(new Date().getTime() / 1000000);
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async=1;
+  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'os-widget-jssdk'));
+</script><div class="os_poll" data-path="/polls/2490277" id="os-widget-2490277"></div>
+      </div>
+      </div>
+      </section>
+
+      <section id="actress1">
+      <h3> Best Performance by an Actress in a Leading Role: </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000531/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjI3NzgxNjYzOF5BMl5BanBnXkFtZTgwNTIxMjExNzE@._V1_SY1000_CR0,0,830,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0000531/">Frances McDormand <br>(Three Billboards Outside Ebbing, Missouri)</a></h5>
+      <p>Chance: 99.98%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm3053338/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxNDcwMzU2Nl5BMl5BanBnXkFtZTcwNDc4NzkzOQ@@._V1_SY999_SX750_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm3053338/">Margot Robbie <br> 
+      (I, Tonya)</a></h5>
+      <p>Chance: 0.00%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000658/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU4Mjk5MDExOF5BMl5BanBnXkFtZTcwOTU1MTMyMw@@._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0000658/">Meryl Streep <br>
+      (The Post)</a></h5>
+      <p>Chance: 0.02%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm1020089/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BODE4MDE0MDEzMl5BMl5BanBnXkFtZTgwNjI1NTU5MDE@._V1_SY1000_CR0,0,765,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm1020089/">Sally Hawkins <br>(The Shape of Water)</a></h5>
+      <p>Chance: 0.00%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm1519680/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjExNTM5NDE4NV5BMl5BanBnXkFtZTcwNzczMzEzOQ@@._V1_SY1000_CR0,0,664,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm1519680/">Saoirse Ronan <br> 
+      (Lady Bird)</a></h5>
+      <p>Chance: 0.00%</p>
+      </span>
+      </div>
+      </div>
+      <h5>Strong Signals:</h5>
+      <li>Screen Actors Guild Awards (SAG) -- outstanding female actor, leading role -- winner </li>
+      <li>British Academy of Film and Television Arts (BAFTA) -- best leading actress -- winner </li>
+      <li>Golden Globe Awards (GG) -- best actress, motion picture drama -- winner </li>
+      </div>
+      <div class="3u 12u$(small)">
+      	<script type="text/javascript">
+(function(d, s, id){
+  var js,
+      fjs = d.getElementsByTagName(s)[0],
+      r = Math.floor(new Date().getTime() / 1000000);
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async=1;
+  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'os-widget-jssdk'));
+</script><div class="os_poll" data-path="/polls/2490279" id="os-widget-2490279"></div>
+      </div>
+      </div>
+      </section>
+
+     <section id="actor2">
+      <h3> Best Performance by an Actor in a Supporting Role: </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0001626/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5MzQ5MDY3NF5BMl5BanBnXkFtZTcwNzMxOTU5Ng@@._V1_SY1000_CR0,0,700,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0001626/">Christopher Plummer <br>(All the Money in the World)</a></h5>
+      <p>Chance: 1.35%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0420955/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMzM5MzA4NDcyN15BMl5BanBnXkFtZTcwMDkwNjQzMg@@._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0420955/">Richard Jenkins <br> 
+      (The Shape of Water)</a></h5>
+      <p>Chance: 1.11%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0005377/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2NTM3MzE5NF5BMl5BanBnXkFtZTcwMjg4NDMwNA@@._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0005377/">Sam Rockwell<br>
+      (Three Billboards Outside Ebbing, Missouri)</a></h5>
+      <p>Chance: 83.80%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000353/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTcyNjU2MTYyM15BMl5BanBnXkFtZTgwMjY5MDY4NDE@._V1_SY1000_CR0,0,799,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0000353/">Willem Dafoe<br>(The Florida Project)</a></h5>
+      <p>Chance: 3.62%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000437/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU3NDc2ODc4MF5BMl5BanBnXkFtZTcwODk2MzAyMg@@._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0000437/">Woody Harrelson<br>
+      (Three Billboards Outside Ebbing, Missouri)</a></h5>
+      <p>Chance: 10.12%</p>
+      </span>
+      </div>
+      </div>
+      <h5>Strong Signals:</h5>
+<li>Golden Globe Awards (GG) -- best actor supporting role, motion picture -- winner  </li>
+<li>British Academy of Film and Television Arts (BAFTA) -- best supporting actor -- winner  </li>
+<li>Screen Actors Guild Awards (SAG) -- outstanding male actor supporting role -- winner  </li>
+      </div>
+      <div class="3u 12u$(small)">
+<script type="text/javascript">
+(function(d, s, id){
+  var js,
+      fjs = d.getElementsByTagName(s)[0],
+      r = Math.floor(new Date().getTime() / 1000000);
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async=1;
+  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'os-widget-jssdk'));
+</script><div class="os_poll" data-path="/polls/2490282" id="os-widget-2490282"></div>
+      </div>
+      </div>
+      </section>
+
+     <section id="actress2">
+      <h3> Best Performance by an Actress in a Supporting Role: </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0005049/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjAyNjc2NzgxM15BMl5BanBnXkFtZTgwODQyMjM1MjE@._V1_SY1000_CR0,0,730,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0005049/">Allison Janney<br>(I, Tonya)</a></h5>
+      <p>Chance: 100.00%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0582418/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc1NDA1NDA5N15BMl5BanBnXkFtZTcwODAyNTU3MQ@@._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0582418/">Laurie Metcalf <br> (Lady Bird)</a></h5>
+      <p>Chance: 0.00%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0544334/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3NTU0OTc1OF5BMl5BanBnXkFtZTcwNzU5MTA3NA@@._V1_SY1000_CR0,0,638,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0544334/">Lesley Manville<br>(Phantom Thread)</a></h5>
+      <p>Chance: 0.00%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0004763" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2MzAzMDMxNl5BMl5BanBnXkFtZTYwNjQwMjY1._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0004763">Mary J. Blige<br>(Mudbound)</a></h5>
+      <p>Chance: 0.00%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0818055/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTg0MjcwMjcxNl5BMl5BanBnXkFtZTcwMjkwODg0Ng@@._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0818055/">Octavia Spencer<br> (The Shape of Water)</a></h5>
+      <p>Chance: 0.00%</p>
+      </span>
+      </div>
+      </div>
+      <h5>Strong Signals:</h5>
+      <li>Screen Actors Guild Awards (SAG) -- outstanding female actor supporting role -- winner </li>
+      <li>British Academy of Film and Television Arts (BAFTA) -- best supporting actress -- winner </li>
+      <li>Critics’ Choice Awards (CCA) -- best supporting actress -- winner </li>
+      </div>
+      <div class="3u 12u$(small)">
+<script type="text/javascript">
+(function(d, s, id){
+  var js,
+      fjs = d.getElementsByTagName(s)[0],
+      r = Math.floor(new Date().getTime() / 1000000);
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async=1;
+  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'os-widget-jssdk'));
+</script><div class="os_poll" data-path="/polls/2490283" id="os-widget-2490283"></div>
+      </div>
+      </div>
+      </section>
+
+     <section id="writer1">
+      <h3> Best Original Screenplay: </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt5052448/"> Get Out (Jordan Peele)</a></b> &nbspChance: 69.81%</li>
+      <li><b><a href="http://www.imdb.com/title/tt4925292/"> Lady Bird (Greta Gerwig)</a></b> &nbsp Chance: 0.82%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5462602/"> The Big Sick (Kumail Nanjiani)</a></b> &nbsp Chance: 1.44%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5580390/"> The Shape of Water (Guillermo del Toro) </a></b> &nbsp Chance: 0.25%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5027774/"> Three Billboards Outside Ebbing, Missouri (Martin McDonagh) </a></b> &nbsp Chance: 27.68%</li>
+      <br>
+            <h5>Strong Signals:</h5>
+      <li>Writers Guild of America Awards (WGA) -- best writing original screenplay -- winner </li>
+<li>British Academy of Film and Television Arts (BAFTA) -- best screenplay original -- winner </li>
+<li>Critics’ Choice Awards (CCA) -- best writing original screenplay -- winner </li>
+      </div>
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="writer2">
+      <h3> Best Adapted Screenplay: </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt5726616/"> Call Me by Your Name (James Ivory)</a></b> &nbsp Chance: 16.76%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3315342/"> Logan (Scott Frank) </a></b> &nbsp Chance: 16.96%</li>
+      <li><b><a href="http://www.imdb.com/title/tt4209788/"> Mollys Game (Aaron Sorkin) </a></b> &nbsp Chance: 16.56%</li>
+      <li><b><a href="http://www.imdb.com/title/tt2396589/"> Mudbound (Dee Rees) </a></b> &nbsp Chance: 32.90%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3521126/"> The Disaster Artist (Scott Neustadter) </a></b> &nbsp Chance: 16.82%</li>
+      <br>
+      <h5>Strong Signals:</h5>
+      <li>Critics’ Choice Awards (CCA) -- best directing -- winner </li>
+<li>Golden Globe Awards (GG) -- best motion picture drama -- winner </li>
+<li>Writers Guild of America Awards (WGA) -- best writing adapted screenplay -- winner </li>
+      </div>
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+            <section id="music1">
+      <h3> Best Achievement in Music Written for Motion Pictures (Original Song)</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt5726616/"> "Mystery of Love" (Call Me by Your Name) </a></b> &nbsp Chance: 5.52%</li>
+      <li><b><a href="http://www.imdb.com/title/tt2380307/"> "Remember Me" (Coco) </a></b> &nbsp Chance:  28.18%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5301662/"> "Stand Up for Something" (Marshall) </a></b> &nbsp Chance:  8.69%</li>
+      <li><b><a href="http://www.imdb.com/title/tt2396589/"> "Mighty River" (Mudbound) </a></b> &nbsp Chance:  1.76%</li>
+      <li><b><a href="http://www.imdb.com/title/tt1485796/"> "This Is Me" (The Greatest Showman)</a></b> &nbsp Chance:  55.85%</li>
+      <br>
+      <h5>Strong Signals:</h5>
+      <li>Golden Globe Awards (GG) -- best original song motion picture -- winner </li>
+<li>Critics’ Choice Awards (CCA) -- best song -- winner </li>
+<li>British Academy of Film and Television Arts (BAFTA) -- best animated film -- winner </li>
+      </div>
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="music2">
+      <h3> Best Achievement in Music Written for Motion Pictures (Original Score) </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt5013056/"> Dunkirk (Hans Zimmer) </a></b> &nbsp Chance:  6.03%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5776858/"> Phantom Thread (Jonny Greenwood) </a></b> &nbsp Chance:  6.10%</li>
+      <li><b><a href="http://www.imdb.com/title/tt2527336/"> Star Wars: The Last Jedi (John Williams) </a></b> &nbsp Chance:  4.76%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5580390/"> The Shape of Water (Alexandre Desplat) </a></b> &nbsp Chance:  76.61%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5027774/"> Three Billboards Outside Ebbing, Missouri (Carter Burwell) </a></b> &nbsp Chance:  6.51%</li>
+      <br>
+      <h5>Strong Signals:</h5>
+      <li>Golden Globe Awards (GG) -- best original score motion picture -- winner </li>
+<li>Critics’ Choice Awards (CCA) -- best score -- winner </li>
+<li>Los Angeles Film Critics Association (LAFCA) -- best music -- winner </li>
+      </div>
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="cinematography">
+      <h3> Best Achievement in Cinematography </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt1856101/"> Blade Runner 2049 (Roger Deakins) </a></b> &nbsp Chance:  99.87%</li>
+      <li><b><a href="http://www.imdb.com/title/tt4555426/"> Darkest Hour (Bruno Delbonnel) </a></b> &nbsp Chance:  0.06%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5013056/"> Dunkirk (Hoyte Van Hoytema) </a></b> &nbsp Chance:  0.06%</li>
+      <li><b><a href="http://www.imdb.com/title/tt2396589/"> Mudbound (Rachel Morrison) </a></b> &nbsp Chance:  0.00%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5580390/"> The Shape of Water (Dan Laustsen) </a></b> &nbsp Chance:  0.01%</li>
+      <br>
+      <h5>Strong Signals:</h5>
+      <li>Cinema Audio Society Awards (CAS) -- outstanding sound mixing for motion pictures -- winner </li>
+<li>Critics’ Choice Awards (CCA) -- best composer -- winner </li>
+<li>Golden Globe Awards (GG) -- best director motion picture -- winner </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="film">
+      <h3> Best Achievement in Film Editing </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt3890160/"> Baby Driver (Paul Machliss) </a></b> &nbsp Chance:  27.57%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5013056/"> Dunkirk (Lee Smith) </a></b> &nbsp Chance:  25.90%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5580036/"> I, Tonya (Tatiana S Riegel) </a></b> &nbsp Chance:  16.41%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5580390/"> The Shape of Water (Sidney Wolinsky) </a></b> &nbsp Chance:  23.02%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5027774/"> Three Billboards Outside Ebbing, Missouri (Jon Gregory) </a></b> &nbsp Chance:  7.10%</li>
+      <br>
+      <h5>Strong Signals:</h5>
+      <li>American Cinema Editors Awards (ACE) -- best edited feature film dramatic -- winner </li>
+<li>Critics’ Choice Awards (CCA) -- best directing -- winner </li>
+<li>British Academy of Film and Television Arts (BAFTA) -- best editing -- winner </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="visual">
+      <h3> Best Achievement in Visual Effects </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt1856101/"> Blade Runner 2049 (John Nelson) </a></b> &nbsp Chance: 56.00%
+ &nbsp </li>
+      <li><b><a href="http://www.imdb.com/title/tt3896198/"> Guardians of the Galaxy Vol 2 (Christopher Townsend) </a></b> &nbsp Chance: 12.16%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3731562/"> Kong: Skull Island (Stephen Rosenbaum) </a></b> &nbsp Chance: 12.06%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt2527336/"> Star Wars: The Last Jedi (Ben Morris) </a></b> &nbsp Chance: 9.64%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3450958/"> War for the Planet of the Apes (Joe Letteri) </a></b> &nbsp Chance: 10.15%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>British Academy of Film and Television Arts (BAFTA) -- best special visual effects -- winner </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="sound1">
+      <h3> Best Achievement in Sound Mixing </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt3890160/"> Baby Driver (Tim Cavagin) </a></b> &nbsp Chance: 15.43%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt1856101/"> Blade Runner 2049 (Ron Bartlett) </a></b> &nbsp Chance: 9.40%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5013056/"> Dunkirk (Gregg Landaker) </a></b> &nbsp Chance: 58.63%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt2527336/"> Star Wars: The Last Jedi (Michael Semanick) </a></b> &nbsp Chance: 8.96%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5580390/"> The Shape of Water (Christian T. Cooke) </a></b> &nbsp Chance: 7.58%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>British Academy of Film and Television Arts (BAFTA) -- best sound mixing -- winner </li>
+<li>British Academy of Film and Television Arts (BAFTA) -- best editing -- winner </li>
+<li>American Cinema Editors Awards (ACE) -- best edited feature film dramatic -- winner  </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="sound2">
+      <h3> Best Achievement in Sound Editing </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt3890160/"> Baby Driver (Julian Slater) </a></b> &nbsp Chance: 4.61%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt1856101/"> Blade Runner 2049 (Mark A Mangini) </a></b> &nbsp Chance: 3.89%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5013056/"> Dunkirk (Richard King) </a></b> &nbsp Chance: 71.12%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt2527336/"> Star Wars: The Last Jedi (Matthew Wood) </a></b> &nbsp Chance: 4.90%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5580390/"> The Shape of Water (Nathan Robitaille </a></b> &nbsp Chance: 15.48%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>British Academy of Film and Television Arts (BAFTA) -- best sound mixing -- winner </li>
+<li>National Society of Film Critics Awards (NSFCA) -- best cinematography -- nominee </li>
+<li>British Academy of Film and Television Arts (BAFTA) -- best cinematography -- nominee </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="costume">
+      <h3> Best Achievement in Costume Design </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt2771200/"> Beauty and the Beast (Jacqueline Durran) </a></b> &nbsp Chance: 21.81%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4555426/"> Darkest Hour (Jacqueline Durran) </a></b> &nbsp Chance: 5.58%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5776858/"> Phantom Thread (Mark Bridges) </a></b> &nbsp Chance: 3.20%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5580390/"> The Shape of Water (Luis Sequeira) </a></b> &nbsp Chance: 58.98%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5816682/"> Victoria & Abdul (Consolata Boyle) </a></b> &nbsp Chance: 10.44%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>Critics’ Choice Awards (CCA) -- best costume design -- winner </li>
+<li>British Academy of Film and Television Arts (BAFTA) -- best costume design -- winner </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="makeup">
+      <h3> Best Achievement in Makeup and Hairstyling</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt4555426/"> Darkest Hour (Kazuhiro Tsuji) </a></b> &nbsp Chance: 51.42%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5816682/"> Victoria & Abdul (Daniel Phillips) </a></b> &nbsp Chance: 25.40%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt2543472/"> Wonder (Arjen Tuiten) </a></b> &nbsp Chance: 23.18%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>British Academy of Film and Television Arts (BAFTA) -- best makeup and hair -- winner </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="production">
+      <h3> Best Achievement in Production Design</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt2771200/"> Beauty and the Beast (Sarah Greenwood) </a></b> &nbsp Chance: 9.84%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt1856101/"> Blade Runner 2049 (Dennis Gassner) </a></b> &nbsp Chance: 18.03%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4555426/"> Darkest Hour (Sarah Greenwood) </a></b> &nbsp Chance: 11.92%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5013056/"> Dunkirk (Nathan Crowley) </a></b> &nbsp Chance: 18.26%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5580390/"> The Shape of Water (Paul D Austerberry) </a></b> &nbsp Chance: 41.96%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>British Academy of Film and Television Arts (BAFTA) -- best costume design -- winner </li>
+<li>Los Angeles Film Critics Association (LAFCA) -- best production design -- winner </li>
+<li>American Cinema Editors Awards (ACE) -- best edited feature film comedy or musical -- winner </li>
+<li>Washington DC Area Film Critics Awards (WAFCA) -- best art direction -- winner </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="foreign">
+      <h3> Best Foreign Language Film of the Year</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt5639354/"> A Fantastic Woman </a></b> &nbsp Chance: 8.69%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt6304162/"> Loveless </a></b> &nbsp Chance: 61.37%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5607714/"> On Body and Soul </a></b> &nbsp Chance: 9.63%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt7048622/"> The Insult </a></b> &nbsp Chance: 9.63%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4995790/"> The Square </a></b> &nbsp Chance: 10.69%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>Los Angeles Film Critics Association (LAFCA) -- best foreign film -- winner </li>
+<li>National Board of Review (NBR) -- best foreign language film -- winner </li>
+<li>Golden Globe Awards (GG) -- best foreign language film -- winner </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="animation">
+      <h3> Best Animated Feature Film of the Year</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt2380307/"> Coco (Lee Unkrich) </a></b> &nbsp Chance: 99.99%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3411444/"> Ferdinand (Carlos Saldanha) </a></b> &nbsp Chance: 0.00%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3262342/"> Loving Vincent (Dorota Kobiela) </a></b> &nbsp Chance: 0.00%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3874544/"> The Boss Baby (Tom McGrath) </a></b> &nbsp Chance: 0.01%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3901826/"> The Breadwinner (Nora Twomey) </a></b> &nbsp Chance: 0.00%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>Critics’ Choice Awards (CCA) -- best animated feature film -- winner</li>
+<li>New York Film Critics Circle Awards (NYFCCA) -- best animated film -- winner </li>
+<li>Cinema Audio Society Awards (CAS) -- outstanding sound mixing for motion pictures animated -- winner </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+
+      <section id="documentary">
+      <h3> Best Documentary Feature</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt5952382/"> Abacus: Small Enough to Jail (Steve James) </a></b> &nbsp Chance: 9.67%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5598102/"> Faces Places (Agnès Varda) </a></b> &nbsp Chance: 77.90%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt6333060/"> Icarus (Bryan Fogel) </a></b> &nbsp Chance: 4.00%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt6333074/"> Last Men in Aleppo (Kareem Abeed) </a></b> &nbsp Chance: 3.53%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5873150/"> Strong Island (Yance Ford) </a></b> &nbsp Chance: 4.90%
+ &nbsp</li>
+      <br>
+      <h5>Strong Signals:</h5>
+      <li>National Board of Review (NBR) -- best documentary -- winner </li>
+<li>American Cinema Editors Awards (ACE) -- best edited documentary feature -- winner </li>
+<li>Boston Society of Film Critics Awards (BSFCA) -- best documentary -- nominee </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      </div>
+      </div>
+<!-- Sidebar -->
+<div id="sidebar">
+   <div class="inner">
+
+      <!-- Menu -->
+      <nav id="menu">
+         <header class="major">
+            <h2>Menu</h2>
+         </header>
+         <ul>
+            <li><a href="../index.html#banner">Homepage</a></li>
+            <li><a href="../index.html#news">Latest News</a></li>
+            <li><a href="../index.html#research">Research & Service</a></li>
+            <li><a href="../index.html#misc">Misc.</a></li>
+         </ul>
+      </nav>
+
+      <!-- Section -->
+      <section>
+         <header class="major">
+            <h2>Contact</h2>
+         </header>
+
+         <ul class="contact">
+            <li class="fa-envelope-o"> mengting.wan at gmail.com </li>
+         </ul>
+      </section>
+   </div>
+</div>
+
+</div>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/skel.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11132224; 
+var sc_invisible=1; 
+var sc_security="d310e9da"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+   "https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+   scJsHost+
+   "statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript>
+<div class="statcounter"><a title="shopify
+   analytics" href="http://statcounter.com/shopify/"
+   target="_blank"><img class="statcounter"
+   src="//c.statcounter.com/11132224/0/d310e9da/1/"
+   alt="shopify analytics"></a>
+</div>
+</noscript>
+   </body>
+</html>

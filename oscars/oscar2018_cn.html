@@ -1,0 +1,927 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>2018年学院奖（奥斯卡金像奖）结果预测</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+      <link rel="stylesheet" href="../assets/css/main.css" />
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" href="../assets/css/ie9.css" />
+      <![endif]-->
+      <!--[if lte IE 8]>
+      <link rel="stylesheet" href="../assets/css/ie8.css" />
+      <![endif]-->
+      <script>
+         function getVote(int) {
+         	if (window.XMLHttpRequest) {
+         // code for IE7+, Firefox, Chrome, Opera, Safari
+         xmlhttp=new XMLHttpRequest();
+         } else {  // code for IE6, IE5
+         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+         }
+         xmlhttp.onreadystatechange=function() {
+         if (this.readyState==4 && this.status==200) {
+         document.getElementById("poll").innerHTML=this.responseText;
+         }
+         }
+         xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+         xmlhttp.send();
+         }
+      </script>
+   </head>
+   <body>
+      <!-- Wrapper -->
+      <div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+      <div class="inner">
+      <!-- Header -->
+      <header id="header">
+         <h2>2018年学院奖（奥斯卡金像奖）结果预测 </h2>
+      </header>
+<a href="oscar2018.html"> English </a> / <a href="oscar2018_cn.html"> 中文版 </a> <br><br>
+<font color="red"><small>3/3/2018: 独立精神奖今日揭晓。模型已做相应更新。. </small></font> <br>
+与去年类似，我训练了一个线性分类器来预测今年奥斯卡金像奖的获奖情况。在这个小项目里，一部分<a href="https://github.com/MengtingWan/oscar/blob/master/award_code.csv">奥斯卡前哨奖</a>的信息被用作特征。这个页面包括了预测结果的一个简单总结。从选取的特征来看，除了相应工会奖的获奖情况外，英国电影学院奖 (BAFTA) 和评论家选择奖 (CCA) 也是两个非常重要的风向标。我创建了几个简单的投票app，欢迎大家为自己最喜欢的电影/导演/演员投票。希望大家在阅读的同时可以获得乐趣 :)<br>
+我公开了在这个小项目中用到的所有<a href="https://github.com/MengtingWan/oscar/tree/master/data">数据</a>, <a href="https://github.com/MengtingWan/oscar">代码</a>, <a href="https://github.com/MengtingWan/oscar/blob/master/results_flat.csv">具体结果</a> 和 <a href="https://github.com/MengtingWan/oscar/blob/master/evidence_flat.csv">正相关的特征</a>，也欢迎大家查阅。<br>
+
+
+
+      <!-- Section -->
+      <section id="picture">
+         <h3> 最佳影片 </h3>
+         <div class="row">
+            <div class="9u 12u$(small)">
+               <div class="row">
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/26799731/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@._V1_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/26799731/">请以你的名字呼唤我<br>Call Me by Your Name</a></h5>
+                        <p>胜率: 0.10%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/26761416/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNTU4MjMwOTgyMV5BMl5BanBnXkFtZTgwODQzNjY2NDM@._V1_SY1000_SX675_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/26761416/">至暗时刻<br>Darkest Hour</a></h5>
+                        <p>胜率: 0.10%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/26607693/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/26607693/">敦克尔克<br>Dunkirk</a></h5>
+                        <p>胜率: 0.11%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/26688480/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/26688480/">逃出绝命镇<br>Get Out</a></h5>
+                        <p>胜率: 0.01%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/26588314/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX677_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/26588314/">伯德小姐<br>Lady Bird</a></h5>
+                        <p>胜率: 0.01%</p>
+                     </span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/26809592/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxODcwOTU2Nl5BMl5BanBnXkFtZTgwOTUzNjY2NDM@._V1_SY1000_SX675_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/26809592/">魅影缝匠<br>Phantom Thread</a></h5>
+                        <p>胜率: 0.36%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/26990609/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjQyMjEwOTIwNV5BMl5BanBnXkFtZTgwOTkzNTMxNDM@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/26990609/">华盛顿邮报<br>The Post</a></h5>
+                        <p>胜率: 0.13%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/26752852/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNGNiNWQ5M2MtNGI0OC00MDA2LWI5NzEtMmZiYjVjMDEyOWYzXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/26752852/">水形物语<br>The Shape of Water</a></h5>
+                        <p>胜率: 97.19%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/26611804/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BZTZjYzU2NTktNTdmNi00OTM0LTg5MDgtNGFjOGMzNjY0MDk5XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX675_CR0,0,675,999_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/26611804/">三块广告牌<br>Three Billboards Outside Ebbing, Missouri</a></h5>
+                        <p>胜率: 1.98%</p>
+                     </span>
+                  </div>
+               </div>
+               <h5> 正相关特征:</h5>
+               <li> 导演工会奖 (DGA) -- 最佳导演 -- 获奖 </li>
+               <li> 评论家选择奖 (CCA) -- 最佳影片 -- 获奖 </li>
+               <li> 华盛顿影评人协会奖 (WAFCA) -- 最佳群戏 -- 获奖 </li>
+            </div>
+            <div class="3u 12u$(small)">
+<script type="text/javascript">
+(function(d, s, id){
+  var js,
+      fjs = d.getElementsByTagName(s)[0],
+      r = Math.floor(new Date().getTime() / 1000000);
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async=1;
+  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'os-widget-jssdk'));
+</script><div class="os_poll" data-path="/polls/2490275" id="os-widget-2490275"></div>
+            </div>
+         </div>
+      </section>
+      <section id="director">
+         <h3> 最佳导演 </h3>
+         <div class="row">
+            <div class="9u 12u$(small)">
+               <div class="row">
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/celebrity/1054524/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/celebrity/1054524/">克里斯托弗·诺兰 <br>(敦克尔克)</a></h5>
+                        <p>胜率: 0.02%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/celebrity/1022652/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX677_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/celebrity/1022652/">格蕾塔·葛韦格 <br> 
+                           (伯德小姐)</a>
+                        </h5>
+                        <p>胜率: 0.00%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/celebrity/1027182/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNGNiNWQ5M2MtNGI0OC00MDA2LWI5NzEtMmZiYjVjMDEyOWYzXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/celebrity/1027182/">吉尔莫·德尔·托罗 <br>
+                           (水形物语)</a>
+                        </h5>
+                        <p>胜率: 98.67%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/celebrity/1032808/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/celebrity/1032808/">乔丹·皮尔 <br>(逃出绝命镇)</a></h5>
+                        <p>胜率: 0.00%</p>
+                     </span>
+                  </div>
+                  <div class="2u 8u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/celebrity/1054388/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxODcwOTU2Nl5BMl5BanBnXkFtZTgwOTUzNjY2NDM@._V1_SY1000_SX675_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/celebrity/1054388/">保罗·托马斯·安德森 <br> 
+                           (魅影缝匠)</a>
+                        </h5>
+                        <p>胜率: 1.31%</p>
+                     </span>
+                  </div>
+               </div>
+               <h5>正相关特征:</h5>
+               <li>导演工会奖 (DGA) -- 最佳导演 -- 获奖 </li>
+               <li>英国电影学院奖 (BAFTA) -- 最佳摄影 -- 获奖 </li>
+               <li>英国电影学院奖 (BAFTA) -- 最佳影片 -- 获奖 </li>
+            </div>
+            <div class="3u 12u$(small)">
+<script type="text/javascript">
+(function(d, s, id){
+  var js,
+      fjs = d.getElementsByTagName(s)[0],
+      r = Math.floor(new Date().getTime() / 1000000);
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async=1;
+  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'os-widget-jssdk'));
+</script><div class="os_poll" data-path="/polls/2490276" id="os-widget-2490276"></div>
+            </div>
+            </div>
+      </section>
+      <section id="actor1">
+      <h3> 最佳男主角 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1056177/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2NDY2NDc1Ml5BMl5BanBnXkFtZTcwNjAyMjkwOQ@@._V1_SY1000_CR0,0,759,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1056177/">丹尼尔·戴-刘易斯 <br>(魅影缝匠)</a></h5>
+      <p>胜率: 1.84%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1316928/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BOTk1MzgzOTg5OV5BMl5BanBnXkFtZTcwNDQ4NjMxOA@@._V1_SY1000_CR0,0,681,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1316928/">丹尼尔·卡卢亚 <br> 
+      (逃出绝命镇)</a></h5>
+      <p>胜率: 4.18%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1054431/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjE5NDU2Mzc3MV5BMl5BanBnXkFtZTcwNjAwNTE5OQ@@._V1_SY1000_SX750_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1054431/">丹泽尔·华盛顿 <br>
+      (罗曼先生，你好)</a></h5>
+      <p>胜率: 4.02%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1010507/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc3NTM4MzQ5MV5BMl5BanBnXkFtZTcwOTE4MDczNw@@._V1_SY1000_CR0,0,678,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1010507/">加里·奥德曼 <br>(至暗时刻)</a></h5>
+      <p>胜率: 87.87%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1325862/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BOWU1Nzg0M2ItYjEzMi00ODliLThkODAtNGEyYzRkZTBmMmEzXkEyXkFqcGdeQXVyNDk2Mzk2NDg@._V1_SY1000_CR0,0,755,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1325862/">蒂莫西·柴勒梅德 <br> 
+      (请以你的名字呼唤我)</a></h5>
+      <p>胜率: 2.10%</p>
+      </span>
+      </div>
+      </div>
+      <h5>正相关特征:</h5>
+      <li> 演员工会奖 (SAG) -- 最佳男主角 -- 获奖 </li>
+      <li> 英国电影学院奖 (BAFTA) -- 最佳影片 -- 获奖 </li>
+      <li> 英国电影学院奖 (BAFTA) -- 最佳男主角 -- 获奖 </li>
+      </div>
+      <div class="3u 12u$(small)">
+<script type="text/javascript">
+(function(d, s, id){
+  var js,
+      fjs = d.getElementsByTagName(s)[0],
+      r = Math.floor(new Date().getTime() / 1000000);
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async=1;
+  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'os-widget-jssdk'));
+</script><div class="os_poll" data-path="/polls/2490277" id="os-widget-2490277"></div>
+      </div>
+      </div>
+      </section>
+
+      <section id="actress1">
+      <h3> 最佳女主角 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1010548/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjI3NzgxNjYzOF5BMl5BanBnXkFtZTgwNTIxMjExNzE@._V1_SY1000_CR0,0,830,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1010548/">弗兰西斯·麦克多蒙德<br>(三块广告牌)</a></h5>
+      <p>胜率: 99.98%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1272303/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxNDcwMzU2Nl5BMl5BanBnXkFtZTcwNDc4NzkzOQ@@._V1_SY999_SX750_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1272303/">玛格特·罗比<br> 
+      (我，花样女王)</a></h5>
+      <p>胜率: 0.00%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1054437/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU4Mjk5MDExOF5BMl5BanBnXkFtZTcwOTU1MTMyMw@@._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1054437/">梅丽尔·斯特里普<br>
+      (华盛顿邮报)</a></h5>
+      <p>胜率: 0.02%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1044915/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BODE4MDE0MDEzMl5BMl5BanBnXkFtZTgwNjI1NTU5MDE@._V1_SY1000_CR0,0,765,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1044915/">莎莉·霍金斯<br>(水形物语)</a></h5>
+      <p>胜率: 0.00%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1022004/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjExNTM5NDE4NV5BMl5BanBnXkFtZTcwNzczMzEzOQ@@._V1_SY1000_CR0,0,664,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1022004/">西尔莎·罗南<br> 
+      (伯德小姐)</a></h5>
+      <p>胜率: 0.00%</p>
+      </span>
+      </div>
+      </div>
+      <h5>正相关特征:</h5>
+      <li>演员工会奖 (SAG) -- 最佳女主角 -- 获奖 </li>
+      <li>英国电影学院奖 (BAFTA) -- 最佳女主角 -- 获奖 </li>
+      <li>金球奖 (GG) -- 最佳剧情片女主角 -- 获奖 </li>
+      </div>
+      <div class="3u 12u$(small)">
+      	<script type="text/javascript">
+(function(d, s, id){
+  var js,
+      fjs = d.getElementsByTagName(s)[0],
+      r = Math.floor(new Date().getTime() / 1000000);
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async=1;
+  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'os-widget-jssdk'));
+</script><div class="os_poll" data-path="/polls/2490279" id="os-widget-2490279"></div>
+      </div>
+      </div>
+      </section>
+
+     <section id="actor2">
+      <h3> 最佳男配角</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1036321/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5MzQ5MDY3NF5BMl5BanBnXkFtZTcwNzMxOTU5Ng@@._V1_SY1000_CR0,0,700,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1036321/">克里斯托弗·普卢默<br>(金钱世界)</a></h5>
+      <p>胜率: 1.35%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1048145/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMzM5MzA4NDcyN15BMl5BanBnXkFtZTcwMDkwNjQzMg@@._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1048145/">理查德·詹金斯<br> 
+      (水形物语)</a></h5>
+      <p>胜率: 1.11%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1047972/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2NTM3MzE5NF5BMl5BanBnXkFtZTcwMjg4NDMwNA@@._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1047972/">山姆·洛克威尔<br>
+      (三块广告牌)</a></h5>
+      <p>胜率: 83.80%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1010539/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTcyNjU2MTYyM15BMl5BanBnXkFtZTgwMjY5MDY4NDE@._V1_SY1000_CR0,0,799,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1010539/">威廉·达福<br>(佛罗里达乐园)</a></h5>
+      <p>胜率: 3.62%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1053560/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU3NDc2ODc4MF5BMl5BanBnXkFtZTcwODk2MzAyMg@@._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1053560/">伍迪·哈里森<br>
+      (三块广告牌)</a></h5>
+      <p>胜率: 10.12%</p>
+      </span>
+      </div>
+      </div>
+      <h5>正相关特征:</h5>
+<li>金球奖 (GG) -- 最佳剧情片男配角 -- 获奖 </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳男配角 -- 获奖 </li>
+<li>演员工会奖 (SAG) -- 最佳男配角 -- 获奖 </li>
+      </div>
+      <div class="3u 12u$(small)">
+<script type="text/javascript">
+(function(d, s, id){
+  var js,
+      fjs = d.getElementsByTagName(s)[0],
+      r = Math.floor(new Date().getTime() / 1000000);
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async=1;
+  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'os-widget-jssdk'));
+</script><div class="os_poll" data-path="/polls/2490282" id="os-widget-2490282"></div>
+      </div>
+      </div>
+      </section>
+
+     <section id="actress2">
+      <h3> 最佳女配角</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1041139/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjAyNjc2NzgxM15BMl5BanBnXkFtZTgwODQyMjM1MjE@._V1_SY1000_CR0,0,730,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1041139/">艾莉森·珍妮<br>(我，花样女王)</a></h5>
+      <p>胜率: 100.00%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1121650/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc1NDA1NDA5N15BMl5BanBnXkFtZTcwODAyNTU3MQ@@._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1121650/">劳里·梅特卡夫<br> (伯德小姐)</a></h5>
+      <p>胜率: 0.00%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1032219/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3NTU0OTc1OF5BMl5BanBnXkFtZTcwNzU5MTA3NA@@._V1_SY1000_CR0,0,638,1000_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1032219/">莱丝利·曼维尔<br>(魅影缝匠)</a></h5>
+      <p>胜率: 0.00%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1014134/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2MzAzMDMxNl5BMl5BanBnXkFtZTYwNjQwMjY1._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1014134/">玛丽·布莱姬<br>(泥土之界)</a></h5>
+      <p>胜率: 0.00%</p>
+      </span>
+      </div>
+      <div class="2u 8u$(small)" align="center">
+      <span class="image object">
+      <a href="https://movie.douban.com/celebrity/1154263/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTg0MjcwMjcxNl5BMl5BanBnXkFtZTcwMjkwODg0Ng@@._V1_.jpg" alt="" />
+      </a>
+      <h5><a href="https://movie.douban.com/celebrity/1154263/">奥克塔维亚·斯宾瑟<br> (水形物语)</a></h5>
+      <p>胜率: 0.00%</p>
+      </span>
+      </div>
+      </div>
+      <h5>正相关特征:</h5>
+      <li>演员工会奖 (SAG) -- 最佳女配角 -- 获奖 </li>
+      <li>英国电影学院奖 (BAFTA) -- 最佳女配角 -- 获奖 </li>
+      <li>评论家选择奖 (CCA) -- 最佳女配角 -- 获奖 </li>
+      </div>
+      <div class="3u 12u$(small)">
+<script type="text/javascript">
+(function(d, s, id){
+  var js,
+      fjs = d.getElementsByTagName(s)[0],
+      r = Math.floor(new Date().getTime() / 1000000);
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async=1;
+  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'os-widget-jssdk'));
+</script><div class="os_poll" data-path="/polls/2490283" id="os-widget-2490283"></div>
+      </div>
+      </div>
+      </section>
+
+     <section id="writer1">
+      <h3> 最佳原创剧本</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/26688480/"> 逃出绝命镇 (Jordan Peele)</a></b> &nbsp胜率: 69.81%</li>
+      <li><b><a href="https://movie.douban.com/subject/26588314/"> 伯德小姐 (Greta Gerwig)</a></b> &nbsp 胜率: 0.82%</li>
+      <li><b><a href="https://movie.douban.com/subject/26884892/"> 大病 (Kumail Nanjiani)</a></b> &nbsp 胜率: 1.44%</li>
+      <li><b><a href="https://movie.douban.com/subject/26752852/"> 水形物语 (Guillermo del Toro) </a></b> &nbsp 胜率: 0.25%</li>
+      <li><b><a href="https://movie.douban.com/subject/26611804/"> 三块广告牌 (Martin McDonagh) </a></b> &nbsp 胜率: 27.68%</li>
+      <br>
+            <h5>正相关特征:</h5>
+      <li>编剧工会奖 (WGA) -- 最佳原创剧本 -- 获奖 </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳原创剧本 -- 获奖 </li>
+<li>评论家选择奖 (CCA) -- 最佳原创剧本 -- 获奖 </li>
+      </div>
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="writer2">
+      <h3> 最佳改编剧本</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/26799731/"> 请以你的名字呼唤我 (James Ivory)</a></b> &nbsp 胜率: 16.76%</li>
+      <li><b><a href="https://movie.douban.com/subject/25765735/"> 金刚狼3：殊死一战 (Scott Frank) </a></b> &nbsp 胜率: 16.96%</li>
+      <li><b><a href="https://movie.douban.com/subject/26704137/"> 茉莉牌局 (Aaron Sorkin) </a></b> &nbsp 胜率: 16.56%</li>
+      <li><b><a href="https://movie.douban.com/subject/26755367/"> 泥土之界 (Dee Rees) </a></b> &nbsp 胜率: 32.90%</li>
+      <li><b><a href="https://movie.douban.com/subject/25944886/"> 灾难艺术家 (Scott Neustadter) </a></b> &nbsp 胜率: 16.82%</li>
+      <br>
+      <h5>正相关特征:</h5>
+      <li>评论家选择奖 (CCA) -- 最佳导演 -- 获奖 </li>
+<li>金球奖 (GG) -- 最佳剧情片 -- 获奖 </li>
+<li>编剧工会奖 (WGA) -- 最佳改编剧本 -- 获奖 </li>
+      </div>
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+            <section id="music1">
+      <h3> 最佳原创歌曲 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/26799731/"> "Mystery of Love" (请以你的名字呼唤我) </a></b> &nbsp 胜率: 5.52%</li>
+      <li><b><a href="https://movie.douban.com/subject/20495023/"> "Remember Me" (寻梦环游记) </a></b> &nbsp 胜率:  28.18%</li>
+      <li><b><a href="https://movie.douban.com/subject/26689487/"> "Stand Up for Something" (马歇尔) </a></b> &nbsp 胜率:  8.69%</li>
+      <li><b><a href="https://movie.douban.com/subject/26755367/"> "Mighty River" (泥土之界) </a></b> &nbsp 胜率:  1.76%</li>
+      <li><b><a href="https://movie.douban.com/subject/3914513/"> "This Is Me" (马戏之王)</a></b> &nbsp 胜率:  55.85%</li>
+      <br>
+      <h5>正相关特征:</h5>
+      <li>金球奖 (GG) -- 最佳原创歌曲 -- 获奖 </li>
+<li>评论家选择奖 (CCA) -- 最佳歌曲 -- 获奖 </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳动画片 -- 获奖 </li>
+      </div>
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="music2">
+      <h3> 最佳原创配乐 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/26607693/"> 敦刻尔克 (Hans Zimmer) </a></b> &nbsp 胜率:  6.03%</li>
+      <li><b><a href="https://movie.douban.com/subject/26809592/"> 魅影缝匠 (Jonny Greenwood) </a></b> &nbsp 胜率:  6.10%</li>
+      <li><b><a href="https://movie.douban.com/subject/22265634/"> 星球大战8：最后的绝地武士 (John Williams) </a></b> &nbsp 胜率:  4.76%</li>
+      <li><b><a href="https://movie.douban.com/subject/26752852/"> 水形物语 (Alexandre Desplat) </a></b> &nbsp 胜率:  76.61%</li>
+      <li><b><a href="https://movie.douban.com/subject/26611804/"> 三块广告牌 (Carter Burwell) </a></b> &nbsp 胜率:  6.51%</li>
+      <br>
+      <h5>正相关特征:</h5>
+      <li>金球奖 (GG) -- 最佳原创配乐 -- 获奖</li>
+<li>评论家选择奖 (CCA) -- 最佳原创配乐 -- 获奖</li>
+<li>洛杉矶影评人协会奖 (LAFCA) -- 最佳音乐 -- 获奖 </li>
+      </div>
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="cinematography">
+      <h3> 最佳摄影 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/10512661/"> 银翼杀手2049 (Roger Deakins) </a></b> &nbsp 胜率:  99.87%</li>
+      <li><b><a href="https://movie.douban.com/subject/26761416/"> 至暗时刻 (Bruno Delbonnel) </a></b> &nbsp 胜率:  0.06%</li>
+      <li><b><a href="https://movie.douban.com/subject/26607693/"> 敦刻尔克 (Hoyte Van Hoytema) </a></b> &nbsp 胜率:  0.06%</li>
+      <li><b><a href="https://movie.douban.com/subject/26755367/"> 泥土之界 (Rachel Morrison) </a></b> &nbsp 胜率:  0.00%</li>
+      <li><b><a href="https://movie.douban.com/subject/26752852/"> 水形物语 (Dan Laustsen) </a></b> &nbsp 胜率:  0.01%</li>
+      <br>
+      <h5>正相关特征:</h5>
+      <li>美国声音效果协会奖 (CAS) -- 最佳混音 -- 获奖 </li>
+<li>评论家选择奖 (CCA) -- 最佳作曲 -- 获奖  </li>
+<li>金球奖 (GG) -- 最佳导演 -- 获奖 </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="film">
+      <h3> 最佳剪辑 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/25933890/"> 极盗车神 (Paul Machliss) </a></b> &nbsp 胜率:  27.57%</li>
+      <li><b><a href="https://movie.douban.com/subject/26607693/"> 敦刻尔克 (Lee Smith) </a></b> &nbsp 胜率:  25.90%</li>
+      <li><b><a href="https://movie.douban.com/subject/26756049/"> 我，花样女王 (Tatiana S Riegel) </a></b> &nbsp 胜率:  16.41%</li>
+      <li><b><a href="https://movie.douban.com/subject/26752852/"> 水形物语 (Sidney Wolinsky) </a></b> &nbsp 胜率:  23.02%</li>
+      <li><b><a href="https://movie.douban.com/subject/26611804/"> 三块广告牌 (Jon Gregory) </a></b> &nbsp 胜率:  7.10%</li>
+      <br>
+      <h5>正相关特征:</h5>
+      <li>剪辑工会奖 (ACE) -- 最佳剧情剪辑 -- 获奖 </li>
+<li>评论家选择奖 (CCA) -- 最佳导演 -- 获奖 </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳剪辑 -- 获奖  </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="visual">
+      <h3> 最佳视觉效果 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/10512661/"> 银翼杀手2049 (John Nelson) </a></b> &nbsp 胜率: 56.00%
+ &nbsp </li>
+      <li><b><a href="https://movie.douban.com/subject/25937854/"> 银河护卫队2 (Christopher Townsend) </a></b> &nbsp 胜率: 12.16%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26309788/"> 金刚：骷髅岛 (Stephen Rosenbaum) </a></b> &nbsp 胜率: 12.06%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/22265634/"> 星球大战8：最后的绝地武士 (Ben Morris) </a></b> &nbsp 胜率: 9.64%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/25808075/"> 猩球崛起3：终极之战 (Joe Letteri) </a></b> &nbsp 胜率: 10.15%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>英国电影学院奖 (BAFTA) -- 最佳视觉效果 -- 获奖  </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="sound1">
+      <h3> 最佳混音 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/25933890/"> 极盗车神 (Tim Cavagin) </a></b> &nbsp 胜率: 15.43%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/10512661/"> 银翼杀手2049 (Ron Bartlett) </a></b> &nbsp 胜率: 9.40%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26607693/"> 敦刻尔克 (Gregg Landaker) </a></b> &nbsp 胜率: 58.63%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/22265634/"> 星球大战8：最后的绝地武士 (Michael Semanick) </a></b> &nbsp 胜率: 8.96%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26752852/"> 水形物语 (Christian T. Cooke) </a></b> &nbsp 胜率: 7.58%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>英国电影学院奖 (BAFTA) -- 最佳混音 -- 获奖  </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳剪辑 -- 获奖  </li>
+<li>剪辑工会奖 (ACE) -- 最佳剧情剪辑 -- 获奖  </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="sound2">
+      <h3> 最佳音效剪辑 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/25933890/"> 极盗车神 (Julian Slater) </a></b> &nbsp 胜率: 4.61%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/10512661/"> 银翼杀手2049 (Mark A Mangini) </a></b> &nbsp 胜率: 3.89%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26607693/"> 敦刻尔克 (Richard King) </a></b> &nbsp 胜率: 71.12%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/22265634/"> 星球大战8：最后的绝地武士 (Matthew Wood) </a></b> &nbsp 胜率: 4.90%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26752852/"> 水形物语 (Nathan Robitaille </a></b> &nbsp 胜率: 15.48%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>英国电影学院奖 (BAFTA) -- 最佳混音 -- 获奖 </li>
+<li>国家影评人协会奖 (NSFCA) -- 最佳摄影 -- 提名  </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳摄影 -- 提名  </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="costume">
+      <h3> 最佳服装设计 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/25900945/"> 美女与野兽 (Jacqueline Durran) </a></b> &nbsp 胜率: 21.81%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26761416/"> 至暗时刻 (Jacqueline Durran) </a></b> &nbsp 胜率: 5.58%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26809592/"> 魅影缝匠 (Mark Bridges) </a></b> &nbsp 胜率: 3.20%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26752852/"> 水形物语 (Luis Sequeira) </a></b> &nbsp 胜率: 58.98%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26820546/"> 维多利亚与阿卜杜勒 (Consolata Boyle) </a></b> &nbsp 胜率: 10.44%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>评论家选择奖 (CCA) -- 最佳服装设计 -- 获奖 </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳服装设计 -- 获奖  </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="makeup">
+      <h3> 最佳化妆与发型设计</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/26761416/"> 至暗时刻 (Kazuhiro Tsuji) </a></b> &nbsp 胜率: 51.42%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26820546/"> 维多利亚与阿卜杜勒 (Daniel Phillips) </a></b> &nbsp 胜率: 25.40%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26787574/"> 奇迹男孩 (Arjen Tuiten) </a></b> &nbsp 胜率: 23.18%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>英国电影学院奖 (BAFTA) -- 最佳化妆与发型设计 -- 获奖 </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="production">
+      <h3> 最佳艺术指导</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/25900945/"> 美女与野兽 (Sarah Greenwood) </a></b> &nbsp 胜率: 9.84%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/10512661/"> 银翼杀手2049 (Dennis Gassner) </a></b> &nbsp 胜率: 18.03%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26761416/"> 至暗时刻 (Sarah Greenwood) </a></b> &nbsp 胜率: 11.92%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26607693/"> 敦刻尔克 (Nathan Crowley) </a></b> &nbsp 胜率: 18.26%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26752852/"> 水形物语 (Paul D Austerberry) </a></b> &nbsp 胜率: 41.96%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>英国电影学院奖 (BAFTA) -- 最佳服装设计 -- 获奖 </li>
+<li>洛杉矶影评人协会奖 (LAFCA) -- 最佳艺术指导 -- 获奖 </li>
+<li>剪辑工会奖 (ACE) -- 最佳戏剧/音乐剧剪辑 -- 获奖 </li>
+<li>华盛顿影评人协会奖 (WAFCA) -- 最佳艺术指导 -- 获奖 </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="foreign">
+      <h3> 最佳外语片</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/26627754/"> 普通女人 </a></b> &nbsp 胜率: 8.69%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26785590/"> 无爱可诉 </a></b> &nbsp 胜率: 61.37%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26935675/"> 肉与灵 </a></b> &nbsp 胜率: 9.63%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/27098888/"> 羞辱 </a></b> &nbsp 胜率: 9.63%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26610229/"> 方形 </a></b> &nbsp 胜率: 10.69%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>洛杉矶影评人协会奖 (LAFCA) -- 最佳外语片 -- 获奖 </li>
+<li>美国国家评论奖 (NBR) -- 最佳外语片 -- 获奖 </li>
+<li>金球奖 (GG) -- 最佳外语片 -- 获奖 </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      <section id="animation">
+      <h3> 最佳动画长片</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/20495023/"> 寻梦环游记 (Lee Unkrich) </a></b> &nbsp 胜率: 99.99%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/25846857/"> 公牛历险记 (Carlos Saldanha) </a></b> &nbsp 胜率: 0.00%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/25837262/"> 至爱梵高·星空之谜 (Dorota Kobiela) </a></b> &nbsp 胜率: 0.00%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/25907029/"> 宝贝老板 (Tom McGrath) </a></b> &nbsp 胜率: 0.01%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26346327/"> 养家之人 (Nora Twomey) </a></b> &nbsp 胜率: 0.00%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>评论家选择奖 (CCA) -- 最佳动画长片 -- 获奖 </li>
+<li>纽约影评人协会奖 (NYFCCA) -- 最佳动画片 -- 获奖 </li>
+<li>美国声音效果协会奖 (CAS) -- 最佳动画片混音 -- 获奖 </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+
+      <section id="documentary">
+      <h3> 最佳纪录长片</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/26857694/"> 国宝银行：小到可以进监狱 (Steve James) </a></b> &nbsp 胜率: 9.67%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26764928/"> 脸庞，村庄 (Agnès Varda) </a></b> &nbsp 胜率: 77.90%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26928130/"> 伊卡洛斯 (Bryan Fogel) </a></b> &nbsp 胜率: 4.00%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26928137/"> 终守阿勒波 (Kareem Abeed) </a></b> &nbsp 胜率: 3.53%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26929016/"> 强岛 (Yance Ford) </a></b> &nbsp 胜率: 4.90%
+ &nbsp</li>
+      <br>
+      <h5>正相关特征:</h5>
+      <li>美国国家评论奖 (NBR) -- 最佳纪录片 -- 获奖 </li>
+<li>剪辑工会奖 (ACE) -- 最佳纪录片剪辑 -- 获奖 </li>
+<li>波士顿影评人协会奖 (BSFCA) -- 最佳纪录片 -- 提名 </li>
+      </div>
+
+      <div class="3u 12u$(small)"></div>
+      </div>
+      </section>
+
+      </div>
+      </div>
+<!-- Sidebar -->
+<div id="sidebar">
+   <div class="inner">
+
+      <!-- Menu -->
+      <nav id="menu">
+         <header class="major">
+            <h2>Menu</h2>
+         </header>
+         <ul>
+            <li><a href="../index.html#banner">Homepage</a></li>
+            <li><a href="../index.html#news">Latest News</a></li>
+            <li><a href="../index.html#research">Research & Service</a></li>
+            <li><a href="../index.html#misc">Misc.</a></li>
+         </ul>
+      </nav>
+
+      <!-- Section -->
+      <section>
+         <header class="major">
+            <h2>Contact</h2>
+         </header>
+
+         <ul class="contact">
+            <li class="fa-envelope-o"> mengting.wan at gmail.com </li>
+         </ul>
+      </section>
+   </div>
+</div>
+
+</div>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/skel.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11132224; 
+var sc_invisible=1; 
+var sc_security="d310e9da"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+   "https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+   scJsHost+
+   "statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript>
+<div class="statcounter"><a title="shopify
+   analytics" href="http://statcounter.com/shopify/"
+   target="_blank"><img class="statcounter"
+   src="//c.statcounter.com/11132224/0/d310e9da/1/"
+   alt="shopify analytics"></a>
+</div>
+</noscript>
+   </body>
+</html>

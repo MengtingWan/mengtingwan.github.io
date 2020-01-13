@@ -1,0 +1,1037 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>Who Will Win at the Academy Awards, 2017?</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+      <link rel="stylesheet" href="../assets/css/main.css" />
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" href="../assets/css/ie9.css" />
+      <![endif]-->
+      <!--[if lte IE 8]>
+      <link rel="stylesheet" href="../assets/css/ie8.css" />
+      <![endif]-->
+      <script>
+         function getVote(int) {
+         	if (window.XMLHttpRequest) {
+         // code for IE7+, Firefox, Chrome, Opera, Safari
+         xmlhttp=new XMLHttpRequest();
+         } else {  // code for IE6, IE5
+         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+         }
+         xmlhttp.onreadystatechange=function() {
+         if (this.readyState==4 && this.status==200) {
+         document.getElementById("poll").innerHTML=this.responseText;
+         }
+         }
+         xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+         xmlhttp.send();
+         }
+      </script>
+   </head>
+   <body>
+      <!-- Wrapper -->
+      <div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+      <div class="inner">
+      <!-- Header -->
+      <header id="header">
+         <h2>Who Will Win at the Academy Awards, 2017? </h2>
+      </header>
+      <!-- Banner -->
+      <section id="banner">
+         The target of this mini-project is to predict who will win at the Oscars, where a simple logistic regression was applied and a couple of pre-Oscar awards were included as features. <br>
+         Preliminary results are showed as below and predictions will be updated if I have time to improve the model. Strong signals for each award and their corresponding coefficients from the logistic regression model are included. I've also created a couple of polls and you are more than welcome to vote for your favorites. Hope you are having fun in reading this page :)
+      </section>
+      <!-- Section -->
+      <section id="picture">
+         <h3> Best Motion Picture of the Year: </h3>
+         <div class="row">
+            <div class="9u 12u$(small)">
+               <div class="row">
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt2543164/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt2543164/">Arrival</a></h5>
+                        <p>Chance: 1.57%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt2671706/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BOTg0Nzc1NjA0MV5BMl5BanBnXkFtZTgwNTcyNDQ0MDI@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt2671706/">Fences</a></h5>
+                        <p>Chance: 4.21%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt2119532/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ1NjM3MTUxNV5BMl5BanBnXkFtZTgwMDc5MTY5OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt2119532/">Hacksaw Ridge</a></h5>
+                        <p>Chance: 1.54%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt2582782/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTg4NDA1OTA5NF5BMl5BanBnXkFtZTgwMDQ2MDM5ODE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt2582782/">Hell or High Water</a></h5>
+                        <p>Chance: 20.80%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt4846340/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjQxOTkxODUyN15BMl5BanBnXkFtZTgwNTU3NTM3OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt4846340/">Hidden Figures</a></h5>
+                        <p>Chance: 29.06%</p>
+                     </span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt3783958/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt3783958/">La La Land</a></h5>
+                        <p>Chance: 28.40%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt3741834/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjA3NjkzNjg2MF5BMl5BanBnXkFtZTgwMDkyMzgzMDI@._V1_UY268_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt3741834/">Lion</a></h5>
+                        <p>Chance: 7.19%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt4034228/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTYxMjk0NDg4Ml5BMl5BanBnXkFtZTgwODcyNjA5OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt4034228/">Manchester by the Sea</a></h5>
+                        <p>Chance: 1.45%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt4975722/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt4975722/">Moonlight</a></h5>
+                        <p>Chance: 5.79%</p>
+                     </span>
+                  </div>
+               </div>
+               <h5> Strong Signals:</h5>
+               <li> Directors Guild of America, USA -- Outstanding Directorial Achievement in Motion Pictures -- winner (1.01)</li>
+               <li> Broadcast Film Critics Association Awards -- Best Picture -- winner (0.74)</li>
+               <li> Washington DC Area Film Critics Association Awards -- Best Acting Ensemble -- winner (0.55)</li>
+               <li> Screen Actors Guild Awards -- Outstanding Performance by a Cast in a Motion Picture -- winner (0.54)</li>
+            </div>
+            <div class="3u 12u$(small)">
+               <script>
+                  (function(d, s, id){
+                  	var js,
+                  	fjs = d.getElementsByTagName(s)[0],
+                  	p = (('https:' == d.location.protocol) ? 'https://' : 'http://'),
+                  	r = Math.floor(new Date().getTime() / 1000000);
+                  	if (d.getElementById(id)) {return;}
+                  	js = d.createElement(s); js.id = id; js.async=1;
+                  	js.src = p + "www.opinionstage.com/assets/loader.js?" + r;
+                  	fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'os-widget-jssdk'));
+               </script>
+               <div id="2422705" class="os_poll" data-path="/polls/2422705"></div>
+            </div>
+         </div>
+      </section>
+      <section id="director">
+         <h3> Best Achievement in Directing: </h3>
+         <div class="row">
+            <div class="9u 12u$(small)">
+               <div class="row">
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt2543164/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt2543164/">Denis Villeneuve <br>(Arrival)</a></h5>
+                        <p>Chance: 15.30%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt2119532/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ1NjM3MTUxNV5BMl5BanBnXkFtZTgwMDc5MTY5OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt2119532/">Mel Gibson <br> 
+                           (Hacksaw Ridge)</a>
+                        </h5>
+                        <p>Chance: 5.33%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt3783958/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt3783958/">Damien Chazelle <br>
+                           (La La Land)</a>
+                        </h5>
+                        <p>Chance: 74.80%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt4034228/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTYxMjk0NDg4Ml5BMl5BanBnXkFtZTgwODcyNjA5OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt4034228/">Kenneth Lonergan <br>(Manchester by the Sea)</a></h5>
+                        <p>Chance: 0.69%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt4975722/" class="image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt4975722/">Barry Jenkins <br> 
+                           (Moonlight)</a>
+                        </h5>
+                        <p>Chance: 3.88%</p>
+                     </span>
+                  </div>
+               </div>
+               <h5>Strong Signals:</h5>
+               <li>Directors Guild of America, USA -- Outstanding Directorial Achievement in Motion Pictures -- winner (0.79)</li>
+               <li>BAFTA Awards -- Best Film -- winner (0.64)</li>
+               <li>BAFTA Awards -- Best Cinematography -- winner (0.61)</li>
+            </div>
+            <div class="3u 12u$(small)">
+               <script>
+                  (function(d, s, id){
+                  	var js,
+                  	fjs = d.getElementsByTagName(s)[0],
+                  	p = (('https:' == d.location.protocol) ? 'https://' : 'http://'),
+                  	r = Math.floor(new Date().getTime() / 1000000);
+                  	if (d.getElementById(id)) {return;}
+                  	js = d.createElement(s); js.id = id; js.async=1;
+                  	js.src = p + "www.opinionstage.com/assets/loader.js?" + r;
+                  	fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'os-widget-jssdk'));
+               </script>
+               <div id="2422708" class="os_poll" data-path="/polls/2422708"></div>
+            </div>
+      </section>
+      <section id="actor1">
+      <h3> Best Performance by an Actor in a Leading Role: </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000729/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTg3MDU1NzU4MF5BMl5BanBnXkFtZTgwNDQ5ODgwMDI@._V1_UY317_CR14,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4034228/">Casey Affleck <br>(Manchester by the Sea)</a></h5>
+      <p>Chance: 61.44%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm1940449/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2MjI2OTk1OV5BMl5BanBnXkFtZTgwNTY1NzM4MDI@._V1_UY317_CR0,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt2119532/">Andrew Garfield <br> 
+      (Hacksaw Ridge)</a></h5>
+      <p>Chance: 1.51%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0331516/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTQzMjkwNTQ2OF5BMl5BanBnXkFtZTgwNTQ4MTQ4MTE@._V1_UY317_CR18,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt3783958/">Ryan Gosling <br>
+      (La La Land)</a></h5>
+      <p>Chance: 2.01%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0001557/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNDQzOTg4NzA2Nl5BMl5BanBnXkFtZTcwMzkwNjkxMg@@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt3553976/">Viggo Mortensen <br>(Captain Fantastic)</a></h5>
+      <p>Chance: 7.98%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/title/tt2671706/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjE5NDU2Mzc3MV5BMl5BanBnXkFtZTcwNjAwNTE5OQ@@._V1_UY317_CR12,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0000243/">Denzel Washington <br> 
+      (Fences)</a></h5>
+      <p>Chance: 27.06%</p>
+      </span>
+      </div>
+      </div>
+      <h5>Strong Signals:</h5>
+      <li> Screen Actors Guild Awards -- Outstanding Performance by a Male Actor in a Leading Role -- winner (1.76)</li>
+      <li> Golden Globes, USA -- Best Performance by an Actor in a Motion Picture - Drama -- winner (1.11)</li>
+      <li> Broadcast Film Critics Association Awards -- Best Actor -- winner (1.05)</li>
+      <li> BAFTA Awards -- Best Leading Actor -- winner	(0.87)</li>
+      <li> National Society of Film Critics Awards, USA -- Best Actor -- winner (0.71)</li>
+      </div>
+      <div class="3u 12u$(small)">
+      <script>
+         (function(d, s, id){
+         	var js,
+         	fjs = d.getElementsByTagName(s)[0],
+         	p = (('https:' == d.location.protocol) ? 'https://' : 'http://'),
+         	r = Math.floor(new Date().getTime() / 1000000);
+         	if (d.getElementById(id)) {return;}
+         	js = d.createElement(s); js.id = id; js.async=1;
+         	js.src = p + "www.opinionstage.com/assets/loader.js?" + r;
+         	fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'os-widget-jssdk'));
+      </script>
+      <div id="2422710" class="os_poll" data-path="/polls/2422710"></div>
+      </div>
+      </section>
+
+      <section id="actress1">
+      <h3> Best Performance by an Actress in a Leading Role: </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0001376/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNTgzMzI3NTEzOV5BMl5BanBnXkFtZTcwMDMxNjM4Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt3716530/">Isabelle Huppert <br>(Elle)</a></h5>
+      <p>Chance: 41.11%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm1940449/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxMjMyMTEzN15BMl5BanBnXkFtZTgwMTI1OTI5ODE@._V1_UY317_CR131,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4669986/">Ruth Negga <br> 
+      (Loving)</a></h5>
+      <p>Chance: 3.46%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000204/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3ODE3Mjg1NV5BMl5BanBnXkFtZTcwNzA4ODcxNA@@._V1_UY317_CR11,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt1619029/">Natalie Portman <br>
+      (Jackie)</a></h5>
+      <p>Chance: 4.79%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm1297015/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjI4NjM1NDkyN15BMl5BanBnXkFtZTgwODgyNTY1MjE@._V1.._UX214_CR0,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt3783958/">Emma Stone <br>(La La Land)</a></h5>
+      <p>Chance: 33.39%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000658/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU4Mjk5MDExOF5BMl5BanBnXkFtZTcwOTU1MTMyMw@@._V1_UY317_CR6,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4136084/">Meryl Streep <br> 
+      (Florence Foster Jenkins)</a></h5>
+      <p>Chance: 17.24%</p>
+      </span>
+      </div>
+      </div>
+      <h5>Strong Signals:</h5>
+      <li>Golden Globes, USA -- Best Performance by an Actress in a Motion Picture - Drama -- winner (1.74)</li>
+      <li>BAFTA Awards -- Best Leading Actress -- winner (1.23)</li>
+      <li>Screen Actors Guild Awards -- Outstanding Performance by a Female Actor in a Leading Role -- winner (1.17)</li>
+      <li>BAFTA Awards -- Best Performance by an Actress in a Leading Role -- winner (0.76)</li>
+      <li>Broadcast Film Critics Association Awards -- Best Actress -- winner (0.65)</li>
+      </div>
+      <div class="3u 12u$(small)">
+<script>
+  (function(d, s, id){
+    var js,
+        fjs = d.getElementsByTagName(s)[0],
+        p = (('https:' == d.location.protocol) ? 'https://' : 'http://'),
+        r = Math.floor(new Date().getTime() / 1000000);
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id; js.async=1;
+    js.src = p + "www.opinionstage.com/assets/loader.js?" + r;
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'os-widget-jssdk'));
+</script>
+<div id="2422712" class="os_poll" data-path="/polls/2422712"></div>
+      </div>
+      </section>
+
+     <section id="actor2">
+      <h3> Best Performance by an Actor in a Supporting Role: </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0991810/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNDg4OTczODE5Nl5BMl5BanBnXkFtZTcwMjgwMjA0Mg@@._V1_UY317_CR32,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4975722/">Mahershala Ali <br>(Moonlight)</a></h5>
+      <p>Chance: 61.98%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000313/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNTU1NjM4MDYzMl5BMl5BanBnXkFtZTcwMjIwMjMyMw@@._V1_UY317_CR11,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt2582782/">Jeff Bridges <br> 
+      (Hell or High Water)</a></h5>
+      <p>Chance: 5.55%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm2348627/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTY4NGE4MzAtZGMzNS00OTExLWI0NzctM2VmN2EwNTllOGJkL2ltYWdlXkEyXkFqcGdeQXVyMjI5MDI1Ng@@._V1_UY317_CR51,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4034228/">Lucas Hedges <br>
+      (Manchester by the Sea)</a></h5>
+      <p>Chance: 6.30%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm2353862/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjgxMjQwNDc5Nl5BMl5BanBnXkFtZTgwODI5Njk2NDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt3741834/">Dev Patel <br>(Lion)</a></h5>
+      <p>Chance: 8.85%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0788335/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTQzODk4MjU1NV5BMl5BanBnXkFtZTcwMDYwNjQzMg@@._V1_UY317_CR1,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4550098/">Michael Shannon <br> 
+      (Nocturnal Animals)</a></h5>
+      <p>Chance: 17.32%</p>
+      </span>
+      </div>
+      </div>
+      <h5>Strong Signals:</h5>
+<li>Golden Globes, USA -- Best Performance by an Actor in a Supporting Role in a Motion Picture -- winner (1.37) </li>
+<li>BAFTA Awards -- Best Supporting Actor -- winner (0.89) </li>
+<li>Screen Actors Guild Awards -- Outstanding Performance by a Male Actor in a Supporting Role -- winner (0.79) </li>
+<li>National Society of Film Critics Awards, USA -- Best Supporting Actor -- nominee (0.77) </li>
+<li>Los Angeles Film Critics Association Awards -- Best Supporting Actor -- nominee (0.73) </li>
+      </div>
+      <div class="3u 12u$(small)">
+<script>
+  (function(d, s, id){
+    var js,
+        fjs = d.getElementsByTagName(s)[0],
+        p = (('https:' == d.location.protocol) ? 'https://' : 'http://'),
+        r = Math.floor(new Date().getTime() / 1000000);
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id; js.async=1;
+    js.src = p + "www.opinionstage.com/assets/loader.js?" + r;
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'os-widget-jssdk'));
+</script>
+<div id="2422714" class="os_poll" data-path="/polls/2422714"></div>
+      </div>
+      </section>
+
+     <section id="actress2">
+      <h3> Best Performance by an Actress in a Supporting Role: </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0205626/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNjYwMzI0NDY4OF5BMl5BanBnXkFtZTgwOTU4MDk1NjE@._V1_UY317_CR8,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt2671706/">Viola Davis <br>(Fences)</a></h5>
+      <p>Chance: 78.69%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0365140/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTUyMDU1MTU2N15BMl5BanBnXkFtZTgwODkyNzQ3MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4975722/">Naomie Harris <br> 
+      (Moonlight)</a></h5>
+      <p>Chance: 2.74%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000173/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTk1MjM5NDg4MF5BMl5BanBnXkFtZTcwNDg1OTQ4Nw@@._V1_UY317_CR10,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt3741834/">Nicole Kidman <br>
+      (Lion)</a></h5>
+      <p>Chance: 9.35%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0818055/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTg0MjcwMjcxNl5BMl5BanBnXkFtZTcwMjkwODg0Ng@@._V1_UY317_CR11,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4846340/">Octavia Spencer <br>(Hidden Figures)</a></h5>
+      <p>Chance: 4.26%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0931329/" class="image">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTYxNTQ2NTk3MV5BMl5BanBnXkFtZTcwNjExNDQzNA@@._V1_UY317_CR1,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4034228/">Michelle Williams <br> 
+      (Manchester by the Sea)</a></h5>
+      <p>Chance: 4.97%</p>
+      </span>
+      </div>
+      </div>
+      <h5>Strong Signals:</h5>
+      <li>Screen Actors Guild Awards -- Outstanding Performance by a Female Actor in a Supporting Role -- winner (1.83)</li>
+      <li>BAFTA Awards -- Best Supporting Actress -- winner (1.16)</li>
+      <li>Broadcast Film Critics Association Awards -- Best Supporting Actress -- winner (0.88)</li>
+      <li>Washington DC Area Film Critics Association Awards -- Best Supporting Actress -- winner (0.84)</li>
+      <li>BAFTA Awards -- Best Performance by an Actress in a Supporting Role -- winner (0.72)</li>
+      </div>
+      <div class="3u 12u$(small)">
+<script>
+  (function(d, s, id){
+    var js,
+        fjs = d.getElementsByTagName(s)[0],
+        p = (('https:' == d.location.protocol) ? 'https://' : 'http://'),
+        r = Math.floor(new Date().getTime() / 1000000);
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id; js.async=1;
+    js.src = p + "www.opinionstage.com/assets/loader.js?" + r;
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'os-widget-jssdk'));
+</script>
+<div id="2422715" class="os_poll" data-path="/polls/2422715"></div>
+      </div>
+      </section>
+
+     <section id="writer1">
+      <h3> Best Original Screenplay: </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt2582782/"> Taylor Sheridan (Hell or High Water)</a></b> &nbspChance: 19.04%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3783958/"> Damien Chazelle (La La Land)</a></b> &nbsp Chance: 29.57%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3464902/"> Yorgos Lanthimos, Efthymis Filippou (The Lobster)</a></b> &nbsp Chance: 13.09%</li>
+      <li><b><a href="http://www.imdb.com/title/tt4034228/"> Kenneth Lonergan (Manchester by the Sea) </a></b> &nbsp Chance: 35.08%</li>
+      <li><b><a href="http://www.imdb.com/title/tt4385888/"> Mike Mills (20th Century Women) </a></b> &nbsp Chance: 3.21%</li>
+      <br>
+            <h5>Strong Signals:</h5>
+      <li>Writers Guild of America, USA -- Best Original Screenplay -- winner (0.83) </li>
+<li>BAFTA Awards -- Best Screenplay - Original -- winner (0.66) </li>
+<li>Broadcast Film Critics Association Awards -- Best Original Screenplay -- winner (0.66) </li>
+<li>Golden Globes, USA -- Best Screenplay - Motion Picture -- winner (0.59) </li>
+      </div>
+      <div class="3u 12u$(small)">
+<script>
+  (function(d, s, id){
+    var js,
+        fjs = d.getElementsByTagName(s)[0],
+        p = (('https:' == d.location.protocol) ? 'https://' : 'http://'),
+        r = Math.floor(new Date().getTime() / 1000000);
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id; js.async=1;
+    js.src = p + "www.opinionstage.com/assets/loader.js?" + r;
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'os-widget-jssdk'));
+</script>
+<div id="2422717" class="os_poll" data-path="/polls/2422717"></div>
+      </div>
+            </div>
+      </section>
+
+      <section id="writer2">
+      <h3> Best Adapted Screenplay: </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt4975722/"> Barry Jenkins, Tarell Alvin McCraney (Moonlight)</a></b> &nbsp Chance: 27.55%</li>
+      <li><b><a href="http://www.imdb.com/title/tt2543164/"> Eric Heisserer (Arrival) </a></b> &nbsp Chance: 2.64%</li>
+      <li><b><a href="http://www.imdb.com/title/tt2671706/"> August Wilson (Fences) </a></b> &nbsp Chance: 31.26%</li>
+      <li><b><a href="http://www.imdb.com/title/tt4846340/"> Allison Schroeder, Theodore Melfi (Hidden Figures) </a></b> &nbsp Chance: 30.04%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3741834/"> Luke Davies (Lion) </a></b> &nbsp Chance: 8.51%</li>
+      <br>
+      <h5>Strong Signals:</h5>
+      <li>Writers Guild of America, USA -- Best Adapted Screenplay -- winner (0.71) </li>
+<li>Screen Actors Guild Awards -- Outstanding Performance by a Cast in a Motion Picture -- nominee (0.64) </li>
+<li>Boston Society of Film Critics Awards -- Best Film -- winner (0.54) </li>
+<li>Broadcast Film Critics Association Awards -- Best Acting Ensemble -- nominee (0.51) </li>
+      </div>
+      <div class="3u 12u$(small)">
+<script>
+  (function(d, s, id){
+    var js,
+        fjs = d.getElementsByTagName(s)[0],
+        p = (('https:' == d.location.protocol) ? 'https://' : 'http://'),
+        r = Math.floor(new Date().getTime() / 1000000);
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id; js.async=1;
+    js.src = p + "www.opinionstage.com/assets/loader.js?" + r;
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'os-widget-jssdk'));
+</script>
+<div id="2422718" class="os_poll" data-path="/polls/2422718"></div>
+      </div>
+            </div>
+      </section>
+
+            <section id="music1">
+      <h3> Best Achievement in Music Written for Motion Pictures (Original Song)</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt3783958/"> "Audition (The Fools Who Dream)" (La La Land)</a></b> &nbsp Chance: 16.84%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3783958/"> "City of Stars" (La La Land) </a></b> &nbsp Chance:  31.25%</li>
+      <li><b><a href="http://www.imdb.com/title/tt1679335/"> "Can't Stop the Feeling" (Trolls) </a></b> &nbsp Chance:  16.84%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5278466/"> "The Empty Chair" (Jim: The James Foley Story) </a></b> &nbsp Chance:  18.23%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3521164/"> "How Far I'll Go" (Moana)</a></b> &nbsp Chance:  16.84%</li>
+      <br>
+      <h5>Strong Signals:</h5>
+<li>Broadcast Film Critics Association Awards -- Best Song -- winner (0.84) </li>
+<li>Golden Globes, USA -- Best Original Song - Motion Picture -- nominee (0.67) </li>
+<li>Golden Globes, USA -- Best Original Song - Motion Picture -- winner (0.5) </li>  
+      </div>
+      <div class="3u 12u$(small)">
+<script>
+  (function(d, s, id){
+    var js,
+        fjs = d.getElementsByTagName(s)[0],
+        p = (('https:' == d.location.protocol) ? 'https://' : 'http://'),
+        r = Math.floor(new Date().getTime() / 1000000);
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id; js.async=1;
+    js.src = p + "www.opinionstage.com/assets/loader.js?" + r;
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'os-widget-jssdk'));
+</script>
+<div id="2422719" class="os_poll" data-path="/polls/2422719"></div>
+
+      </div>
+            </div>
+      </section>
+
+      <section id="music2">
+      <h3> Best Achievement in Music Written for Motion Pictures (Original Score) </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt1619029/"> Mica Levi (Jackie) </a></b> &nbsp Chance:  6.23%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3783958/"> Justin Hurwitz (La La Land) </a></b> &nbsp Chance:  53.29%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3741834/"> Dustin O'Halloran, Volker Bertelmann (Lion) </a></b> &nbsp Chance:  10.42%</li>
+      <li><b><a href="http://www.imdb.com/title/tt4975722/"> Nicholas Britell (Moonlight) </a></b> &nbsp Chance:  18.26%</li>
+      <li><b><a href="http://www.imdb.com/title/tt1355644/"> Thomas Newman (Passengers) </a></b> &nbsp Chance:  11.81%</li>
+      <br>
+      <h5>Strong Signals:</h5>
+      <li>Golden Globes, USA -- Best Original Score - Motion Picture -- winner (1.08) </li>
+<li>Golden Globes, USA -- Best Director - Motion Picture -- nominee (0.51) </li>
+<li>Broadcast Film Critics Association Awards -- Best Score -- winner (0.5) </li>
+      </div>
+      <div class="3u 12u$(small)">
+<script>
+  (function(d, s, id){
+    var js,
+        fjs = d.getElementsByTagName(s)[0],
+        p = (('https:' == d.location.protocol) ? 'https://' : 'http://'),
+        r = Math.floor(new Date().getTime() / 1000000);
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id; js.async=1;
+    js.src = p + "www.opinionstage.com/assets/loader.js?" + r;
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'os-widget-jssdk'));
+</script>
+<div id="2422720" class="os_poll" data-path="/polls/2422720"></div>
+
+      </div>
+      </div>
+      </section>
+
+      <section id="cinematography">
+      <h3> Best Achievement in Cinematography </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt2543164/"> Bradford Young (Arrival) </a></b> &nbsp Chance:  27.52%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3783958/"> Linus Sandgren (La La Land) </a></b> &nbsp Chance:  35.17%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3741834/"> Greig Fraser (Lion) </a></b> &nbsp Chance:  23.03%</li>
+      <li><b><a href="http://www.imdb.com/title/tt4975722/"> James Laxton (Moonlight) </a></b> &nbsp Chance:  6.00%</li>
+      <li><b><a href="http://www.imdb.com/title/tt0490215/"> Rodrigo Prieto (Silence) </a></b> &nbsp Chance:  8.28%</li>
+      <br>
+      <h5>Strong Signals:</h5>
+      <li>Broadcast Film Critics Association Awards -- Best Composer -- winner (0.54) </li>
+<li>Los Angeles Film Critics Association Awards -- Best Production Design -- winner (0.5) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="film">
+      <h3> Best Achievement in Film Editing </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt3783958/"> Tom Cross (La La Land) </a></b> &nbsp Chance:  43.29%</li>
+      <li><b><a href="http://www.imdb.com/title/tt2119532/"> John Gilbert (Hacksaw Ridge) </a></b> &nbsp Chance:  11.16%</li>
+      <li><b><a href="http://www.imdb.com/title/tt4975722/"> Joi McMillon, Nat Sanders (Moonlight) </a></b> &nbsp Chance:  1.82%</li>
+      <li><b><a href="http://www.imdb.com/title/tt2543164/"> Joe Walker (Arrival) </a></b> &nbsp Chance:  40.05%</li>
+      <li><b><a href="http://www.imdb.com/title/tt2582782/"> Jake Roberts (Hell or High Water) </a></b> &nbsp Chance:  3.68%</li>
+      <br>
+      <h5>Strong Signals:</h5>
+      <li>American Cinema Editors, USA -- Best Edited Feature Film - Dramatic -- winner (0.74) </li>
+<li>Broadcast Film Critics Association Awards -- Best Director -- winner (0.74) </li>
+<li>BAFTA Awards -- Best Editing -- winner (0.69) </li>
+<li>BAFTA Awards -- Best Sound -- winner (0.59) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="visual">
+      <h3> Best Achievement in Visual Effects </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt1860357/"> Craig Hammack, Jason H. Snell, Jason Billington, Burt Dalton (Deepwater Horizon) </a></b> &nbsp Chance: 36.53%
+ &nbsp </li>
+      <li><b><a href="http://www.imdb.com/title/tt1211837/"> Stephane Ceretti, Richard Bluff, Vincent Cirelli, Paul Corbould (Doctor Strange) </a></b> &nbsp Chance: 3.35%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3040964/"> Robert Legato, Adam Valdez, Andrew R. Jones, Dan Lemmon (The Jungle Book) </a></b> &nbsp Chance: 10.84%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4302938/"> Steve Emerson, Oliver Jones, Brian McLean, Brad Schiff (Kubo and the Two Strings) </a></b> &nbsp Chance: 36.40%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3748528/"> John Knoll, Mohen Leo, Hal T. Hickel, Neil Corbould (Rogue One) </a></b> &nbsp Chance: 12.88%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>BAFTA Awards -- Best Special Visual Effects -- winner (0.85) </li>
+<li>Visual Effects Society Awards -- Outstanding Created Environment in a Live Action Motion Picture -- winner (0.54) </li>
+<li>BAFTA Awards -- Best Achievement in Special Visual Effects -- winner (0.52) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="sound1">
+      <h3> Best Achievement in Sound Mixing </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt2543164/"> Bernard Gariépy Strobl, Claude La Haye (Arrival) </a></b> &nbsp Chance: 31.03%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt2119532/"> Kevin O'Connell, Andy Wright, Robert Mackenzie, Peter Grace (Hacksaw Ridge) </a></b> &nbsp Chance: 8.82%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3783958/"> Andy Nelson, Ai-Ling Lee, Steven Morrow (La La Land) </a></b> &nbsp Chance: 41.56%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3748528/"> David Parker, Christopher Scarabosio, Stuart Wilson (Rogue One) </a></b> &nbsp Chance: 6.30%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4172430/"> Greg P. Russell, Gary Summers, Jeffrey J. Haboush, Mac Ruth (13 Hours) </a></b> &nbsp Chance: 12.29%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>BAFTA Awards -- Best Sound -- winner (1.08) </li>
+<li>BAFTA Awards -- Best Editing -- winner (0.57) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="sound2">
+      <h3> Best Achievement in Sound Editing </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt2543164/"> Sylvain Bellemare (Arrival) </a></b> &nbsp Chance: 23.16%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt1860357/"> Wylie Stateman, Renee Tondelli (Deepwater Horizon) </a></b> &nbsp Chance: 11.98%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt2119532/"> Robert Mackenzie, Andy Wright (Hacksaw Ridge) </a></b> &nbsp Chance: 19.39%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3783958/"> Ai-Ling Lee, Mildred Iatrou (La La Land) </a></b> &nbsp Chance: 40.89%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3263904/"> Alan Robert Murray, Bub Asman (Sully) </a></b> &nbsp Chance: 4.59%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>BAFTA Awards -- Best Sound -- winner (0.58) </li>
+<li>National Society of Film Critics Awards, USA -- Best Cinematography -- nominee (0.54) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="costume">
+      <h3> Best Achievement in Costume Design </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt3640424/"> Joanna Johnston (Allied) </a></b> &nbsp Chance: 10.61%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3183660/"> Colleen Atwood (Fantastic Beasts and Where to Find Them) </a></b> &nbsp Chance: 17.04%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4136084/"> Consolata Boyle (Florence Foster Jenkins) </a></b> &nbsp Chance: 12.98%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt1619029/"> Madeline Fontaine (Jackie) </a></b> &nbsp Chance: 34.56%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3783958/"> Mary Zophres (La La Land) </a></b> &nbsp Chance: 24.81%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>BAFTA Awards -- Best Costume Design -- winner (1.03) </li>
+<li>Broadcast Film Critics Association Awards -- Best Costume Design -- winner (0.74) </li>
+<li>BAFTA Awards -- Best Production Design -- nominee (0.59) </li>
+<li>Washington DC Area Film Critics Association Awards -- Best Art Direction -- nominee (0.57) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="makeup">
+      <h3> Best Achievement in Makeup and Hairstyling</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt4080728/"> Eva Von Bahr, Love Larson (A Man Called Ove) </a></b> &nbsp Chance: 33.98%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt2660888/"> Joel Harlow, Richard Alonzo (Star Trek Beyond) </a></b> &nbsp Chance: 30.54%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt1386697/"> Alessandro Bertolazzi, Giorgio Gregorini, Christopher Allen Nelson (Suicide Squad) </a></b> &nbsp Chance: 35.48%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>Broadcast Film Critics Association Awards -- Best Young Actress -- nominee (0.61) </li>
+<li>Screen Actors Guild Awards -- Outstanding Performance by a Cast in a Motion Picture -- nominee (0.51) </li>
+<li>Broadcast Film Critics Association Awards -- Best Family Film (Live Action) -- nominee (0.51) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="production">
+      <h3> Best Achievement in Production Design</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt2543164/"> Arrival </a></b> &nbsp Chance: 3.92%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3183660/"> Fantastic Beasts and Where to Find Them </a></b> &nbsp Chance: 33.50%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt0475290/"> Hail, Caesar! </a></b> &nbsp Chance: 20.83%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3783958/"> La La Land </a></b> &nbsp Chance: 19.39%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt1355644/"> Passengers </a></b> &nbsp Chance: 22.36%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>Washington DC Area Film Critics Association Awards -- Best Art Direction -- winner (0.67) </li>
+<li>American Cinema Editors, USA -- Best Edited Feature Film - Comedy or Musical -- winner (0.55) </li>
+<li>BAFTA Awards -- Best Production Design -- winner (0.54) </li>
+<li>Los Angeles Film Critics Association Awards -- Best Production Design -- nominee (0.52) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="foreign">
+      <h3> Best Foreign Language Film of the Year</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt4080728/"> A Man Called Ove (Sweden) </a></b> &nbsp Chance: 12.98%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5186714/"> The Salesman (Iran) </a></b> &nbsp Chance: 10.53%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4239726/"> Tanna (Australia) </a></b> &nbsp Chance: 12.98%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4048272/"> Toni Erdmann (Germany) </a></b> &nbsp Chance: 55.13%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3841424/"> Land of Mine (Denmark) </a></b> &nbsp Chance: 8.37%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>Los Angeles Film Critics Association Awards -- Best Foreign Film -- winner (0.79) </li>
+<li>Los Angeles Film Critics Association Awards -- Best Foreign Film -- nominee (0.71) </li>
+<li>Golden Globes, USA -- Best Foreign Language Film -- nominee (0.69) </li>
+<li>Broadcast Film Critics Association Awards -- Best Foreign-Language Film -- winner (0.64) </li>
+<li>British Independent Film Awards -- Best International Independent Film -- nominee (0.58) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="animation">
+      <h3> Best Animated Feature Film of the Year</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt4302938/"> Kubo and the Two Strings </a></b> &nbsp Chance: 22.25%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3521164/"> Moana </a></b> &nbsp Chance: 25.39%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt2321405/"> My Life as a Zucchini </a></b> &nbsp Chance: 10.40%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3666024/"> The Red Turtle </a></b> &nbsp Chance: 7.61%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt2948356/"> Zootopia </a></b> &nbsp Chance: 34.35%
+ &nbsp</li>
+ <br>
+ <h5>Strong Signals:</h5>
+ <li>Broadcast Film Critics Association Awards -- Best Animated Feature -- winner (0.84) </li>
+<li>BAFTA Awards -- Best Animated Film -- winner (0.71) </li>
+<li>Washington DC Area Film Critics Association Awards -- Best Animated Feature -- winner (0.63) </li>
+<li>Visual Effects Society Awards -- Outstanding Created Environment in an Animated Feature Motion Picture -- winner (0.59) </li>
+<li>Visual Effects Society Awards -- Outstanding Animated Character in an Animated Feature Motion Picture -- winner (0.57) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+
+      <section id="documentary">
+      <h3> Best Documentary Feature</h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt3652526/"> Fire at Sea </a></b> &nbsp Chance: 7.97%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5804038/"> I Am Not Your Negro </a></b> &nbsp Chance: 7.08%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3917210/"> Life, Animated </a></b> &nbsp Chance: 8.76%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5275892/"> O.J.: Made in America </a></b> &nbsp Chance: 68.01%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5895028/"> 13th </a></b> &nbsp Chance: 8.19%
+ &nbsp</li>
+      <br>
+      <h5>Strong Signals:</h5>
+      <li>National Board of Review, USA -- Best Documentary -- winner (0.95) </li>
+<li>National Board of Review, USA -- Best Documentary -- nominee (0.95) </li>
+<li>Broadcast Film Critics Association Awards -- Best Documentary Feature -- nominee (0.79) </li>
+<li>Broadcast Film Critics Association Awards -- Best Documentary Feature -- winner (0.65) </li>
+<li>American Cinema Editors, USA -- Best Edited Documentary - Feature -- winner (0.63) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      </div>
+      </div>
+ 
+<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="../index.html#banner">Homepage</a></li>
+						<li><a href="../index.html#news">Latest News</a></li>
+						<li><a href="../index.html#research">Research & Service</a></li>
+						<li><a href="../index.html#misc">Misc.</a></li>
+					</ul>
+				</nav>
+
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Contact</h2>
+					</header>
+
+					<ul class="contact">
+						<li class="fa-envelope-o"> mengting.wan at gmail.com </li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/skel.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+	
+	<!-- Start of StatCounter Code for Default Guide -->
+	<script type="text/javascript">
+		var sc_project=11132224; 
+		var sc_invisible=1; 
+		var sc_security="d310e9da"; 
+		var scJsHost = (("https:" == document.location.protocol) ?
+			"https://secure." : "http://www.");
+		document.write("<sc"+"ript type='text/javascript' src='" +
+			scJsHost+
+			"statcounter.com/counter/counter.js'></"+"script>");
+	</script>
+	<noscript>
+		<div class="statcounter"><a title="shopify
+			analytics" href="http://statcounter.com/shopify/"
+			target="_blank"><img class="statcounter"
+			src="//c.statcounter.com/11132224/0/d310e9da/1/"
+			alt="shopify analytics"></a>
+		</div>
+	</noscript>
+   </body>
+</html>
