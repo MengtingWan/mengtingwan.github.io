@@ -2606,8 +2606,10 @@
 			-webkit-transition: -webkit-transform 0.2s ease;
 			-ms-transition: -ms-transform 0.2s ease;
 			transition: transform 0.2s ease;
-			margin: 0 0 2em 0;
+			object-fit: cover;
+			margin: 0 0 1em 0;
 			width: 100%;
+			min-height: 20vh;
 		}
 
 		a.image:hover img {
