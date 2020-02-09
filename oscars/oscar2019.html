@@ -1,832 +1,977 @@
 <!DOCTYPE HTML>
 <html>
-   <head>
-      <title>Who Will Win at the Academy Awards, 2019?</title>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-      <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
-      <link rel="stylesheet" href="../assets/css/main.css" />
-      <!--[if lte IE 9]>
+
+<head>
+   <title>Who Will Win at the Academy Awards, 2019?</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+   <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+   <link rel="stylesheet" href="../assets/css/main.css" />
+   <!--[if lte IE 9]>
       <link rel="stylesheet" href="../assets/css/ie9.css" />
       <![endif]-->
-      <!--[if lte IE 8]>
+   <!--[if lte IE 8]>
       <link rel="stylesheet" href="../assets/css/ie8.css" />
       <![endif]-->
-   </head>
-   <body>
-      <!-- Wrapper -->
-      <div id="wrapper">
+</head>
+
+<body>
+   <!-- Wrapper -->
+   <div id="wrapper">
       <!-- Main -->
       <div id="main">
-      <div class="inner">
-      <!-- Header -->
-      <header id="header">
-         <h2>Who Will Win at the Academy Awards, 2019? </h2>
-      </header>
-      <!-- <a href="oscar2019.html"> English </a> / <a href="oscar2019_cn.html"> 中文版 </a> <br><br> -->
-      Similar to the previous two years (<a href="oscar2017.html">2017</a>, <a href="oscar2018.html">2018</a>), I trained a classifier to predict the winners at this year's academy awards. A couple of <a href="https://github.com/MengtingWan/oscar/blob/master/data/award_code.csv">pre-Oscar awards</a> were included as features. A brief summary of the results are included as below. <br>
-      I've released all the <a href="https://github.com/MengtingWan/oscar/tree/master/data">data</a>, <a href="https://github.com/MengtingWan/oscar">source code</a>, <a href="https://github.com/MengtingWan/oscar/blob/master/results/results_flat.csv">detailed results</a> and <a href="https://github.com/MengtingWan/oscar/blob/master/results/evidence_flat.csv"> associated evidences</a>. Feel free to check out and hope you're having fun in exploring this mini-project.
+         <div class="inner">
+            <!-- Header -->
+            <header id="header">
+               <h2>Who Will Win at the Academy Awards, 2019? </h2>
+            </header>
+            <!-- <a href="oscar2019.html"> English </a> / <a href="oscar2019_cn.html"> 中文版 </a> <br><br> -->
+            Similar to the previous two years (<a href="oscar2017.html">2017</a>, <a href="oscar2018.html">2018</a>), I
+            trained a classifier to predict the winners at this year's academy awards. A couple of <a
+               href="https://github.com/MengtingWan/oscar/blob/master/data/award_code.csv">pre-Oscar awards</a> were
+            included as features. A brief summary of the results are included as below. <br>
+            I've released all <a href="https://github.com/MengtingWan/oscar">source code</a>. Feel free to check out and hope you're having fun in exploring this mini-project.
 
-      <!-- Section -->
-      <section id="picture">
-         <h3> Best Motion Picture of the Year: </h3>
-         <div class="row">
-            <div class="9u 12u$(small)">
+            <!-- Section -->
+            <section id="picture">
+               <h3> Best Motion Picture of the Year: </h3>
                <div class="row">
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/title/tt1517451/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BNmE5ZmE3OGItNTdlNC00YmMxLWEzNjctYzAwOGQ5ODg0OTI0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/title/tt1517451/">A Star Is Born</a></h5>
-                        <p>Chance: 3.42%</p>
-                     </span>
-                  </div>
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/title/tt7349662/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMjUyOTE1NjI0OF5BMl5BanBnXkFtZTgwMTM4ODQ5NTM@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/title/tt7349662/">BlacKkKlansman</a></h5>
-                        <p>Chance: 7.33%</p>
-                     </span>
-                  </div>
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/title/tt1825683/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/title/tt1825683/">Black Panther</a></h5>
-                        <p>Chance: 2.22%</p>
-                     </span>
-                  </div>
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/title/tt1727824/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BNDg2NjIxMDUyNF5BMl5BanBnXkFtZTgwMzEzNTE1NTM@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/title/tt1727824/">Bohemian Rhapsody</a></h5>
-                        <p>Chance: 1.47%</p>
-                     </span>
-                  </div>
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/title/tt6966692/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BYzIzYmJlYTYtNGNiYy00N2EwLTk4ZjItMGYyZTJiOTVkM2RlXkEyXkFqcGdeQXVyODY1NDk1NjE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/title/tt6966692/">Green Book</a></h5>
-                        <p>Chance: 0.05%</p>
-                     </span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/title/tt6155172/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTU0OTc3ODk4Ml5BMl5BanBnXkFtZTgwMzM4NzI5NjM@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/title/tt6155172/">Roma</a></h5>
-                        <p>Chance: 55.39%</p>
-                     </span>
-                  </div>
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/title/tt5083738/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTg1NzQwMDQxNV5BMl5BanBnXkFtZTgwNDg2NDYyNjM@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/title/tt5083738/">The Favourite</a></h5>
-                        <p>Chance: 18.31%</p>
-                     </span>
-                  </div>
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/title/tt6266538/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTY1NjM0MzgxMV5BMl5BanBnXkFtZTgwNDc4NTY0NjM@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/title/tt6266538/">Vice</a></h5>
-                        <p>Chance: 11.36%</p>
-                     </span>
+                  <div class="9u 12u$(small)">
+                     <div class="row">
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/title/tt1517451/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BNmE5ZmE3OGItNTdlNC00YmMxLWEzNjctYzAwOGQ5ODg0OTI0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/title/tt1517451/">A Star Is Born</a></h5>
+                              <p>Chance: 3.42%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/title/tt7349662/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMjUyOTE1NjI0OF5BMl5BanBnXkFtZTgwMTM4ODQ5NTM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/title/tt7349662/">BlacKkKlansman</a></h5>
+                              <p>Chance: 7.33%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/title/tt1825683/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/title/tt1825683/">Black Panther</a></h5>
+                              <p>Chance: 2.22%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/title/tt1727824/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BNDg2NjIxMDUyNF5BMl5BanBnXkFtZTgwMzEzNTE1NTM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/title/tt1727824/">Bohemian Rhapsody</a></h5>
+                              <p>Chance: 1.47%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/title/tt6966692/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BYzIzYmJlYTYtNGNiYy00N2EwLTk4ZjItMGYyZTJiOTVkM2RlXkEyXkFqcGdeQXVyODY1NDk1NjE@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/title/tt6966692/">Green Book</a></h5>
+                              <p>Chance: 0.05%</p>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/title/tt6155172/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTU0OTc3ODk4Ml5BMl5BanBnXkFtZTgwMzM4NzI5NjM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/title/tt6155172/">Roma</a></h5>
+                              <p>Chance: 55.39%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/title/tt5083738/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTg1NzQwMDQxNV5BMl5BanBnXkFtZTgwNDg2NDYyNjM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/title/tt5083738/">The Favourite</a></h5>
+                              <p>Chance: 18.31%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/title/tt6266538/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTY1NjM0MzgxMV5BMl5BanBnXkFtZTgwNDc4NTY0NjM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/title/tt6266538/">Vice</a></h5>
+                              <p>Chance: 11.36%</p>
+                           </span>
+                        </div>
+                     </div>
+                     <h5> Strong Signals:</h5>
+                     <li> Directors Guild of America, USA (DGA) -- outstanding directorial, motion pictures -- winner
+                     </li>
+                     <li> Critics’ Choice Awards (CCA) -- best motion picture -- winner </li>
                   </div>
                </div>
-               <h5> Strong Signals:</h5>
-               <li> Directors Guild of America, USA (DGA) -- outstanding directorial, motion pictures -- winner </li>
-               <li> Critics’ Choice Awards (CCA) -- best motion picture -- winner </li>
-            </div>
-         </div>
-      </section>
-      <section id="director">
-         <h3> Best Achievement in Directing: </h3>
-         <div class="row">
-            <div class="9u 12u$(small)">
+            </section>
+            <section id="director">
+               <h3> Best Achievement in Directing: </h3>
                <div class="row">
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/name/nm0570912/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BZmQ2ZDNkMGYtOWUzNi00N2Q3LTk1MDItODFlNDJkMTZkMjFmXkEyXkFqcGdeQXVyMjMxNzg4Mjk@._V1_UY317_CR11,0,214,317_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/name/nm0570912/">Adam McKay</a><br>
-                           <a href="https://www.imdb.com/title/tt6266538/">(Vice)</a></h5>
-                        <p>Chance: 0.00%</p>
-                     </span>
-                  </div>
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/name/nm0190859/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMjA0ODY4OTk4Nl5BMl5BanBnXkFtZTcwNTkxMzYyMg@@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/name/nm0190859/">Alfonso Cuarón</a> <br> 
-                           <a href="https://www.imdb.com/title/tt6155172/"> (Roma)</a>
-                        </h5>
-                        <p>Chance: 100.00%</p>
-                     </span>
-                  </div>
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/name/nm0667734/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTU5OTQ1NDEzNV5BMl5BanBnXkFtZTgwMDk1OTk4MDE@._V1_UY317_CR12,0,214,317_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/name/nm0667734/">Pawel Pawlikowski</a> <br>
-                           <a href="https://www.imdb.com/title/tt6543652/">(Cold War)</a>
-                        </h5>
-                        <p>Chance: 0.00%</p>
-                     </span>
-                  </div>
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/name/nm0000490/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTgyMTEyNDgxOF5BMl5BanBnXkFtZTcwNTkzMTA3Nw@@._V1_UY317_CR12,0,214,317_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/name/nm0000490/">Spike Lee</a> <br>
-                           <a href="https://www.imdb.com/title/tt7349662/">(BlacKkKlansman)</a></h5>
-                        <p>Chance: 0.00%</p>
-                     </span>
-                  </div>
-                  <div class="2u 8u$(small)" align="center">
-                     <span class="image object">
-                        <a href="https://www.imdb.com/name/nm0487166/" class="image">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMjA3NzAwNjMxN15BMl5BanBnXkFtZTcwMDkyMDQ1NA@@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
-                        </a>
-                        <h5><a href="https://www.imdb.com/name/nm0487166/">Yorgos Lanthimos</a><br> 
-                           <a href="https://www.imdb.com/title/tt5083738/">(The Favourite)</a>
-                        </h5>
-                        <p>Chance: 0.00%</p>
-                     </span>
+                  <div class="9u 12u$(small)">
+                     <div class="row">
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0570912/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BZmQ2ZDNkMGYtOWUzNi00N2Q3LTk1MDItODFlNDJkMTZkMjFmXkEyXkFqcGdeQXVyMjMxNzg4Mjk@._V1_UY317_CR11,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0570912/">Adam McKay</a><br>
+                                 <a href="https://www.imdb.com/title/tt6266538/">(Vice)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0190859/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMjA0ODY4OTk4Nl5BMl5BanBnXkFtZTcwNTkxMzYyMg@@._V1_UX214_CR0,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0190859/">Alfonso Cuarón</a> <br>
+                                 <a href="https://www.imdb.com/title/tt6155172/"> (Roma)</a>
+                              </h5>
+                              <p>Chance: 100.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0667734/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTU5OTQ1NDEzNV5BMl5BanBnXkFtZTgwMDk1OTk4MDE@._V1_UY317_CR12,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0667734/">Pawel Pawlikowski</a> <br>
+                                 <a href="https://www.imdb.com/title/tt6543652/">(Cold War)</a>
+                              </h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0000490/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTgyMTEyNDgxOF5BMl5BanBnXkFtZTcwNTkzMTA3Nw@@._V1_UY317_CR12,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0000490/">Spike Lee</a> <br>
+                                 <a href="https://www.imdb.com/title/tt7349662/">(BlacKkKlansman)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0487166/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMjA3NzAwNjMxN15BMl5BanBnXkFtZTcwMDkyMDQ1NA@@._V1_UX214_CR0,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0487166/">Yorgos Lanthimos</a><br>
+                                 <a href="https://www.imdb.com/title/tt5083738/">(The Favourite)</a>
+                              </h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                     </div>
+                     <h5>Strong Signals:</h5>
+                     <li>Directors Guild of America, USA (DGA) -- outstanding directorial, motion pictures -- winner
+                     </li>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best cinematography -- winner </li>
+                     <li>Critics’ Choice Awards (CCA) -- best directing -- winner </li>
                   </div>
                </div>
-               <h5>Strong Signals:</h5>
-               <li>Directors Guild of America, USA (DGA) -- outstanding directorial, motion pictures -- winner </li>
-               <li>British Academy of Film and Television Arts (BAFTA) -- best cinematography -- winner </li>
-               <li>Critics’ Choice Awards (CCA) -- best directing -- winner </li>
-            </div>
-            </div>
-      </section>
-      <section id="actor1">
-      <h3> Best Performance by an Actor in a Leading Role: </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <div class="row">
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0177896/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjM0OTIyMzY1M15BMl5BanBnXkFtZTgwMTg0OTE0NzE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0177896/">Bradley Cooper </a><br>
-         <a href="https://www.imdb.com/title/tt1517451/">(A Star Is Born)</a></h5>
-      <p>Chance: 0.00%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0000288/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTkxMzk4MjQ4MF5BMl5BanBnXkFtZTcwMzExODQxOA@@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0000288/">Christian Bale </a><br> 
-      <a href="https://www.imdb.com/title/tt6266538/">(Vice)</a></h5>
-      <p>Chance: 0.00%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0000288/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BODEwMjkzNDIzOV5BMl5BanBnXkFtZTgwOTQ4NTU0NzE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0000288/">Rami Malek </a> <br>
-      <a href="https://www.imdb.com/title/tt1727824/">(Bohemian Rhapsody)</a></h5>
-      <p>Chance: 100.00%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0001557/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BNDQzOTg4NzA2Nl5BMl5BanBnXkFtZTcwMzkwNjkxMg@@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0001557/"> Viggo Mortensen </a> <br>
-         <a href="https://www.imdb.com/title/tt6966692/">(Green Book)</a></h5>
-      <p>Chance: 0.00%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0000353/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTcyNjU2MTYyM15BMl5BanBnXkFtZTgwMjY5MDY4NDE@._V1_UY317_CR19,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0000353/">Willem Dafoe </a> <br> 
-      <a href="https://www.imdb.com/title/tt6938828/">(At Eternitys Gate)</a></h5>
-      <p>Chance: 0.00%</p>
-      </span>
-      </div>
-      </div>
-      <h5>Strong Signals:</h5>
-      <li> Screen Actors Guild Awards (SAG) -- outstanding male actor, leading role -- winner </li>
-      <li> British Academy of Film and Television Arts (BAFTA) -- best film -- winner </li>
-      <li> British Academy of Film and Television Arts (BAFTA) -- best leading actor -- winner </li>
-      </div>
-      </div>
-      </section>
+            </section>
+            <section id="actor1">
+               <h3> Best Performance by an Actor in a Leading Role: </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <div class="row">
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0177896/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMjM0OTIyMzY1M15BMl5BanBnXkFtZTgwMTg0OTE0NzE@._V1_UX214_CR0,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0177896/">Bradley Cooper </a><br>
+                                 <a href="https://www.imdb.com/title/tt1517451/">(A Star Is Born)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0000288/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTkxMzk4MjQ4MF5BMl5BanBnXkFtZTcwMzExODQxOA@@._V1_UX214_CR0,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0000288/">Christian Bale </a><br>
+                                 <a href="https://www.imdb.com/title/tt6266538/">(Vice)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0000288/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BODEwMjkzNDIzOV5BMl5BanBnXkFtZTgwOTQ4NTU0NzE@._V1_UX214_CR0,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0000288/">Rami Malek </a> <br>
+                                 <a href="https://www.imdb.com/title/tt1727824/">(Bohemian Rhapsody)</a></h5>
+                              <p>Chance: 100.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0001557/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BNDQzOTg4NzA2Nl5BMl5BanBnXkFtZTcwMzkwNjkxMg@@._V1_UX214_CR0,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0001557/"> Viggo Mortensen </a> <br>
+                                 <a href="https://www.imdb.com/title/tt6966692/">(Green Book)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0000353/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTcyNjU2MTYyM15BMl5BanBnXkFtZTgwMjY5MDY4NDE@._V1_UY317_CR19,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0000353/">Willem Dafoe </a> <br>
+                                 <a href="https://www.imdb.com/title/tt6938828/">(At Eternitys Gate)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                     </div>
+                     <h5>Strong Signals:</h5>
+                     <li> Screen Actors Guild Awards (SAG) -- outstanding male actor, leading role -- winner </li>
+                     <li> British Academy of Film and Television Arts (BAFTA) -- best film -- winner </li>
+                     <li> British Academy of Film and Television Arts (BAFTA) -- best leading actor -- winner </li>
+                  </div>
+               </div>
+            </section>
 
-      <section id="actress1">
-      <h3> Best Performance by an Actress in a Leading Role: </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <div class="row">
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0000335/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTEwNDk5MTU2NTNeQTJeQWpwZ15BbWU3MDczNjEzMTM@._V1_UY317_CR13,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0000335/">Glenn Close </a><br>
-         <a href="https://www.imdb.com/title/tt3750872/">(The Wife)</a></h5>
-      <p>Chance: 86.81%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm3078932/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTg1NjQwMzU4MF5BMl5BanBnXkFtZTgwNTk5NjQ4NjE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm3078932/">Lady Gaga </a><br>
-         <a href="https://www.imdb.com/title/tt1517451/"> (A Star Is Born)</a></h5>
-      <p>Chance: 0.47%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0565250/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTg5NjA3ODkyMl5BMl5BanBnXkFtZTgwNTU4Mzg5NjE@._V1_UY317_CR17,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0565250/">Melissa McCarthy </a><br>
-         <a href="https://www.imdb.com/title/tt4595882/">(Can You Ever Forgive Me)</a></h5>
-      <p>Chance: 0.43%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm1469236/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTk0MDMxOTgzM15BMl5BanBnXkFtZTcwNzAwMDQ0NA@@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm1469236/">Olivia Colman </a><br>
-         <a href="https://www.imdb.com/title/tt5083738/">(The Favourite)</a></h5>
-      <p>Chance: 11.68%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm8611957/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjA2NDY2MTg0N15BMl5BanBnXkFtZTgwNzA5ODkyNjM@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm8611957/">Yalitza Aparicio </a><br>
-         <a href="https://www.imdb.com/title/tt6155172/"> (Roma)</a></h5>
-      <p>Chance: 6.02%</p>
-      </span>
-      </div>
-      </div>
-      <h5>Strong Signals:</h5>
-      <li>Screen Actors Guild Awards (SAG) -- outstanding female actor, leading role -- winner </li>
-      <li>British Academy of Film and Television Arts (BAFTA) -- best leading actress -- winner </li>
-      <li>Golden Globe Awards (GG) -- best actress, motion picture drama -- winner </li>
-      </div>
-      </div>
-      </section>
+            <section id="actress1">
+               <h3> Best Performance by an Actress in a Leading Role: </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <div class="row">
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0000335/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTEwNDk5MTU2NTNeQTJeQWpwZ15BbWU3MDczNjEzMTM@._V1_UY317_CR13,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0000335/">Glenn Close </a><br>
+                                 <a href="https://www.imdb.com/title/tt3750872/">(The Wife)</a></h5>
+                              <p>Chance: 86.81%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm3078932/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTg1NjQwMzU4MF5BMl5BanBnXkFtZTgwNTk5NjQ4NjE@._V1_UX214_CR0,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm3078932/">Lady Gaga </a><br>
+                                 <a href="https://www.imdb.com/title/tt1517451/"> (A Star Is Born)</a></h5>
+                              <p>Chance: 0.47%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0565250/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTg5NjA3ODkyMl5BMl5BanBnXkFtZTgwNTU4Mzg5NjE@._V1_UY317_CR17,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0565250/">Melissa McCarthy </a><br>
+                                 <a href="https://www.imdb.com/title/tt4595882/">(Can You Ever Forgive Me)</a></h5>
+                              <p>Chance: 0.43%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm1469236/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTk0MDMxOTgzM15BMl5BanBnXkFtZTcwNzAwMDQ0NA@@._V1_UX214_CR0,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm1469236/">Olivia Colman </a><br>
+                                 <a href="https://www.imdb.com/title/tt5083738/">(The Favourite)</a></h5>
+                              <p>Chance: 11.68%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm8611957/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMjA2NDY2MTg0N15BMl5BanBnXkFtZTgwNzA5ODkyNjM@._V1_UX214_CR0,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm8611957/">Yalitza Aparicio </a><br>
+                                 <a href="https://www.imdb.com/title/tt6155172/"> (Roma)</a></h5>
+                              <p>Chance: 6.02%</p>
+                           </span>
+                        </div>
+                     </div>
+                     <h5>Strong Signals:</h5>
+                     <li>Screen Actors Guild Awards (SAG) -- outstanding female actor, leading role -- winner </li>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best leading actress -- winner </li>
+                     <li>Golden Globe Awards (GG) -- best actress, motion picture drama -- winner </li>
+                  </div>
+               </div>
+            </section>
 
-     <section id="actor2">
-      <h3> Best Performance by an Actor in a Supporting Role: </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <div class="row">
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm3485845/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BOWViYjUzOWMtMzRkZi00MjNkLTk4M2ItMTVkMDg5MzE2ZDYyXkEyXkFqcGdeQXVyODQwNjM3NDA@._V1_UY317_CR44,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm3485845/">Adam Driver</a><br>
-         <a href="https://www.imdb.com/title/tt7349662/">(BlacKkKlansman)</a></h5>
-      <p>Chance: 0.00%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0991810/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BNDg4OTczODE5Nl5BMl5BanBnXkFtZTcwMjgwMjA0Mg@@._V1_UY317_CR32,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0991810/">Mahershala Ali </a><br>
-         <a href="https://www.imdb.com/title/tt6966692/">(Green Book)</a></h5>
-      <p>Chance: 100.00%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0001290/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTc2NzA1NDk1Ml5BMl5BanBnXkFtZTgwMjk2NTA0NjM@._V1_UY317_CR11,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0001290/">Richard E Grant</a><br>
-         <a href="https://www.imdb.com/title/tt4595882/">(Can You Ever Forgive Me)</a></h5>
-      <p>Chance: 0.00%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0000385/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTU0NTk4NDgzMl5BMl5BanBnXkFtZTYwNjU5Nzc1._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0000385/">Sam Elliott</a><br>
-         <a href="https://www.imdb.com/title/tt1517451/">(A Star Is Born)</a></h5>
-      <p>Chance: 0.00%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0005377/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTc2NTM3MzE5NF5BMl5BanBnXkFtZTcwMjg4NDMwNA@@._V1_UY317_CR4,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0005377/">Sam Rockwell</a><br>
-         <a href="https://www.imdb.com/title/tt6266538/">(Vice)</a></h5>
-      <p>Chance: 0.00%</p>
-      </span>
-      </div>
-      </div>
-      <h5>Strong Signals:</h5>
-<li>Golden Globe Awards (GG) -- best actor supporting role, motion picture -- winner  </li>
-<li>British Academy of Film and Television Arts (BAFTA) -- best supporting actor -- winner  </li>
-<li>Screen Actors Guild Awards (SAG) -- outstanding male actor supporting role -- winner  </li>
-      </div>
-      </div>
-      </section>
+            <section id="actor2">
+               <h3> Best Performance by an Actor in a Supporting Role: </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <div class="row">
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm3485845/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BOWViYjUzOWMtMzRkZi00MjNkLTk4M2ItMTVkMDg5MzE2ZDYyXkEyXkFqcGdeQXVyODQwNjM3NDA@._V1_UY317_CR44,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm3485845/">Adam Driver</a><br>
+                                 <a href="https://www.imdb.com/title/tt7349662/">(BlacKkKlansman)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0991810/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BNDg4OTczODE5Nl5BMl5BanBnXkFtZTcwMjgwMjA0Mg@@._V1_UY317_CR32,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0991810/">Mahershala Ali </a><br>
+                                 <a href="https://www.imdb.com/title/tt6966692/">(Green Book)</a></h5>
+                              <p>Chance: 100.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0001290/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTc2NzA1NDk1Ml5BMl5BanBnXkFtZTgwMjk2NTA0NjM@._V1_UY317_CR11,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0001290/">Richard E Grant</a><br>
+                                 <a href="https://www.imdb.com/title/tt4595882/">(Can You Ever Forgive Me)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0000385/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTU0NTk4NDgzMl5BMl5BanBnXkFtZTYwNjU5Nzc1._V1_UX214_CR0,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0000385/">Sam Elliott</a><br>
+                                 <a href="https://www.imdb.com/title/tt1517451/">(A Star Is Born)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0005377/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTc2NTM3MzE5NF5BMl5BanBnXkFtZTcwMjg4NDMwNA@@._V1_UY317_CR4,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0005377/">Sam Rockwell</a><br>
+                                 <a href="https://www.imdb.com/title/tt6266538/">(Vice)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                     </div>
+                     <h5>Strong Signals:</h5>
+                     <li>Golden Globe Awards (GG) -- best actor supporting role, motion picture -- winner </li>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best supporting actor -- winner </li>
+                     <li>Screen Actors Guild Awards (SAG) -- outstanding male actor supporting role -- winner </li>
+                  </div>
+               </div>
+            </section>
 
-     <section id="actress2">
-      <h3> Best Performance by an Actress in a Supporting Role: </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <div class="row">
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0010736/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTg2NTk2MTgxMV5BMl5BanBnXkFtZTgwNjcxMjAzMTI@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0010736/">Amy Adams</a><br>
-         <a href="https://www.imdb.com/title/tt6266538/">(Vice)</a></h5>
-      <p>Chance: 0.00%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm1297015/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI4NjM1NDkyN15BMl5BanBnXkFtZTgwODgyNTY1MjE@._V1.._UX214_CR0,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm1297015/"> Emma Stone </a><br>
-         <a href="https://www.imdb.com/title/tt5083738/"> (The Favourite)</a></h5>
-      <p>Chance: 0.00%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0211920/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BZTRmY2I4NzUtZTU0NS00ZjlmLThkYTMtOTk2YjE2MjA5MzQyXkEyXkFqcGdeQXVyMjA0MDAwNDY@._V1_UY317_CR20,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0211920/"> Marina de Tavira</a><br>
-         <a href="https://www.imdb.com/title/tt6155172/">(Roma)</a></h5>
-      <p>Chance: 0.00%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0001838/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTQ4MzM1MDAwMV5BMl5BanBnXkFtZTcwNTU4NzQwMw@@._V1_UY317_CR4,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0001838/">Rachel Weisz</a><br>
-         <a href="https://www.imdb.com/title/tt5083738/">(The Favourite)</a></h5>
-      <p>Chance: 0.00%</p>
-      </span>
-      </div>
-      <div class="2u 8u$(small)" align="center">
-      <span class="image object">
-      <a href="https://www.imdb.com/name/nm0005093/" class="image">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTc4MTU4MDc5NF5BMl5BanBnXkFtZTcwNDk5NTE2MQ@@._V1_UY317_CR16,0,214,317_AL_.jpg" alt="" />
-      </a>
-      <h5><a href="https://www.imdb.com/name/nm0005093/">Regina King</a><br>
-         <a href="https://www.imdb.com/title/tt7125860/"> (If Beale Street Could Talk)</a></h5>
-      <p>Chance: 100.00%</p>
-      </span>
-      </div>
-      </div>
-      <h5>Strong Signals:</h5>
-      <li>Screen Actors Guild Awards (SAG) -- outstanding female actor supporting role -- winner </li>
-      <li>British Academy of Film and Television Arts (BAFTA) -- best supporting actress -- winner </li>
-      <li>Critics’ Choice Awards (CCA) -- best supporting actress -- winner </li>
-      </div>
-      </div>
-      </section>
+            <section id="actress2">
+               <h3> Best Performance by an Actress in a Supporting Role: </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <div class="row">
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0010736/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTg2NTk2MTgxMV5BMl5BanBnXkFtZTgwNjcxMjAzMTI@._V1_UX214_CR0,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0010736/">Amy Adams</a><br>
+                                 <a href="https://www.imdb.com/title/tt6266538/">(Vice)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm1297015/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMjI4NjM1NDkyN15BMl5BanBnXkFtZTgwODgyNTY1MjE@._V1.._UX214_CR0,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm1297015/"> Emma Stone </a><br>
+                                 <a href="https://www.imdb.com/title/tt5083738/"> (The Favourite)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0211920/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BZTRmY2I4NzUtZTU0NS00ZjlmLThkYTMtOTk2YjE2MjA5MzQyXkEyXkFqcGdeQXVyMjA0MDAwNDY@._V1_UY317_CR20,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0211920/"> Marina de Tavira</a><br>
+                                 <a href="https://www.imdb.com/title/tt6155172/">(Roma)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0001838/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTQ4MzM1MDAwMV5BMl5BanBnXkFtZTcwNTU4NzQwMw@@._V1_UY317_CR4,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0001838/">Rachel Weisz</a><br>
+                                 <a href="https://www.imdb.com/title/tt5083738/">(The Favourite)</a></h5>
+                              <p>Chance: 0.00%</p>
+                           </span>
+                        </div>
+                        <div class="2u 8u$(small)" align="center">
+                           <span class="image object">
+                              <a href="https://www.imdb.com/name/nm0005093/" class="image">
+                                 <img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTc4MTU4MDc5NF5BMl5BanBnXkFtZTcwNDk5NTE2MQ@@._V1_UY317_CR16,0,214,317_AL_.jpg"
+                                    alt="" />
+                              </a>
+                              <h5><a href="https://www.imdb.com/name/nm0005093/">Regina King</a><br>
+                                 <a href="https://www.imdb.com/title/tt7125860/"> (If Beale Street Could Talk)</a></h5>
+                              <p>Chance: 100.00%</p>
+                           </span>
+                        </div>
+                     </div>
+                     <h5>Strong Signals:</h5>
+                     <li>Screen Actors Guild Awards (SAG) -- outstanding female actor supporting role -- winner </li>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best supporting actress -- winner </li>
+                     <li>Critics’ Choice Awards (CCA) -- best supporting actress -- winner </li>
+                  </div>
+               </div>
+            </section>
 
-     <section id="writer1">
-      <h3> Best Original Screenplay: </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt6053438/"> First Reformed (Paul Schrader)</a></b> &nbspChance: 98.22%</li>
-      <li><b><a href="https://www.imdb.com/title/tt6966692/"> Green Book (Nick Vallelonga)</a></b> &nbsp Chance: 0.78%</li>
-      <li><b><a href="https://www.imdb.com/title/tt6155172/"> Roma (Alfonso Cuarón)</a></b> &nbsp Chance: 0.01%</li>
-      <li><b><a href="https://www.imdb.com/title/tt5083738/"> The Favourite (Deborah Davis) </a></b> &nbsp Chance: 0.78%</li>
-      <li><b><a href="https://www.imdb.com/title/tt6266538/"> Vice (Adam McKay) </a></b> &nbsp Chance: 0.21%</li>
-      <br>
-            <h5>Strong Signals:</h5>
-      <li>Writers Guild of America Awards (WGA) -- best writing original screenplay -- winner </li>
-<li>British Academy of Film and Television Arts (BAFTA) -- best screenplay original -- winner </li>
-<li>Critics’ Choice Awards (CCA) -- best writing original screenplay -- winner </li>
-      </div>
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
+            <section id="writer1">
+               <h3> Best Original Screenplay: </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt6053438/"> First Reformed (Paul Schrader)</a></b>
+                        &nbspChance: 98.22%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6966692/"> Green Book (Nick Vallelonga)</a></b> &nbsp
+                        Chance: 0.78%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6155172/"> Roma (Alfonso Cuarón)</a></b> &nbsp Chance:
+                        0.01%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5083738/"> The Favourite (Deborah Davis) </a></b>
+                        &nbsp Chance: 0.78%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6266538/"> Vice (Adam McKay) </a></b> &nbsp Chance:
+                        0.21%</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>Writers Guild of America Awards (WGA) -- best writing original screenplay -- winner </li>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best screenplay original -- winner </li>
+                     <li>Critics’ Choice Awards (CCA) -- best writing original screenplay -- winner </li>
+                  </div>
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
 
-      <section id="writer2">
-      <h3> Best Adapted Screenplay: </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt1517451/"> A Star Is Born (Eric Roth)</a></b> &nbsp Chance: 21.06%</li>
-      <li><b><a href="https://www.imdb.com/title/tt7349662/"> BlacKkKlansman (Charlie Wachtel) </a></b> &nbsp Chance: 22.14%</li>
-      <li><b><a href="https://www.imdb.com/title/tt4595882/"> Can You Ever Forgive Me (Nicole Holofcener) </a></b> &nbsp Chance: 17.02%</li>
-      <li><b><a href="https://www.imdb.com/title/tt7125860/"> If Beale Street Could Talk (Barry Jenkins) </a></b> &nbsp Chance: 23.85%</li>
-      <li><b><a href="https://www.imdb.com/title/tt6412452/"> The Ballad of Buster Scruggs (Joel Coen) </a></b> &nbsp Chance: 15.93%</li>
-      <br>
-      <h5>Strong Signals:</h5>
-      <li>Critics’ Choice Awards (CCA) -- best directing -- winner </li>
-<li>Golden Globe Awards (GG) -- best motion picture drama -- winner </li>
-<li>Writers Guild of America Awards (WGA) -- best writing adapted screenplay -- winner </li>
-      </div>
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
+            <section id="writer2">
+               <h3> Best Adapted Screenplay: </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt1517451/"> A Star Is Born (Eric Roth)</a></b> &nbsp
+                        Chance: 21.06%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt7349662/"> BlacKkKlansman (Charlie Wachtel) </a></b>
+                        &nbsp Chance: 22.14%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt4595882/"> Can You Ever Forgive Me (Nicole Holofcener)
+                           </a></b> &nbsp Chance: 17.02%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt7125860/"> If Beale Street Could Talk (Barry Jenkins)
+                           </a></b> &nbsp Chance: 23.85%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6412452/"> The Ballad of Buster Scruggs (Joel Coen)
+                           </a></b> &nbsp Chance: 15.93%</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>Critics’ Choice Awards (CCA) -- best directing -- winner </li>
+                     <li>Golden Globe Awards (GG) -- best motion picture drama -- winner </li>
+                     <li>Writers Guild of America Awards (WGA) -- best writing adapted screenplay -- winner </li>
+                  </div>
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
 
             <section id="music1">
-      <h3> Best Achievement in Music Written for Motion Pictures (Original Song)</h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt1517451/"> "Shallow" (A Star Is Born) </a></b> &nbsp Chance: 71.90%</li>
-      <li><b><a href="https://www.imdb.com/title/tt1825683/"> "All the Stars" (Black Panther) </a></b> &nbsp Chance:  2.31%</li>
-      <li><b><a href="https://www.imdb.com/title/tt5028340/"> "The Place Where Lost Things Go" (Mary Poppins Returns) </a></b> &nbsp Chance:  2.50%</li>
-      <li><b><a href="https://www.imdb.com/title/tt7689964/"> "I'll Fight" (RBG) </a></b> &nbsp Chance:  13.06%</li>
-      <li><b><a href="https://www.imdb.com/title/tt6412452/"> "When a Cowboy Trades His Spurs for Wings" (The Ballad of Buster Scruggs)</a></b> &nbsp Chance:  10.22%</li>
-      <br>
-      <h5>Strong Signals:</h5>
-      <li>Golden Globe Awards (GG) -- best original song motion picture -- winner </li>
-<li>Critics’ Choice Awards (CCA) -- best song -- winner </li>
-<li>British Academy of Film and Television Arts (BAFTA) -- best animated film -- winner </li>
-      </div>
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
+               <h3> Best Achievement in Music Written for Motion Pictures (Original Song)</h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt1517451/"> "Shallow" (A Star Is Born) </a></b> &nbsp
+                        Chance: 71.90%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt1825683/"> "All the Stars" (Black Panther) </a></b>
+                        &nbsp Chance: 2.31%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5028340/"> "The Place Where Lost Things Go" (Mary
+                              Poppins Returns) </a></b> &nbsp Chance: 2.50%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt7689964/"> "I'll Fight" (RBG) </a></b> &nbsp Chance:
+                        13.06%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6412452/"> "When a Cowboy Trades His Spurs for Wings"
+                              (The Ballad of Buster Scruggs)</a></b> &nbsp Chance: 10.22%</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>Golden Globe Awards (GG) -- best original song motion picture -- winner </li>
+                     <li>Critics’ Choice Awards (CCA) -- best song -- winner </li>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best animated film -- winner </li>
+                  </div>
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
 
-      <section id="music2">
-      <h3> Best Achievement in Music Written for Motion Pictures (Original Score) </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt7349662/"> BlacKkKlansman (Terence Blanchard) </a></b> &nbsp Chance:  23.23%</li>
-      <li><b><a href="https://www.imdb.com/title/tt1825683/"> Black Panther (Ludwig Göransson) </a></b> &nbsp Chance:  20.80%</li>
-      <li><b><a href="https://www.imdb.com/title/tt7125860/"> If Beale Street Could Talk (Nicholas Britell) </a></b> &nbsp Chance:  25.11%</li>
-      <li><b><a href="https://www.imdb.com/title/tt5104604/"> Isle of Dogs (Alexandre Desplat) </a></b> &nbsp Chance:  15.28%</li>
-      <li><b><a href="https://www.imdb.com/title/tt5028340/"> Mary Poppins Returns (Marc Shaiman) </a></b> &nbsp Chance:  15.58%</li>
-      <br>
-      <h5>Strong Signals:</h5>
-      <li>Golden Globe Awards (GG) -- best original score motion picture -- winner </li>
-<li>Critics’ Choice Awards (CCA) -- best score -- winner </li>
-<li>Los Angeles Film Critics Association (LAFCA) -- best music -- winner </li>
+            <section id="music2">
+               <h3> Best Achievement in Music Written for Motion Pictures (Original Score) </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt7349662/"> BlacKkKlansman (Terence Blanchard) </a></b>
+                        &nbsp Chance: 23.23%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt1825683/"> Black Panther (Ludwig Göransson) </a></b>
+                        &nbsp Chance: 20.80%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt7125860/"> If Beale Street Could Talk (Nicholas
+                              Britell) </a></b> &nbsp Chance: 25.11%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5104604/"> Isle of Dogs (Alexandre Desplat) </a></b>
+                        &nbsp Chance: 15.28%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5028340/"> Mary Poppins Returns (Marc Shaiman)
+                           </a></b> &nbsp Chance: 15.58%</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>Golden Globe Awards (GG) -- best original score motion picture -- winner </li>
+                     <li>Critics’ Choice Awards (CCA) -- best score -- winner </li>
+                     <li>Los Angeles Film Critics Association (LAFCA) -- best music -- winner </li>
+                  </div>
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
+
+            <section id="cinematography">
+               <h3> Best Achievement in Cinematography </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt1517451/"> A Star Is Born (Matthew Libatique) </a></b>
+                        &nbsp Chance: 0.70%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6543652/"> Cold War (Lukasz Zal) </a></b> &nbsp
+                        Chance: 2.56%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5311542/"> Never Look Away (Caleb Deschanel) </a></b>
+                        &nbsp Chance: 1.20%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6155172/"> Roma (Alfonso Cuarón) </a></b> &nbsp
+                        Chance: 93.78%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5083738/"> The Favourite (Robbie Ryan) </a></b> &nbsp
+                        Chance: 1.86%</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>Cinema Audio Society Awards (CAS) -- outstanding sound mixing for motion pictures -- winner
+                     </li>
+                     <li>Critics’ Choice Awards (CCA) -- best composer -- winner </li>
+                     <li>Golden Globe Awards (GG) -- best director motion picture -- winner </li>
+                  </div>
+
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
+
+            <section id="film">
+               <h3> Best Achievement in Film Editing </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt7349662/"> BlacKkKlansman (Barry Alexander Brown)
+                           </a></b> &nbsp Chance: 8.03%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt1727824/"> Bohemian Rhapsody (John Ottman) </a></b>
+                        &nbsp Chance: 58.13%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6966692/"> Green Book (Patrick J Don Vito) </a></b>
+                        &nbsp Chance: 11.47%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5083738/"> The Favourite (Yorgos Mavropsaridis)
+                           </a></b> &nbsp Chance: 9.57%</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6266538/"> Vice (Hank Corwin) </a></b> &nbsp Chance:
+                        12.81%</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>American Cinema Editors Awards (ACE) -- best edited feature film dramatic -- winner </li>
+                     <li>Critics’ Choice Awards (CCA) -- best directing -- winner </li>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best editing -- winner </li>
+                  </div>
+
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
+
+            <section id="visual">
+               <h3> Best Achievement in Visual Effects </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt4154756/"> Avengers Infinity War (Dan DeLeeuw)
+                           </a></b> &nbsp Chance: 17.88%
+                        &nbsp </li>
+                     <li><b><a href="https://www.imdb.com/title/tt4575576/"> Christopher Robin (Chris Lawrence) </a></b>
+                        &nbsp Chance: 17.88%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt1213641/"> First Man (Paul Lambert) </a></b> &nbsp
+                        Chance: 28.58%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt1677720/"> Ready Player One Roger (Guyett) </a></b>
+                        &nbsp Chance: 17.78%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt3778644/"> Solo A Star Wars Story (Rob Bredow)
+                           </a></b> &nbsp Chance: 17.88%
+                        &nbsp</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best special visual effects -- winner
+                     </li>
+                  </div>
+
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
+
+            <section id="sound1">
+               <h3> Best Achievement in Sound Mixing </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt1517451/"> A Star Is Born (Tom Ozanich) </a></b> &nbsp
+                        Chance: 11.92%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt1825683/"> Black Panther (Steve Boeddeker) </a></b>
+                        &nbsp Chance: 7.96%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt1727824/"> Bohemian Rhapsody (Paul Massey) </a></b>
+                        &nbsp Chance: 51.13%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt1213641/"> First Man (Jon Taylor) </a></b> &nbsp
+                        Chance: 13.25%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6155172/"> Roma (Skip Lievsay) </a></b> &nbsp Chance:
+                        15.73%
+                        &nbsp</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best sound mixing -- winner </li>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best editing -- winner </li>
+                     <li>American Cinema Editors Awards (ACE) -- best edited feature film dramatic -- winner </li>
+                  </div>
+
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
+
+            <section id="sound2">
+               <h3> Best Achievement in Sound Editing </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt6644200/"> A Quiet Place (Ethan Van der Ryn) </a></b>
+                        &nbsp Chance: 11.88%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt1825683/"> Black Panther (Benjamin A Burtt) </a></b>
+                        &nbsp Chance: 12.08%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt1727824/"> Bohemian Rhapsody (John Warhurst) </a></b>
+                        &nbsp Chance: 44.18%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt1213641/"> First Man (AiLing Lee) </a></b> &nbsp
+                        Chance: 19.12%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6155172/"> Roma (Sergio Diaz) </a></b> &nbsp Chance:
+                        12.75%
+                        &nbsp</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best sound mixing -- winner </li>
+                     <li>National Society of Film Critics Awards (NSFCA) -- best cinematography -- nominee </li>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best cinematography -- nominee </li>
+                  </div>
+
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
+
+            <section id="costume">
+               <h3> Best Achievement in Costume Design </h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt1825683/"> Black Panther (Ruth E Carter) </a></b>
+                        &nbsp Chance: 23.51%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5028340/"> Mary Poppins Returns (Sandy Powell)
+                           </a></b> &nbsp Chance: 21.17%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt2328900/"> Mary Queen of Scots (Alexandra Byrne)
+                           </a></b> &nbsp Chance: 13.60%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6412452/"> The Ballad of Buster Scruggs (Mary Zophres)
+                           </a></b> &nbsp Chance: 16.35%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5083738/"> The Favourite (Sandy Powell) </a></b> &nbsp
+                        Chance: 25.38%
+                        &nbsp</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>Critics’ Choice Awards (CCA) -- best costume design -- winner </li>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best costume design -- winner </li>
+                  </div>
+
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
+
+            <section id="makeup">
+               <h3> Best Achievement in Makeup and Hairstyling</h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt5501104/"> Border (Göran Lundström) </a></b> &nbsp
+                        Chance: 29.19%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt2328900/"> Mary Queen of Scots (Jenny Shircore)
+                           </a></b> &nbsp Chance: 31.45%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6266538/"> Vice (Greg Cannom) </a></b> &nbsp Chance:
+                        39.36%
+                        &nbsp</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best makeup and hair -- winner </li>
+                  </div>
+
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
+
+            <section id="production">
+               <h3> Best Achievement in Production Design</h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt1825683/"> Black Panther (Hannah Beachler) </a></b>
+                        &nbsp Chance: 13.51%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt1213641/"> First Man (Nathan Crowley) </a></b> &nbsp
+                        Chance: 18.63%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5028340/"> Mary Poppins Returns (John Myhre) </a></b>
+                        &nbsp Chance: 8.50%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6155172/"> Roma (Eugenio Caballero) </a></b> &nbsp
+                        Chance: 22.00%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5083738/"> The Favourite (Fiona Crombie) </a></b>
+                        &nbsp Chance: 37.35%
+                        &nbsp</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>British Academy of Film and Television Arts (BAFTA) -- best costume design -- winner </li>
+                     <li>Los Angeles Film Critics Association (LAFCA) -- best production design -- winner </li>
+                     <li>American Cinema Editors Awards (ACE) -- best edited feature film comedy or musical -- winner
+                     </li>
+                     <li>Washington DC Area Film Critics Awards (WAFCA) -- best art direction -- winner </li>
+                  </div>
+
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
+
+            <section id="foreign">
+               <h3> Best Foreign Language Film of the Year</h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt8267604/"> Capernaum </a></b> &nbsp Chance: 12.46%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6543652/"> Cold War </a></b> &nbsp Chance: 32.94%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5311542/"> Never Look Away </a></b> &nbsp Chance:
+                        9.89%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6155172/"> Roma </a></b> &nbsp Chance: 17.36%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt8075192/"> Shoplifters </a></b> &nbsp Chance: 27.35%
+                        &nbsp</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>Los Angeles Film Critics Association (LAFCA) -- best foreign film -- winner </li>
+                     <li>National Board of Review (NBR) -- best foreign language film -- winner </li>
+                     <li>Golden Globe Awards (GG) -- best foreign language film -- winner </li>
+                  </div>
+
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
+
+            <section id="animation">
+               <h3> Best Animated Feature Film of the Year</h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt3606756/"> Incredibles 2 (Brad Bird) </a></b> &nbsp
+                        Chance: 0.19%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5104604/"> Isle of Dogs (Wes Anderson) </a></b> &nbsp
+                        Chance: 0.52%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6900448/"> Mirai (Mamoru Hosoda) </a></b> &nbsp
+                        Chance: 0.55%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt5848272/"> Ralph Breaks the Internet (Rich Moore)
+                           </a></b> &nbsp Chance: 0.20%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt4633694/"> SpiderMan Into the SpiderVerse (Bob
+                              Persichetti) </a></b> &nbsp Chance: 98.53%
+                        &nbsp</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>Critics’ Choice Awards (CCA) -- best animated feature film -- winner</li>
+                     <li>New York Film Critics Circle Awards (NYFCCA) -- best animated film -- winner </li>
+                     <li>Cinema Audio Society Awards (CAS) -- outstanding sound mixing for motion pictures animated --
+                        winner </li>
+                  </div>
+
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
+
+
+            <section id="documentary">
+               <h3> Best Documentary Feature</h3>
+               <div class="row">
+                  <div class="9u 12u$(small)">
+                     <li><b><a href="https://www.imdb.com/title/tt7775622/"> Free Solo (Elizabeth Chai Vasarhelyi)
+                           </a></b> &nbsp Chance: 31.74%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt6634646/"> Hale County This Morning This Evening
+                              (RaMell Ross) </a></b> &nbsp Chance: 5.28%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt7476236/"> Minding the Gap (Bing Liu) </a></b> &nbsp
+                        Chance: 7.11%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt7519174/"> Of Fathers and Sons (Talal Derki) </a></b>
+                        &nbsp Chance: 5.30%
+                        &nbsp</li>
+                     <li><b><a href="https://www.imdb.com/title/tt7689964/"> RBG (Betsy West) </a></b> &nbsp Chance:
+                        50.56%
+                        &nbsp</li>
+                     <br>
+                     <h5>Strong Signals:</h5>
+                     <li>National Board of Review (NBR) -- best documentary -- winner </li>
+                     <li>American Cinema Editors Awards (ACE) -- best edited documentary feature -- winner </li>
+                     <li>Boston Society of Film Critics Awards (BSFCA) -- best documentary -- nominee </li>
+                  </div>
+
+                  <div class="3u 12u$(small)"></div>
+               </div>
+            </section>
+
+         </div>
       </div>
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
+      <!-- Sidebar -->
+      <div id="sidebar">
+         <div class="inner">
 
-      <section id="cinematography">
-      <h3> Best Achievement in Cinematography </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt1517451/"> A Star Is Born (Matthew Libatique) </a></b> &nbsp Chance:  0.70%</li>
-      <li><b><a href="https://www.imdb.com/title/tt6543652/"> Cold War (Lukasz Zal) </a></b> &nbsp Chance:  2.56%</li>
-      <li><b><a href="https://www.imdb.com/title/tt5311542/"> Never Look Away (Caleb Deschanel) </a></b> &nbsp Chance:  1.20%</li>
-      <li><b><a href="https://www.imdb.com/title/tt6155172/"> Roma (Alfonso Cuarón) </a></b> &nbsp Chance:  93.78%</li>
-      <li><b><a href="https://www.imdb.com/title/tt5083738/"> The Favourite (Robbie Ryan)  </a></b> &nbsp Chance:  1.86%</li>
-      <br>
-      <h5>Strong Signals:</h5>
-      <li>Cinema Audio Society Awards (CAS) -- outstanding sound mixing for motion pictures -- winner </li>
-<li>Critics’ Choice Awards (CCA) -- best composer -- winner </li>
-<li>Golden Globe Awards (GG) -- best director motion picture -- winner </li>
-      </div>
+            <!-- Menu -->
+            <nav id="menu">
+               <header class="major">
+                  <h2>Menu</h2>
+               </header>
+               <ul>
+                  <li><a href="../index.html#banner">Homepage</a></li>
+                  <li><a href="../index.html#news">Latest News</a></li>
+                  <li><a href="../index.html#research">Research & Service</a></li>
+                  <li><a href="../index.html#misc">Misc.</a></li>
+               </ul>
+            </nav>
 
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
+            <!-- Section -->
+            <section>
+               <header class="major">
+                  <h2>Contact</h2>
+               </header>
 
-      <section id="film">
-      <h3> Best Achievement in Film Editing </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt7349662/"> BlacKkKlansman (Barry Alexander Brown) </a></b> &nbsp Chance:  8.03%</li>
-      <li><b><a href="https://www.imdb.com/title/tt1727824/"> Bohemian Rhapsody (John Ottman) </a></b> &nbsp Chance:  58.13%</li>
-      <li><b><a href="https://www.imdb.com/title/tt6966692/"> Green Book (Patrick J Don Vito) </a></b> &nbsp Chance:  11.47%</li>
-      <li><b><a href="https://www.imdb.com/title/tt5083738/"> The Favourite (Yorgos Mavropsaridis) </a></b> &nbsp Chance:  9.57%</li>
-      <li><b><a href="https://www.imdb.com/title/tt6266538/"> Vice (Hank Corwin) </a></b> &nbsp Chance:  12.81%</li>
-      <br>
-      <h5>Strong Signals:</h5>
-      <li>American Cinema Editors Awards (ACE) -- best edited feature film dramatic -- winner </li>
-<li>Critics’ Choice Awards (CCA) -- best directing -- winner </li>
-<li>British Academy of Film and Television Arts (BAFTA) -- best editing -- winner </li>
+               <ul class="contact">
+                  <li class="fa-envelope-o"> mengting.wan at gmail.com </li>
+               </ul>
+            </section>
+         </div>
       </div>
 
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
-
-      <section id="visual">
-      <h3> Best Achievement in Visual Effects </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt4154756/"> Avengers Infinity War (Dan DeLeeuw) </a></b> &nbsp Chance: 17.88%
- &nbsp </li>
-      <li><b><a href="https://www.imdb.com/title/tt4575576/"> Christopher Robin (Chris Lawrence) </a></b> &nbsp Chance: 17.88%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt1213641/"> First Man (Paul Lambert) </a></b> &nbsp Chance: 28.58%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt1677720/"> Ready Player One Roger (Guyett) </a></b> &nbsp Chance: 17.78%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt3778644/"> Solo A Star Wars Story (Rob Bredow) </a></b> &nbsp Chance: 17.88%
- &nbsp</li>
- <br>
- <h5>Strong Signals:</h5>
- <li>British Academy of Film and Television Arts (BAFTA) -- best special visual effects -- winner </li>
-      </div>
-
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
-
-      <section id="sound1">
-      <h3> Best Achievement in Sound Mixing </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt1517451/"> A Star Is Born (Tom Ozanich) </a></b> &nbsp Chance: 11.92%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt1825683/"> Black Panther (Steve Boeddeker) </a></b> &nbsp Chance: 7.96%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt1727824/"> Bohemian Rhapsody (Paul Massey) </a></b> &nbsp Chance: 51.13%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt1213641/"> First Man (Jon Taylor) </a></b> &nbsp Chance: 13.25%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt6155172/"> Roma (Skip Lievsay) </a></b> &nbsp Chance: 15.73%
- &nbsp</li>
- <br>
- <h5>Strong Signals:</h5>
- <li>British Academy of Film and Television Arts (BAFTA) -- best sound mixing -- winner </li>
-<li>British Academy of Film and Television Arts (BAFTA) -- best editing -- winner </li>
-<li>American Cinema Editors Awards (ACE) -- best edited feature film dramatic -- winner  </li>
-      </div>
-
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
-
-      <section id="sound2">
-      <h3> Best Achievement in Sound Editing </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt6644200/"> A Quiet Place (Ethan Van der Ryn) </a></b> &nbsp Chance: 11.88%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt1825683/"> Black Panther (Benjamin A Burtt) </a></b> &nbsp Chance: 12.08%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt1727824/"> Bohemian Rhapsody (John Warhurst) </a></b> &nbsp Chance: 44.18%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt1213641/"> First Man (AiLing Lee) </a></b> &nbsp Chance: 19.12%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt6155172/"> Roma (Sergio Diaz) </a></b> &nbsp Chance: 12.75%
- &nbsp</li>
- <br>
- <h5>Strong Signals:</h5>
- <li>British Academy of Film and Television Arts (BAFTA) -- best sound mixing -- winner </li>
-<li>National Society of Film Critics Awards (NSFCA) -- best cinematography -- nominee </li>
-<li>British Academy of Film and Television Arts (BAFTA) -- best cinematography -- nominee </li>
-      </div>
-
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
-
-      <section id="costume">
-      <h3> Best Achievement in Costume Design </h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt1825683/"> Black Panther (Ruth E Carter) </a></b> &nbsp Chance: 23.51%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt5028340/"> Mary Poppins Returns (Sandy Powell) </a></b> &nbsp Chance: 21.17%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt2328900/"> Mary Queen of Scots (Alexandra Byrne) </a></b> &nbsp Chance: 13.60%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt6412452/"> The Ballad of Buster Scruggs (Mary Zophres) </a></b> &nbsp Chance: 16.35%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt5083738/"> The Favourite (Sandy Powell) </a></b> &nbsp Chance: 25.38%
- &nbsp</li>
- <br>
- <h5>Strong Signals:</h5>
- <li>Critics’ Choice Awards (CCA) -- best costume design -- winner </li>
-<li>British Academy of Film and Television Arts (BAFTA) -- best costume design -- winner </li>
-      </div>
-
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
-
-      <section id="makeup">
-      <h3> Best Achievement in Makeup and Hairstyling</h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt5501104/"> Border (Göran Lundström) </a></b> &nbsp Chance: 29.19%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt2328900/"> Mary Queen of Scots (Jenny Shircore) </a></b> &nbsp Chance: 31.45%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt6266538/"> Vice (Greg Cannom) </a></b> &nbsp Chance: 39.36%
- &nbsp</li>
- <br>
- <h5>Strong Signals:</h5>
- <li>British Academy of Film and Television Arts (BAFTA) -- best makeup and hair -- winner </li>
-      </div>
-
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
-
-      <section id="production">
-      <h3> Best Achievement in Production Design</h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt1825683/"> Black Panther (Hannah Beachler) </a></b> &nbsp Chance: 13.51%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt1213641/"> First Man (Nathan Crowley) </a></b> &nbsp Chance: 18.63%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt5028340/"> Mary Poppins Returns  (John Myhre) </a></b> &nbsp Chance: 8.50%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt6155172/"> Roma (Eugenio Caballero) </a></b> &nbsp Chance: 22.00%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt5083738/"> The Favourite (Fiona Crombie) </a></b> &nbsp Chance: 37.35%
- &nbsp</li>
- <br>
- <h5>Strong Signals:</h5>
- <li>British Academy of Film and Television Arts (BAFTA) -- best costume design -- winner </li>
-<li>Los Angeles Film Critics Association (LAFCA) -- best production design -- winner </li>
-<li>American Cinema Editors Awards (ACE) -- best edited feature film comedy or musical -- winner </li>
-<li>Washington DC Area Film Critics Awards (WAFCA) -- best art direction -- winner </li>
-      </div>
-
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
-
-      <section id="foreign">
-      <h3> Best Foreign Language Film of the Year</h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt8267604/"> Capernaum </a></b> &nbsp Chance: 12.46%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt6543652/"> Cold War </a></b> &nbsp Chance: 32.94%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt5311542/"> Never Look Away </a></b> &nbsp Chance: 9.89%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt6155172/"> Roma </a></b> &nbsp Chance: 17.36%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt8075192/"> Shoplifters </a></b> &nbsp Chance: 27.35%
- &nbsp</li>
- <br>
- <h5>Strong Signals:</h5>
- <li>Los Angeles Film Critics Association (LAFCA) -- best foreign film -- winner </li>
-<li>National Board of Review (NBR) -- best foreign language film -- winner </li>
-<li>Golden Globe Awards (GG) -- best foreign language film -- winner </li>
-      </div>
-
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
-
-      <section id="animation">
-      <h3> Best Animated Feature Film of the Year</h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt3606756/"> Incredibles 2 (Brad Bird) </a></b> &nbsp Chance: 0.19%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt5104604/"> Isle of Dogs (Wes Anderson) </a></b> &nbsp Chance: 0.52%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt6900448/"> Mirai (Mamoru Hosoda) </a></b> &nbsp Chance: 0.55%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt5848272/"> Ralph Breaks the Internet (Rich Moore) </a></b> &nbsp Chance: 0.20%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt4633694/"> SpiderMan Into the SpiderVerse (Bob Persichetti) </a></b> &nbsp Chance: 98.53%
- &nbsp</li>
- <br>
- <h5>Strong Signals:</h5>
- <li>Critics’ Choice Awards (CCA) -- best animated feature film -- winner</li>
-<li>New York Film Critics Circle Awards (NYFCCA) -- best animated film -- winner </li>
-<li>Cinema Audio Society Awards (CAS) -- outstanding sound mixing for motion pictures animated -- winner </li>
-      </div>
-
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
-
-
-      <section id="documentary">
-      <h3> Best Documentary Feature</h3>
-      <div class="row">
-      <div class="9u 12u$(small)">
-      <li><b><a href="https://www.imdb.com/title/tt7775622/"> Free Solo  (Elizabeth Chai Vasarhelyi) </a></b> &nbsp Chance: 31.74%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt6634646/"> Hale County This Morning This Evening (RaMell Ross) </a></b> &nbsp Chance: 5.28%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt7476236/"> Minding the Gap  (Bing Liu) </a></b> &nbsp Chance: 7.11%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt7519174/"> Of Fathers and Sons (Talal Derki) </a></b> &nbsp Chance: 5.30%
- &nbsp</li>
-      <li><b><a href="https://www.imdb.com/title/tt7689964/"> RBG (Betsy West) </a></b> &nbsp Chance: 50.56%
- &nbsp</li>
-      <br>
-      <h5>Strong Signals:</h5>
-      <li>National Board of Review (NBR) -- best documentary -- winner </li>
-<li>American Cinema Editors Awards (ACE) -- best edited documentary feature -- winner </li>
-<li>Boston Society of Film Critics Awards (BSFCA) -- best documentary -- nominee </li>
-      </div>
-
-      <div class="3u 12u$(small)"></div>
-      </div>
-      </section>
-
-      </div>
-      </div>
- <!-- Sidebar -->
- <div id="sidebar">
-   <div class="inner">
-
-      <!-- Menu -->
-      <nav id="menu">
-         <header class="major">
-            <h2>Menu</h2>
-         </header>
-         <ul>
-            <li><a href="../index.html#banner">Homepage</a></li>
-            <li><a href="../index.html#news">Latest News</a></li>
-            <li><a href="../index.html#research">Research & Service</a></li>
-            <li><a href="../index.html#misc">Misc.</a></li>
-         </ul>
-      </nav>
-
-      <!-- Section -->
-      <section>
-         <header class="major">
-            <h2>Contact</h2>
-         </header>
-
-         <ul class="contact">
-            <li class="fa-envelope-o"> mengting.wan at gmail.com </li>
-         </ul>
-      </section>
    </div>
-</div>
 
-</div>
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/skel.min.js"></script>
+   <script src="../assets/js/util.js"></script>
+   <script src="../assets/js/main.js"></script>
 
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/skel.min.js"></script>
-<script src="../assets/js/util.js"></script>
-<script src="../assets/js/main.js"></script>
+   <!-- Start of StatCounter Code for Default Guide -->
+   <script type="text/javascript">
+      var sc_project = 11132224;
+      var sc_invisible = 1;
+      var sc_security = "d310e9da";
+      var scJsHost = (("https:" == document.location.protocol) ?
+         "https://secure." : "http://www.");
+      document.write("<sc" + "ript type='text/javascript' src='" +
+         scJsHost +
+         "statcounter.com/counter/counter.js'></" + "script>");
+   </script>
+   <noscript>
+      <div class="statcounter"><a title="shopify
+   analytics" href="http://statcounter.com/shopify/" target="_blank"><img class="statcounter"
+               src="//c.statcounter.com/11132224/0/d310e9da/1/" alt="shopify analytics"></a>
+      </div>
+   </noscript>
+</body>
 
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=11132224; 
-var sc_invisible=1; 
-var sc_security="d310e9da"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-   "https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-   scJsHost+
-   "statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript>
-<div class="statcounter"><a title="shopify
-   analytics" href="http://statcounter.com/shopify/"
-   target="_blank"><img class="statcounter"
-   src="//c.statcounter.com/11132224/0/d310e9da/1/"
-   alt="shopify analytics"></a>
-</div>
-</noscript>
-   </body>
 </html>
