@@ -793,7 +793,7 @@ function getProb(cat,nom,method){
 function topNom(cat,method){let b=null,bp=-1;cat.nominees.forEach(n=>{const p=getProb(cat,n,method);if(p>bp){bp=p;b=n;}});return b;}
 
 /* ── Rationale per method ── */
-function getRationale(nom,method){
+function getRationale(nom,method,catKey){
   if(method==='st'){
     const r=nom.stats_rationale;if(!r)return'';
     const wins=r.season_wins.map(w=>evTag(w.award+'::'+w.category+'::W'));
@@ -807,25 +807,22 @@ function getRationale(nom,method){
     const fs=r.features.slice(0,4).map(f=>f.display+' ('+(f.coefficient>0?'+':'')+f.coefficient.toFixed(2)+')');
     return(LANG==='cn'?'\u5173\u952e\u7279\u5f81\uff1a':'Key features: ')+fs.join('; ')+(r.model_selected?' ['+r.model_selected+']':'');
   }
-  if(method==='ll'){
-    const cr=CN_RAT[nom.name];
-    if(LANG==='cn'&&cr)return cr;
-    return nom.llm_rationale.reasoning||'';
+  if(method==='ll'||method==='ov'){
+    // CN: use category-specific translation if available
+    const cnCat=CN_RAT[catKey];
+    if(LANG==='cn'&&cnCat&&cnCat[nom.name])return cnCat[nom.name];
+    const llm=nom.llm_rationale.reasoning||'';
+    if(llm)return llm;
+    if(method==='ov'){
+      const sw=nom.stats_rationale.season_wins;
+      if(sw&&sw.length)return(LANG==='cn'?'\u83b7\u5f97\uff1a':'Won: ')+sw.map(w=>evTag(w.award+'::'+w.category+'::W')).join(', ');
+    }
+    return'';
   }
   if(method==='cr'){
     const r=nom.gd_rationale;if(!r||r.raw_odds==null)return'';
     return(LANG==='cn'?'\u4e13\u5bb6\u5171\u8bc6\uff1a':'Expert consensus: ')+pct(r.raw_odds)+' ('+
       (LANG==='cn'?'\u6392\u540d':'rank')+' '+r.odds_rank+'/'+r.n_candidates+')';
-  }
-  if(method==='ov'){
-    // Holistic: CN translation if available, else LLM reasoning, else stats wins
-    const cr=CN_RAT[nom.name];
-    if(LANG==='cn'&&cr)return cr;
-    const llm=nom.llm_rationale.reasoning||'';
-    if(llm)return llm;
-    const sw=nom.stats_rationale.season_wins;
-    if(sw&&sw.length)return(LANG==='cn'?'\u83b7\u5f97\uff1a':'Won: ')+sw.map(w=>evTag(w.award+'::'+w.category+'::W')).join(', ');
-    return'';
   }
   return'';
 }
@@ -900,11 +897,11 @@ function buildPredictions(){
     body.appendChild(grid);
     // Rationale — item-by-item, collapsible (using details/summary styled by oscar.css)
     const sorted=[...cat.nominees].sort((a,b)=>getProb(cat,b,m)-getProb(cat,a,m));
-    const hasAny=sorted.some(nom=>getRationale(nom,m));
+    const hasAny=sorted.some(nom=>getRationale(nom,m,cat.category_key));
     if(hasAny){
       const rw=document.createElement('div');rw.className='rat-wrap';
       sorted.forEach((nom,ri)=>{
-        const reason=getRationale(nom,m);
+        const reason=getRationale(nom,m,cat.category_key);
         const p=getProb(cat,nom,m),isW=nom===w;
         const rdet=document.createElement('details');
         if(ri===0)rdet.setAttribute('open','');
