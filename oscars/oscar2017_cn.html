@@ -1,0 +1,884 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>2017年学院奖（奥斯卡金像奖）结果预测</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+      <link rel="stylesheet" href="../assets/css/oscar.css" />
+   </head>
+   <body>
+
+<header class="oscar-header">
+  <div class="oscar-header-inner">
+    <a href="../" class="oscar-home">Mengting Wan <span class="oscar-name-cn">(万梦婷)</span>, Ph.D.</a>
+    <span class="oscar-sep">/</span>
+    <span class="oscar-title">Oscar 2017</span>
+    <div class="oscar-nav">
+      <div class="oscar-dropdown">
+        <button class="oscar-dropdown-btn">All Years <span class="arrow">▾</span></button>
+        <div class="oscar-dropdown-menu">
+          <a href="oscar2026.html">2026</a>
+          <a href="oscar2023.html">2023</a>
+          <a href="oscar2021.html">2021</a>
+          <a href="oscar2020.html">2020</a>
+          <a href="oscar2019.html">2019</a>
+          <a href="oscar2018.html">2018</a>
+          <a href="oscar2017.html" class="active">2017</a>
+        </div>
+      </div>
+      <a href="oscar2017.html" class="oscar-lang">English</a>
+    </div>
+  </div>
+</header>
+
+<!-- Wrapper -->
+      <div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+      <div class="inner">
+      <!-- Header -->
+      <header id="header">
+         <h2>2017年学院奖（奥斯卡金像奖）结果预测 </h2>
+      </header>
+与往年类似，我训练了一个线性分类器来预测今年奥斯卡金像奖的获奖情况。在这个小项目里，一部分<a href="https://github.com/MengtingWan/oscar/blob/master/data/award_code.csv">奥斯卡前哨奖</a>的信息被用作特征。这个页面包括了预测结果的一个简单总结。从选取的特征来看，除了相应工会奖的获奖情况外，英国电影学院奖 (BAFTA) 和评论家选择奖 (CCA) 也是两个非常重要的风向标。我创建了几个简单的投票app，欢迎大家为自己最喜欢的电影/导演/演员投票。希望大家在阅读的同时可以获得乐趣 :)<br>
+我公开了在这个小项目中用到的所有<a href="https://github.com/MengtingWan/oscar">代码</a>，也欢迎大家查阅。<br>
+
+
+      <!-- Section -->
+      <section id="picture">
+         <h3> 最佳影片 </h3>
+         <div class="row">
+            <div class="9u 12u$(small)">
+               <div class="row">
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/21324900/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/21324900/">降临<br>Arrival</a></h5>
+                        <p>胜率: 1.57%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/3072070/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOTg0Nzc1NjA0MV5BMl5BanBnXkFtZTgwNTcyNDQ0MDI@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/3072070/">藩篱<br>Fences</a></h5>
+                        <p>胜率: 4.21%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/26325320/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjQ1NjM3MTUxNV5BMl5BanBnXkFtZTgwMDc5MTY5OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/26325320/">血战钢锯岭<br>Hacksaw Ridge</a></h5>
+                        <p>胜率: 1.54%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/26613692/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTg4NDA1OTA5NF5BMl5BanBnXkFtZTgwMDQ2MDM5ODE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/26613692/">赴汤蹈火<br>Hell or High Water</a></h5>
+                        <p>胜率: 20.80%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/26615208/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjQxOTkxODUyN15BMl5BanBnXkFtZTgwNTU3NTM3OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/26615208/">隐藏人物<br>Hidden Figures</a></h5>
+                        <p>胜率: 29.06%</p>
+                     </span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/25934014/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/25934014/">爱乐之城<br>La La Land</a></h5>
+                        <p>胜率: 28.40%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt3741834/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjA3NjkzNjg2MF5BMl5BanBnXkFtZTgwMDkyMzgzMDI@._V1_UY268_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt3741834/">雄狮<br>Lion</a></h5>
+                        <p>胜率: 7.19%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/25980443/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTYxMjk0NDg4Ml5BMl5BanBnXkFtZTgwODcyNjA5OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/25980443/">海边的曼彻斯特<br>Manchester by the Sea</a></h5>
+                        <p>胜率: 1.45%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="https://movie.douban.com/subject/25717614/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="https://movie.douban.com/subject/25717614/">月光男孩<br>Moonlight</a></h5>
+                        <p>胜率: 5.79%</p>
+                     </span>
+                  </div>
+               </div>
+               <h5> 正相关特征:</h5>
+               <li> 导演工会奖 (DGA) -- 最佳导演 -- 获奖 (1.01)</li>
+               <li> 评论家选择奖 (CCA) -- 最佳影片 -- 获奖 (0.74)</li>
+               <li> 华盛顿影评人协会奖 (WAFCA) -- 最佳群戏 -- 获奖 (0.55)</li>
+               <li> 演员工会奖 (SAG) -- 最佳群戏 -- 获奖 (0.54)</li>
+            </div>
+            <div class="3u 12u$(small)">
+               <div id="2422705" class="os_poll" data-path="/polls/2422705"></div>
+            </div>
+         </div>
+      </section>
+      <section id="director">
+         <h3> 最佳导演 </h3>
+         <div class="row">
+            <div class="9u 12u$(small)">
+               <div class="row">
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt2543164/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt2543164/">丹尼斯·维伦纽瓦 <br>(降临)</a></h5>
+                        <p>胜率: 15.30%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt2119532/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjQ1NjM3MTUxNV5BMl5BanBnXkFtZTgwMDc5MTY5OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt2119532/">梅尔·吉布森 <br>
+                           (血战钢锯岭)</a>
+                        </h5>
+                        <p>胜率: 5.33%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt3783958/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt3783958/">达米恩·查泽雷 <br>
+                           (爱乐之城)</a>
+                        </h5>
+                        <p>胜率: 74.80%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt4034228/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTYxMjk0NDg4Ml5BMl5BanBnXkFtZTgwODcyNjA5OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt4034228/">肯尼斯·洛纳根 <br>(海边的曼彻斯特)</a></h5>
+                        <p>胜率: 0.69%</p>
+                     </span>
+                  </div>
+                  <div class="2u 3u$(small)" align="center">
+                     <span class="image object">
+                        <a href="http://www.imdb.com/title/tt4975722/" class="image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="" />
+                        </a>
+                        <h5><a href="http://www.imdb.com/title/tt4975722/">巴里·杰金斯 <br>
+                           (月光男孩)</a>
+                        </h5>
+                        <p>胜率: 3.88%</p>
+                     </span>
+                  </div>
+               </div>
+               <h5>正相关特征:</h5>
+               <li>导演工会奖 (DGA) -- 最佳导演 -- 获奖 (0.79)</li>
+               <li>英国电影学院奖 (BAFTA) -- 最佳影片 -- 获奖 (0.64)</li>
+               <li>英国电影学院奖 (BAFTA) -- 最佳摄影 -- 获奖 (0.61)</li>
+            </div>
+            <div class="3u 12u$(small)">
+               <div id="2422708" class="os_poll" data-path="/polls/2422708"></div>
+            </div>
+      </section>
+      <section id="actor1">
+      <h3> 最佳男主角 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000729/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTg3MDU1NzU4MF5BMl5BanBnXkFtZTgwNDQ5ODgwMDI@._V1_UY317_CR14,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4034228/">卡西·阿弗莱克 <br>(海边的曼彻斯特)</a></h5>
+      <p>胜率: 61.44%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm1940449/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjE2MjI2OTk1OV5BMl5BanBnXkFtZTgwNTY1NzM4MDI@._V1_UY317_CR0,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt2119532/">安德鲁·加菲尔德 <br>
+      (血战钢锯岭)</a></h5>
+      <p>胜率: 1.51%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0331516/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTQzMjkwNTQ2OF5BMl5BanBnXkFtZTgwNTQ4MTQ4MTE@._V1_UY317_CR18,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt3783958/">瑞恩·高斯林 <br>
+      (爱乐之城)</a></h5>
+      <p>胜率: 2.01%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0001557/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BNDQzOTg4NzA2Nl5BMl5BanBnXkFtZTcwMzkwNjkxMg@@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt3553976/">维果·莫腾森 <br>(神奇队长)</a></h5>
+      <p>胜率: 7.98%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/title/tt2671706/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjE5NDU2Mzc3MV5BMl5BanBnXkFtZTcwNjAwNTE5OQ@@._V1_UY317_CR12,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/name/nm0000243/">丹泽尔·华盛顿 <br>
+      (藩篱)</a></h5>
+      <p>胜率: 27.06%</p>
+      </span>
+      </div>
+      </div>
+      <h5>正相关特征:</h5>
+      <li> 演员工会奖 (SAG) -- 最佳男主角 -- 获奖 (1.76)</li>
+      <li> 金球奖 (GG) -- 最佳剧情片男主角 -- 获奖 (1.11)</li>
+      <li> 评论家选择奖 (CCA) -- 最佳男主角 -- 获奖 (1.05)</li>
+      <li> 英国电影学院奖 (BAFTA) -- 最佳男主角 -- 获奖 (0.87)</li>
+      <li> 国家影评人协会奖 (NSFCA) -- 最佳男主角 -- 获奖 (0.71)</li>
+      </div>
+      <div class="3u 12u$(small)">
+      <div id="2422710" class="os_poll" data-path="/polls/2422710"></div>
+      </div>
+      </section>
+
+      <section id="actress1">
+      <h3> 最佳女主角 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0001376/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BNTgzMzI3NTEzOV5BMl5BanBnXkFtZTcwMDMxNjM4Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt3716530/">伊莎贝尔·于佩尔 <br>(她)</a></h5>
+      <p>胜率: 41.11%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm1940449/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTUxMjMyMTEzN15BMl5BanBnXkFtZTgwMTI1OTI5ODE@._V1_UY317_CR131,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4669986/">鲁丝·内伽 <br>
+      (爱恋)</a></h5>
+      <p>胜率: 3.46%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000204/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTQ3ODE3Mjg1NV5BMl5BanBnXkFtZTcwNzA4ODcxNA@@._V1_UY317_CR11,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt1619029/">娜塔莉·波特曼 <br>
+      (第一夫人)</a></h5>
+      <p>胜率: 4.79%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm1297015/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI4NjM1NDkyN15BMl5BanBnXkFtZTgwODgyNTY1MjE@._V1.._UX214_CR0,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt3783958/">艾玛·斯通 <br>(爱乐之城)</a></h5>
+      <p>胜率: 33.39%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000658/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTU4Mjk5MDExOF5BMl5BanBnXkFtZTcwOTU1MTMyMw@@._V1_UY317_CR6,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4136084/">梅丽尔·斯特里普 <br>
+      (跑调天后)</a></h5>
+      <p>胜率: 17.24%</p>
+      </span>
+      </div>
+      </div>
+      <h5>正相关特征:</h5>
+      <li>金球奖 (GG) -- 最佳剧情片女主角 -- 获奖 (1.74)</li>
+      <li>英国电影学院奖 (BAFTA) -- 最佳女主角 -- 获奖 (1.23)</li>
+      <li>演员工会奖 (SAG) -- 最佳女主角 -- 获奖 (1.17)</li>
+      <li>英国电影学院奖 (BAFTA) -- 最佳女主角 -- 获奖 (0.76)</li>
+      <li>评论家选择奖 (CCA) -- 最佳女主角 -- 获奖 (0.65)</li>
+      </div>
+      <div class="3u 12u$(small)">
+<div id="2422712" class="os_poll" data-path="/polls/2422712"></div>
+      </div>
+      </section>
+
+     <section id="actor2">
+      <h3> 最佳男配角 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0991810/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BNDg4OTczODE5Nl5BMl5BanBnXkFtZTcwMjgwMjA0Mg@@._V1_UY317_CR32,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4975722/">马赫沙拉·阿里 <br>(月光男孩)</a></h5>
+      <p>胜率: 61.98%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000313/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BNTU1NjM4MDYzMl5BMl5BanBnXkFtZTcwMjIwMjMyMw@@._V1_UY317_CR11,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt2582782/">杰夫·布里奇斯 <br>
+      (赴汤蹈火)</a></h5>
+      <p>胜率: 5.55%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm2348627/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTY4NGE4MzAtZGMzNS00OTExLWI0NzctM2VmN2EwNTllOGJkL2ltYWdlXkEyXkFqcGdeQXVyMjI5MDI1Ng@@._V1_UY317_CR51,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4034228/">卢卡斯·赫奇斯 <br>
+      (海边的曼彻斯特)</a></h5>
+      <p>胜率: 6.30%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm2353862/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjgxMjQwNDc5Nl5BMl5BanBnXkFtZTgwODI5Njk2NDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt3741834/">戴夫·帕特尔 <br>(雄狮)</a></h5>
+      <p>胜率: 8.85%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0788335/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTQzODk4MjU1NV5BMl5BanBnXkFtZTcwMDYwNjQzMg@@._V1_UY317_CR1,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4550098/">迈克尔·珊农 <br>
+      (夜行动物)</a></h5>
+      <p>胜率: 17.32%</p>
+      </span>
+      </div>
+      </div>
+      <h5>正相关特征:</h5>
+<li>金球奖 (GG) -- 最佳男配角 -- 获奖 (1.37) </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳男配角 -- 获奖 (0.89) </li>
+<li>演员工会奖 (SAG) -- 最佳男配角 -- 获奖 (0.79) </li>
+<li>国家影评人协会奖 (NSFCA) -- 最佳男配角 -- 提名 (0.77) </li>
+<li>洛杉矶影评人协会奖 (LAFCA) -- 最佳男配角 -- 提名 (0.73) </li>
+      </div>
+      <div class="3u 12u$(small)">
+<div id="2422714" class="os_poll" data-path="/polls/2422714"></div>
+      </div>
+      </section>
+
+     <section id="actress2">
+      <h3> 最佳女配角 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <div class="row">
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0205626/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BNjYwMzI0NDY4OF5BMl5BanBnXkFtZTgwOTU4MDk1NjE@._V1_UY317_CR8,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt2671706/">维奥拉·戴维斯 <br>(藩篱)</a></h5>
+      <p>胜率: 78.69%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0365140/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTUyMDU1MTU2N15BMl5BanBnXkFtZTgwODkyNzQ3MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4975722/">娜奥米·哈里斯 <br>
+      (月光男孩)</a></h5>
+      <p>胜率: 2.74%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0000173/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTk1MjM5NDg4MF5BMl5BanBnXkFtZTcwNDg1OTQ4Nw@@._V1_UY317_CR10,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt3741834/">妮可·基德曼 <br>
+      (雄狮)</a></h5>
+      <p>胜率: 9.35%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0818055/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTg0MjcwMjcxNl5BMl5BanBnXkFtZTcwMjkwODg0Ng@@._V1_UY317_CR11,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4846340/">奥克塔维亚·斯宾塞 <br>(隐藏人物)</a></h5>
+      <p>胜率: 4.26%</p>
+      </span>
+      </div>
+      <div class="2u 3u$(small)" align="center">
+      <span class="image object">
+      <a href="http://www.imdb.com/name/nm0931329/" class="image">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTYxNTQ2NTk3MV5BMl5BanBnXkFtZTcwNjExNDQzNA@@._V1_UY317_CR1,0,214,317_AL_.jpg" alt="" />
+      </a>
+      <h5><a href="http://www.imdb.com/title/tt4034228/">米歇尔·威廉姆斯 <br>
+      (海边的曼彻斯特)</a></h5>
+      <p>胜率: 4.97%</p>
+      </span>
+      </div>
+      </div>
+      <h5>正相关特征:</h5>
+      <li>演员工会奖 (SAG) -- 最佳女配角 -- 获奖 (1.83)</li>
+      <li>英国电影学院奖 (BAFTA) -- 最佳女配角 -- 获奖 (1.16)</li>
+      <li>评论家选择奖 (CCA) -- 最佳女配角 -- 获奖 (0.88)</li>
+      <li>华盛顿影评人协会奖 (WAFCA) -- 最佳女配角 -- 获奖 (0.84)</li>
+      <li>英国电影学院奖 (BAFTA) -- 最佳女配角 -- 获奖 (0.72)</li>
+      </div>
+      <div class="3u 12u$(small)">
+<div id="2422715" class="os_poll" data-path="/polls/2422715"></div>
+      </div>
+      </section>
+
+     <section id="writer1">
+      <h3> 最佳原创剧本 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/26613692/"> Taylor Sheridan (赴汤蹈火)</a></b> &nbsp胜率: 19.04%</li>
+      <li><b><a href="https://movie.douban.com/subject/25934014/"> Damien Chazelle (爱乐之城)</a></b> &nbsp 胜率: 29.57%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3464902/"> Yorgos Lanthimos, Efthymis Filippou (龙虾)</a></b> &nbsp 胜率: 13.09%</li>
+      <li><b><a href="https://movie.douban.com/subject/25980443/"> Kenneth Lonergan (海边的曼彻斯特) </a></b> &nbsp 胜率: 35.08%</li>
+      <li><b><a href="http://www.imdb.com/title/tt4385888/"> Mike Mills (二十世纪女人) </a></b> &nbsp 胜率: 3.21%</li>
+      <br>
+            <h5>正相关特征:</h5>
+      <li>编剧工会奖 (WGA) -- 最佳原创剧本 -- 获奖 (0.83) </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳原创剧本 -- 获奖 (0.66) </li>
+<li>评论家选择奖 (CCA) -- 最佳原创剧本 -- 获奖 (0.66) </li>
+<li>金球奖 (GG) -- 最佳编剧 -- 获奖 (0.59) </li>
+      </div>
+      <div class="3u 12u$(small)">
+<div id="2422717" class="os_poll" data-path="/polls/2422717"></div>
+      </div>
+            </div>
+      </section>
+
+      <section id="writer2">
+      <h3> 最佳改编剧本 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/25717614/"> Barry Jenkins, Tarell Alvin McCraney (月光男孩)</a></b> &nbsp 胜率: 27.55%</li>
+      <li><b><a href="https://movie.douban.com/subject/21324900/"> Eric Heisserer (降临) </a></b> &nbsp 胜率: 2.64%</li>
+      <li><b><a href="https://movie.douban.com/subject/3072070/"> August Wilson (藩篱) </a></b> &nbsp 胜率: 31.26%</li>
+      <li><b><a href="https://movie.douban.com/subject/26615208/"> Allison Schroeder, Theodore Melfi (隐藏人物) </a></b> &nbsp 胜率: 30.04%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3741834/"> Luke Davies (雄狮) </a></b> &nbsp 胜率: 8.51%</li>
+      <br>
+      <h5>正相关特征:</h5>
+      <li>编剧工会奖 (WGA) -- 最佳改编剧本 -- 获奖 (0.71) </li>
+<li>演员工会奖 (SAG) -- 最佳群戏 -- 提名 (0.64) </li>
+<li>波士顿影评人协会奖 (BSFCA) -- 最佳影片 -- 获奖 (0.54) </li>
+<li>评论家选择奖 (CCA) -- 最佳群戏 -- 提名 (0.51) </li>
+      </div>
+      <div class="3u 12u$(small)">
+<div id="2422718" class="os_poll" data-path="/polls/2422718"></div>
+      </div>
+            </div>
+      </section>
+
+            <section id="music1">
+      <h3> 最佳原创歌曲 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/25934014/"> "Audition (The Fools Who Dream)" (爱乐之城)</a></b> &nbsp 胜率: 16.84%</li>
+      <li><b><a href="https://movie.douban.com/subject/25934014/"> "City of Stars" (爱乐之城) </a></b> &nbsp 胜率:  31.25%</li>
+      <li><b><a href="http://www.imdb.com/title/tt1679335/"> "Can't Stop the Feeling" (魔发精灵) </a></b> &nbsp 胜率:  16.84%</li>
+      <li><b><a href="http://www.imdb.com/title/tt5278466/"> "The Empty Chair" (Jim: The James Foley Story) </a></b> &nbsp 胜率:  18.23%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3521164/"> "How Far I'll Go" (海洋奇缘)</a></b> &nbsp 胜率:  16.84%</li>
+      <br>
+      <h5>正相关特征:</h5>
+<li>评论家选择奖 (CCA) -- 最佳歌曲 -- 获奖 (0.84) </li>
+<li>金球奖 (GG) -- 最佳原创歌曲 -- 提名 (0.67) </li>
+<li>金球奖 (GG) -- 最佳原创歌曲 -- 获奖 (0.5) </li>
+      </div>
+      <div class="3u 12u$(small)">
+<div id="2422719" class="os_poll" data-path="/polls/2422719"></div>
+
+      </div>
+            </div>
+      </section>
+
+      <section id="music2">
+      <h3> 最佳原创配乐 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt1619029/"> Mica Levi (第一夫人) </a></b> &nbsp 胜率:  6.23%</li>
+      <li><b><a href="https://movie.douban.com/subject/25934014/"> Justin Hurwitz (爱乐之城) </a></b> &nbsp 胜率:  53.29%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3741834/"> Dustin O'Halloran, Volker Bertelmann (雄狮) </a></b> &nbsp 胜率:  10.42%</li>
+      <li><b><a href="https://movie.douban.com/subject/25717614/"> Nicholas Britell (月光男孩) </a></b> &nbsp 胜率:  18.26%</li>
+      <li><b><a href="http://www.imdb.com/title/tt1355644/"> Thomas Newman (太空旅客) </a></b> &nbsp 胜率:  11.81%</li>
+      <br>
+      <h5>正相关特征:</h5>
+      <li>金球奖 (GG) -- 最佳原创配乐 -- 获奖 (1.08) </li>
+<li>金球奖 (GG) -- 最佳导演 -- 提名 (0.51) </li>
+<li>评论家选择奖 (CCA) -- 最佳原创配乐 -- 获奖 (0.5) </li>
+      </div>
+      <div class="3u 12u$(small)">
+<div id="2422720" class="os_poll" data-path="/polls/2422720"></div>
+
+      </div>
+      </div>
+      </section>
+
+      <section id="cinematography">
+      <h3> 最佳摄影 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/21324900/"> Bradford Young (降临) </a></b> &nbsp 胜率:  27.52%</li>
+      <li><b><a href="https://movie.douban.com/subject/25934014/"> Linus Sandgren (爱乐之城) </a></b> &nbsp 胜率:  35.17%</li>
+      <li><b><a href="http://www.imdb.com/title/tt3741834/"> Greig Fraser (雄狮) </a></b> &nbsp 胜率:  23.03%</li>
+      <li><b><a href="https://movie.douban.com/subject/25717614/"> James Laxton (月光男孩) </a></b> &nbsp 胜率:  6.00%</li>
+      <li><b><a href="http://www.imdb.com/title/tt0490215/"> Rodrigo Prieto (沉默) </a></b> &nbsp 胜率:  8.28%</li>
+      <br>
+      <h5>正相关特征:</h5>
+      <li>评论家选择奖 (CCA) -- 最佳作曲 -- 获奖 (0.54) </li>
+<li>洛杉矶影评人协会奖 (LAFCA) -- 最佳艺术指导 -- 获奖 (0.5) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="film">
+      <h3> 最佳剪辑 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/25934014/"> Tom Cross (爱乐之城) </a></b> &nbsp 胜率:  43.29%</li>
+      <li><b><a href="https://movie.douban.com/subject/26325320/"> John Gilbert (血战钢锯岭) </a></b> &nbsp 胜率:  11.16%</li>
+      <li><b><a href="https://movie.douban.com/subject/25717614/"> Joi McMillon, Nat Sanders (月光男孩) </a></b> &nbsp 胜率:  1.82%</li>
+      <li><b><a href="https://movie.douban.com/subject/21324900/"> Joe Walker (降临) </a></b> &nbsp 胜率:  40.05%</li>
+      <li><b><a href="https://movie.douban.com/subject/26613692/"> Jake Roberts (赴汤蹈火) </a></b> &nbsp 胜率:  3.68%</li>
+      <br>
+      <h5>正相关特征:</h5>
+      <li>剪辑工会奖 (ACE) -- 最佳剧情剪辑 -- 获奖 (0.74) </li>
+<li>评论家选择奖 (CCA) -- 最佳导演 -- 获奖 (0.74) </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳剪辑 -- 获奖 (0.69) </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳混音 -- 获奖 (0.59) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="visual">
+      <h3> 最佳视觉效果 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt1860357/"> Craig Hammack, Jason H. Snell, Jason Billington, Burt Dalton (深海浩劫) </a></b> &nbsp 胜率: 36.53%
+ &nbsp </li>
+      <li><b><a href="http://www.imdb.com/title/tt1211837/"> Stephane Ceretti, Richard Bluff, Vincent Cirelli, Paul Corbould (奇异博士) </a></b> &nbsp 胜率: 3.35%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3040964/"> Robert Legato, Adam Valdez, Andrew R. Jones, Dan Lemmon (奇幻森林) </a></b> &nbsp 胜率: 10.84%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4302938/"> Steve Emerson, Oliver Jones, Brian McLean, Brad Schiff (魔弦传说) </a></b> &nbsp 胜率: 36.40%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3748528/"> John Knoll, Mohen Leo, Hal T. Hickel, Neil Corbould (侠盗一号) </a></b> &nbsp 胜率: 12.88%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>英国电影学院奖 (BAFTA) -- 最佳视觉效果 -- 获奖 (0.85) </li>
+<li>视觉效果协会奖 (VES) -- 最佳虚拟环境 -- 获奖 (0.54) </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳视觉效果 -- 获奖 (0.52) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="sound1">
+      <h3> 最佳音效混音 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/21324900/"> Bernard Gariepy Strobl, Claude La Haye (降临) </a></b> &nbsp 胜率: 31.03%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26325320/"> Kevin O'Connell, Andy Wright, Robert Mackenzie, Peter Grace (血战钢锯岭) </a></b> &nbsp 胜率: 8.82%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/25934014/"> Andy Nelson, Ai-Ling Lee, Steven Morrow (爱乐之城) </a></b> &nbsp 胜率: 41.56%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3748528/"> David Parker, Christopher Scarabosio, Stuart Wilson (侠盗一号) </a></b> &nbsp 胜率: 6.30%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4172430/"> Greg P. Russell, Gary Summers, Jeffrey J. Haboush, Mac Ruth (危机13小时) </a></b> &nbsp 胜率: 12.29%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>英国电影学院奖 (BAFTA) -- 最佳混音 -- 获奖 (1.08) </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳剪辑 -- 获奖 (0.57) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="sound2">
+      <h3> 最佳音效剪辑 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/21324900/"> Sylvain Bellemare (降临) </a></b> &nbsp 胜率: 23.16%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt1860357/"> Wylie Stateman, Renee Tondelli (深海浩劫) </a></b> &nbsp 胜率: 11.98%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/26325320/"> Robert Mackenzie, Andy Wright (血战钢锯岭) </a></b> &nbsp 胜率: 19.39%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/25934014/"> Ai-Ling Lee, Mildred Iatrou (爱乐之城) </a></b> &nbsp 胜率: 40.89%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3263904/"> Alan Robert Murray, Bub Asman (萨利机长) </a></b> &nbsp 胜率: 4.59%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>英国电影学院奖 (BAFTA) -- 最佳混音 -- 获奖 (0.58) </li>
+<li>国家影评人协会奖 (NSFCA) -- 最佳摄影 -- 提名 (0.54) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="costume">
+      <h3> 最佳服装设计 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt3640424/"> Joanna Johnston (间谍同盟) </a></b> &nbsp 胜率: 10.61%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3183660/"> Colleen Atwood (神奇动物在哪里) </a></b> &nbsp 胜率: 17.04%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4136084/"> Consolata Boyle (跑调天后) </a></b> &nbsp 胜率: 12.98%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt1619029/"> Madeline Fontaine (第一夫人) </a></b> &nbsp 胜率: 34.56%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/25934014/"> Mary Zophres (爱乐之城) </a></b> &nbsp 胜率: 24.81%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>英国电影学院奖 (BAFTA) -- 最佳服装设计 -- 获奖 (1.03) </li>
+<li>评论家选择奖 (CCA) -- 最佳服装设计 -- 获奖 (0.74) </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳艺术指导 -- 提名 (0.59) </li>
+<li>华盛顿影评人协会奖 (WAFCA) -- 最佳艺术指导 -- 提名 (0.57) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="makeup">
+      <h3> 最佳化妆与发型 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt4080728/"> Eva Von Bahr, Love Larson (一个叫欧维的男人决定去死) </a></b> &nbsp 胜率: 33.98%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt2660888/"> Joel Harlow, Richard Alonzo (星际迷航3：超越星辰) </a></b> &nbsp 胜率: 30.54%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt1386697/"> Alessandro Bertolazzi, Giorgio Gregorini, Christopher Allen Nelson (自杀小队) </a></b> &nbsp 胜率: 35.48%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>评论家选择奖 (CCA) -- 最佳年轻女演员 -- 提名 (0.61) </li>
+<li>演员工会奖 (SAG) -- 最佳群戏 -- 提名 (0.51) </li>
+<li>评论家选择奖 (CCA) -- 最佳家庭电影 -- 提名 (0.51) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="production">
+      <h3> 最佳艺术指导 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="https://movie.douban.com/subject/21324900/"> 降临 </a></b> &nbsp 胜率: 3.92%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3183660/"> 神奇动物在哪里 </a></b> &nbsp 胜率: 33.50%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt0475290/"> 凯撒万岁 </a></b> &nbsp 胜率: 20.83%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/25934014/"> 爱乐之城 </a></b> &nbsp 胜率: 19.39%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt1355644/"> 太空旅客 </a></b> &nbsp 胜率: 22.36%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>华盛顿影评人协会奖 (WAFCA) -- 最佳艺术指导 -- 获奖 (0.67) </li>
+<li>剪辑工会奖 (ACE) -- 最佳喜剧/音乐剧剪辑 -- 获奖 (0.55) </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳艺术指导 -- 获奖 (0.54) </li>
+<li>洛杉矶影评人协会奖 (LAFCA) -- 最佳艺术指导 -- 提名 (0.52) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="foreign">
+      <h3> 最佳外语片 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt4080728/"> 一个叫欧维的男人决定去死 (瑞典) </a></b> &nbsp 胜率: 12.98%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5186714/"> 推销员 (伊朗) </a></b> &nbsp 胜率: 10.53%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4239726/"> 塔纳岛之恋 (澳大利亚) </a></b> &nbsp 胜率: 12.98%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt4048272/"> 托尼·厄德曼 (德国) </a></b> &nbsp 胜率: 55.13%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3841424/"> 地雷区 (丹麦) </a></b> &nbsp 胜率: 8.37%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>洛杉矶影评人协会奖 (LAFCA) -- 最佳外语片 -- 获奖 (0.79) </li>
+<li>洛杉矶影评人协会奖 (LAFCA) -- 最佳外语片 -- 提名 (0.71) </li>
+<li>金球奖 (GG) -- 最佳外语片 -- 提名 (0.69) </li>
+<li>评论家选择奖 (CCA) -- 最佳外语片 -- 获奖 (0.64) </li>
+<li>英国独立电影奖 (BIFA) -- 最佳国际独立电影 -- 提名 (0.58) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      <section id="animation">
+      <h3> 最佳动画长片 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt4302938/"> 魔弦传说 </a></b> &nbsp 胜率: 22.25%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3521164/"> 海洋奇缘 </a></b> &nbsp 胜率: 25.39%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt2321405/"> 西葫芦的生活 </a></b> &nbsp 胜率: 10.40%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3666024/"> 红海龟 </a></b> &nbsp 胜率: 7.61%
+ &nbsp</li>
+      <li><b><a href="https://movie.douban.com/subject/25662329/"> 疯狂动物城 </a></b> &nbsp 胜率: 34.35%
+ &nbsp</li>
+ <br>
+ <h5>正相关特征:</h5>
+ <li>评论家选择奖 (CCA) -- 最佳动画长片 -- 获奖 (0.84) </li>
+<li>英国电影学院奖 (BAFTA) -- 最佳动画片 -- 获奖 (0.71) </li>
+<li>华盛顿影评人协会奖 (WAFCA) -- 最佳动画长片 -- 获奖 (0.63) </li>
+<li>视觉效果协会奖 (VES) -- 最佳动画虚拟环境 -- 获奖 (0.59) </li>
+<li>视觉效果协会奖 (VES) -- 最佳动画角色 -- 获奖 (0.57) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+
+      <section id="documentary">
+      <h3> 最佳纪录长片 </h3>
+      <div class="row">
+      <div class="9u 12u$(small)">
+      <li><b><a href="http://www.imdb.com/title/tt3652526/"> 海上火焰 </a></b> &nbsp 胜率: 7.97%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5804038/"> 我不是你的黑鬼 </a></b> &nbsp 胜率: 7.08%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt3917210/"> 生命，动画 </a></b> &nbsp 胜率: 8.76%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5275892/"> O.J.：美国制造 </a></b> &nbsp 胜率: 68.01%
+ &nbsp</li>
+      <li><b><a href="http://www.imdb.com/title/tt5895028/"> 第13条修正案 </a></b> &nbsp 胜率: 8.19%
+ &nbsp</li>
+      <br>
+      <h5>正相关特征:</h5>
+      <li>美国国家评论奖 (NBR) -- 最佳纪录片 -- 获奖 (0.95) </li>
+<li>美国国家评论奖 (NBR) -- 最佳纪录片 -- 提名 (0.95) </li>
+<li>评论家选择奖 (CCA) -- 最佳纪录长片 -- 提名 (0.79) </li>
+<li>评论家选择奖 (CCA) -- 最佳纪录长片 -- 获奖 (0.65) </li>
+<li>剪辑工会奖 (ACE) -- 最佳纪录片剪辑 -- 获奖 (0.63) </li>
+      </div>
+
+      <div class="3u 12u$(small)">
+
+      </div>
+      </div>
+      </section>
+
+      </div>
+      </div>
+<!-- Sidebar -->
+<div id="sidebar">
+   <div class="inner">
+
+      <!-- Menu -->
+      <nav id="menu">
+         <header class="major">
+            <h2>Menu</h2>
+         </header>
+         <ul>
+            <li><a href="../index.html#about">Homepage</a></li>
+            <li><a href="../index.html#research">Latest News</a></li>
+            <li><a href="../index.html#research">Research & Service</a></li>
+            <li><a href="../index.html#service">Misc.</a></li>
+         </ul>
+      </nav>
+
+   </div>
+</div>
+
+</div>
+
+
+   <script src="../assets/js/oscar-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,574 @@
+/*
+ * oscar-archive.css — Unified styles for all legacy Oscar pages (2017–2023)
+ * Scholarly notebook base + warm gold Oscar accent
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;450;500;600&family=Noto+Serif+SC:wght@400;500;600&display=swap");
+
+/* ── Tokens ── */
+:root {
+	--ink: #1a1a1a;
+	--charcoal: #333;
+	--text: #3a3a3a;
+	--text-light: #666;
+	--text-muted: #999;
+	--border: #e0e0e0;
+	--border-light: #eee;
+	--bg: #fff;
+	--bg-warm: #f9f8f6;
+	--accent: #8b2635;
+	--accent-light: #a63d4b;
+	/* Oscar gold accent — WCAG AA compliant on white */
+	--gold: #85691a;           /* 5.2:1 contrast — primary gold for text */
+	--gold-light: #9a7a28;     /* 4.1:1 — hover/large text */
+	--gold-faint: rgba(133, 105, 26, 0.07);
+	--gold-bg: #f9f6ee;
+	--serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+	--sans: "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+	font-family: var(--sans);
+	font-size: 15px;
+	line-height: 1.7;
+	color: var(--text);
+	background: var(--bg);
+	-webkit-font-smoothing: antialiased;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   OSCAR HEADER — gold accent differentiates from main site
+══════════════════════════════════════════════════════════════ */
+.oscar-header {
+	position: sticky;
+	top: 0;
+	z-index: 200;
+	background: linear-gradient(180deg, #fbf8f0 0%, #f7f3e8 100%);
+	box-shadow: 0 1px 10px rgba(140, 120, 50, 0.08);
+	border-bottom: 2px solid var(--gold);
+}
+
+.oscar-header-inner {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 0.6em 3em;
+	display: flex;
+	align-items: center;
+	gap: 1.2em;
+}
+
+/* Home link */
+.oscar-home {
+	font-family: var(--serif);
+	font-size: 1em;
+	font-weight: 600;
+	color: var(--charcoal);
+	text-decoration: none;
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+.oscar-home:hover { color: var(--ink); }
+
+.oscar-name-cn {
+	font-family: "Noto Serif SC", "Songti SC", "PingFang SC", serif;
+	font-weight: 500;
+	font-size: 0.84em;
+}
+
+/* Separator */
+.oscar-sep {
+	color: var(--border);
+	font-size: 0.9em;
+	flex-shrink: 0;
+}
+
+/* Oscar title with gold accent */
+.oscar-title {
+	font-family: var(--serif);
+	font-size: 1.1em;
+	font-weight: 700;
+	color: var(--gold);
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+/* Year dropdown */
+.oscar-nav {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	gap: 0.8em;
+}
+
+.oscar-dropdown {
+	position: relative;
+}
+
+.oscar-dropdown-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35em;
+	font-family: var(--sans);
+	font-size: 0.78em;
+	font-weight: 500;
+	color: var(--text-light);
+	background: white;
+	border: 1px solid var(--border);
+	border-radius: 5px;
+	padding: 0.35em 0.7em;
+	cursor: pointer;
+	transition: all 0.15s;
+}
+
+.oscar-dropdown-btn:hover {
+	border-color: var(--gold);
+	color: var(--gold);
+}
+
+.oscar-dropdown-btn .arrow {
+	font-size: 0.6em;
+	transition: transform 0.2s;
+}
+
+.oscar-dropdown:hover .arrow {
+	transform: rotate(180deg);
+}
+
+.oscar-dropdown-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	margin-top: 4px;
+	background: white;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+	min-width: 140px;
+	z-index: 300;
+	overflow: hidden;
+}
+
+/* Hover on desktop, click on mobile (JS handles click toggle) */
+@media (hover: hover) {
+	.oscar-dropdown:hover .oscar-dropdown-menu {
+		display: block;
+	}
+}
+
+.oscar-dropdown-menu a {
+	display: block;
+	padding: 0.45em 1em;
+	font-size: 0.8em;
+	color: var(--text);
+	text-decoration: none;
+	transition: background 0.1s;
+}
+
+.oscar-dropdown-menu a:hover {
+	background: var(--gold-faint);
+	color: var(--gold);
+}
+
+.oscar-dropdown-menu a.active {
+	font-weight: 600;
+	color: var(--gold);
+	background: var(--gold-faint);
+}
+
+.oscar-dropdown-menu .menu-divider {
+	border-top: 1px solid var(--border-light);
+	margin: 0.2em 0;
+}
+
+/* Language toggle */
+.oscar-lang {
+	font-size: 0.75em;
+	font-weight: 450;
+	color: var(--text-muted);
+	text-decoration: none;
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	padding: 0.3em 0.6em;
+	transition: all 0.15s;
+}
+
+.oscar-lang:hover {
+	color: var(--gold);
+	border-color: var(--gold);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PAGE LAYOUT
+══════════════════════════════════════════════════════════════ */
+#wrapper { display: block; }
+#main { width: 100%; }
+
+#main > .inner {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 1.5em 3em 3em;
+}
+
+/* ── Page title ── */
+#header {
+	padding: 1.5em 0 1em;
+	border-bottom: none;
+}
+
+#header h2 {
+	font-family: var(--serif);
+	font-size: 2.2em;
+	font-weight: 700;
+	color: var(--ink);
+	line-height: 1.15;
+}
+
+/* ── Intro text ── */
+#header + section,
+#header + section + section:empty + section {
+	padding: 0.5em 0 1.5em;
+	border-top: none;
+	font-size: 0.93em;
+	line-height: 1.8;
+	color: var(--text-light);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TYPOGRAPHY
+══════════════════════════════════════════════════════════════ */
+h2, h3, h4 {
+	font-family: var(--serif);
+	color: var(--ink);
+}
+
+h3 {
+	font-size: 1.35em;
+	font-weight: 700;
+	color: var(--charcoal);
+	margin: 1.8em 0 0.6em;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid var(--border-light);
+}
+
+h4 {
+	font-size: 1em;
+	font-weight: 600;
+	color: var(--charcoal);
+	margin: 1em 0 0.3em;
+}
+
+h5 {
+	font-family: var(--sans);
+	font-size: 0.8em;
+	font-weight: 500;
+	color: var(--ink);
+	margin-top: 0.5em;
+	line-height: 1.3;
+}
+
+h5 a {
+	color: var(--ink);
+	text-decoration: none;
+}
+
+h5 a:hover {
+	color: var(--gold);
+}
+
+h6 {
+	font-family: var(--sans);
+	font-size: 0.7em;
+	font-weight: 400;
+	color: var(--text-muted);
+	margin-top: 0.1em;
+	line-height: 1.3;
+}
+
+p { margin-bottom: 0.8em; }
+
+a {
+	color: var(--gold);
+	text-decoration: none;
+	transition: color 0.15s;
+}
+
+a:hover { color: var(--gold-light); }
+
+small { font-size: inherit; }
+
+/* ── Winner text (overrides inline color:red) ── */
+p[style*="color:red"],
+p[style*="color: red"] {
+	color: var(--gold) !important;
+	font-family: var(--serif);
+	font-weight: 700;
+	font-size: 1.1em;
+	font-style: italic;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   CATEGORY SECTIONS
+══════════════════════════════════════════════════════════════ */
+section {
+	padding: 0.8em 0 1em;
+}
+
+section[id] {
+	padding-top: 1.5em;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   NOMINEE GRID
+══════════════════════════════════════════════════════════════ */
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	margin-bottom: 0.5em;
+}
+
+.row > * { flex: 0 0 auto; }
+
+[class*="2u"] {
+	width: calc(20% - 1em);
+	min-width: 100px;
+}
+
+[class*="3u"] {
+	width: calc(25% - 1em);
+	min-width: 100px;
+}
+
+[class*="9u"],
+[class*="12u"] {
+	width: 100%;
+}
+
+/* ── Nominee cards ── */
+.image.object {
+	display: block;
+	text-align: center;
+}
+
+.image.object .image,
+.image.object a.image {
+	display: block;
+	overflow: hidden;
+	border-radius: 6px;
+	background: var(--bg-warm);
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.image.object a.image:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.image.object img {
+	width: 100%;
+	height: auto;
+	display: block;
+	aspect-ratio: 2/3;
+	object-fit: cover;
+	filter: saturate(0.88) brightness(0.97);
+	transition: filter 0.3s;
+}
+
+.image.object:hover img {
+	filter: saturate(1) brightness(1);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   GPT EXPLANATIONS (details/summary)
+══════════════════════════════════════════════════════════════ */
+details {
+	margin: 0.6em 0 1.2em;
+	background: var(--gold-bg);
+	border: 1px solid rgba(160, 133, 48, 0.15);
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+summary {
+	padding: 0.55em 1em;
+	font-size: 0.85em;
+	font-weight: 500;
+	color: var(--gold);
+	cursor: pointer;
+	transition: color 0.15s;
+	list-style: none;
+}
+
+summary::-webkit-details-marker { display: none; }
+summary::marker { content: ""; }
+
+summary::before {
+	content: "▸ ";
+	font-size: 0.8em;
+}
+
+details[open] summary::before {
+	content: "▾ ";
+}
+
+summary:hover { color: var(--gold-light); }
+
+details[open] summary {
+	border-bottom: 1px solid rgba(160, 133, 48, 0.12);
+}
+
+details > div,
+details > p {
+	padding: 0.8em 1.1em;
+	font-size: 0.86em;
+	line-height: 1.8;
+	color: var(--text);
+}
+
+details ul, details ol {
+	margin: 0.5em 0;
+	padding-left: 1.5em;
+}
+
+details li {
+	margin-bottom: 0.4em;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════════════════════ */
+.oscar-footer {
+	background: var(--gold-bg);
+	border-top: 1px solid rgba(160, 133, 48, 0.12);
+	padding: 2em 3em;
+	text-align: center;
+	margin-top: 2em;
+}
+
+.oscar-footer p {
+	font-family: var(--serif);
+	color: var(--text-muted);
+	font-size: 0.82em;
+	font-style: italic;
+}
+
+.oscar-footer a {
+	color: var(--gold);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SELECTION & SCROLLBAR
+══════════════════════════════════════════════════════════════ */
+::selection {
+	background: rgba(160, 133, 48, 0.12);
+	color: var(--ink);
+}
+
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #aaa; }
+
+/* ══════════════════════════════════════════════════════════════
+   CATEGORY NAV — sticky horizontal scrollable bar
+══════════════════════════════════════════════════════════════ */
+.oscar-cats {
+	position: sticky;
+	top: 42px; /* below header */
+	z-index: 150;
+	display: flex;
+	gap: 4px;
+	padding: 6px 3em;
+	overflow-x: auto;
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(8px);
+	border-bottom: 1px solid var(--border-light);
+	scrollbar-width: none;
+	-webkit-overflow-scrolling: touch;
+}
+
+.oscar-cats::-webkit-scrollbar { display: none; }
+
+.oscar-cat-link {
+	white-space: nowrap;
+	font-family: var(--sans);
+	font-size: 0.7em;
+	font-weight: 500;
+	padding: 3px 9px;
+	border-radius: 4px;
+	color: var(--text-muted);
+	background: var(--bg-warm);
+	border: 1px solid transparent;
+	text-decoration: none;
+	transition: all 0.15s;
+	flex-shrink: 0;
+}
+
+.oscar-cat-link:hover {
+	color: var(--gold);
+	background: var(--gold-faint);
+}
+
+.oscar-cat-link.active {
+	color: var(--gold);
+	background: var(--gold-faint);
+	border-color: rgba(133, 105, 26, 0.18);
+	font-weight: 600;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════════════ */
+@media screen and (max-width: 900px) {
+	[class*="2u"],
+	[class*="3u"] {
+		width: calc(25% - 1em);
+	}
+}
+
+@media screen and (max-width: 680px) {
+	body { font-size: 14px; }
+
+	#main > .inner { padding: 1em 1.5em 2em; }
+
+	.oscar-header-inner {
+		padding: 0.5em 1.5em;
+		flex-wrap: wrap;
+	}
+
+	.oscar-home { font-size: 0.9em; }
+	.oscar-title { font-size: 0.95em; }
+	.oscar-cats { padding: 5px 1.5em; top: 38px; }
+
+	[class*="2u"],
+	[class*="3u"] {
+		width: calc(33.33% - 1em);
+	}
+
+	#header h2 { font-size: 1.6em; }
+	h3 { font-size: 1.15em; }
+}
+
+@media screen and (max-width: 420px) {
+	[class*="2u"],
+	[class*="3u"] {
+		width: calc(50% - 1em);
+	}
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PRINT
+══════════════════════════════════════════════════════════════ */
+@media print {
+	.oscar-header { position: static; box-shadow: none; }
+	.oscar-nav { display: none; }
+	.oscar-cats { display: none; }
+	body { font-size: 10pt; }
+}

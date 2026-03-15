@@ -4,34 +4,35 @@
       <title>Who Will Win at the Academy Awards, 2018?</title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-      <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
-      <link rel="stylesheet" href="../assets/css/main.css" />
-      <!--[if lte IE 9]>
-      <link rel="stylesheet" href="../assets/css/ie9.css" />
-      <![endif]-->
-      <!--[if lte IE 8]>
-      <link rel="stylesheet" href="../assets/css/ie8.css" />
-      <![endif]-->
-      <script>
-         function getVote(int) {
-         	if (window.XMLHttpRequest) {
-         // code for IE7+, Firefox, Chrome, Opera, Safari
-         xmlhttp=new XMLHttpRequest();
-         } else {  // code for IE6, IE5
-         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-         }
-         xmlhttp.onreadystatechange=function() {
-         if (this.readyState==4 && this.status==200) {
-         document.getElementById("poll").innerHTML=this.responseText;
-         }
-         }
-         xmlhttp.open("GET","poll_vote.php?vote="+int,true);
-         xmlhttp.send();
-         }
-      </script>
+      
+      <link rel="stylesheet" href="../assets/css/oscar.css" />
    </head>
    <body>
-      <!-- Wrapper -->
+
+<header class="oscar-header">
+  <div class="oscar-header-inner">
+    <a href="../" class="oscar-home">Mengting Wan <span class="oscar-name-cn">(万梦婷)</span>, Ph.D.</a>
+    <span class="oscar-sep">/</span>
+    <span class="oscar-title">Oscar 2018</span>
+    <div class="oscar-nav">
+      <div class="oscar-dropdown">
+        <button class="oscar-dropdown-btn">All Years <span class="arrow">▾</span></button>
+        <div class="oscar-dropdown-menu">
+          <a href="oscar2026.html">2026</a>
+          <a href="oscar2023.html">2023</a>
+          <a href="oscar2021.html">2021</a>
+          <a href="oscar2020.html">2020</a>
+          <a href="oscar2019.html">2019</a>
+          <a href="oscar2018.html" class="active">2018</a>
+          <a href="oscar2017.html">2017</a>
+        </div>
+      </div>
+      <a href="oscar2018_cn.html" class="oscar-lang">中文版</a>
+    </div>
+  </div>
+</header>
+
+<!-- Wrapper -->
       <div id="wrapper">
       <!-- Main -->
       <div id="main">
@@ -40,7 +41,6 @@
       <header id="header">
          <h2>Who Will Win at the Academy Awards, 2018? </h2>
       </header>
-      <a href="oscar2018.html"> English </a> / <a href="oscar2018_cn.html"> 中文版 </a> <br><br>
       <font color="red"><small>3/3/2018: ISA results were out today. The model was re-trained and numbers have been updated. </small></font> <br>
       Similar to <a href="oscar2017.html"> last year</a>, I trained a classifier to predict the winners at this year's academy awards. A couple of <a href="https://github.com/MengtingWan/oscar/blob/master/data/award_code.csv">pre-Oscar awards</a> were included as features. A brief summary of the results are included as below. <br>
       I've released all <a href="https://github.com/MengtingWan/oscar">source code</a>. Feel free to check out and hope you're having fun in exploring this mini-project.
@@ -54,7 +54,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt5726616/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@._V1_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@._V1_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt5726616/">Call Me by Your Name</a></h5>
                         <p>Chance: 0.10%</p>
@@ -63,7 +63,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt4555426/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNTU4MjMwOTgyMV5BMl5BanBnXkFtZTgwODQzNjY2NDM@._V1_SY1000_SX675_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BNTU4MjMwOTgyMV5BMl5BanBnXkFtZTgwODQzNjY2NDM@._V1_SY1000_SX675_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt4555426/">Darkest Hour</a></h5>
                         <p>Chance: 0.10%</p>
@@ -72,7 +72,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt5013056/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt5013056/">Dunkirk</a></h5>
                         <p>Chance: 0.11%</p>
@@ -81,7 +81,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt5052448/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt5052448/">Get Out</a></h5>
                         <p>Chance: 0.01%</p>
@@ -90,7 +90,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt4925292/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX677_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX677_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt4925292/">Lady Bird</a></h5>
                         <p>Chance: 0.01%</p>
@@ -101,7 +101,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt5776858/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxODcwOTU2Nl5BMl5BanBnXkFtZTgwOTUzNjY2NDM@._V1_SY1000_SX675_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTUxODcwOTU2Nl5BMl5BanBnXkFtZTgwOTUzNjY2NDM@._V1_SY1000_SX675_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt5776858/">Phantom Thread</a></h5>
                         <p>Chance: 0.36%</p>
@@ -110,7 +110,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt6294822/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjQyMjEwOTIwNV5BMl5BanBnXkFtZTgwOTkzNTMxNDM@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjQyMjEwOTIwNV5BMl5BanBnXkFtZTgwOTkzNTMxNDM@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt6294822/">The Post</a></h5>
                         <p>Chance: 0.13%</p>
@@ -119,7 +119,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt5580390/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNGNiNWQ5M2MtNGI0OC00MDA2LWI5NzEtMmZiYjVjMDEyOWYzXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BNGNiNWQ5M2MtNGI0OC00MDA2LWI5NzEtMmZiYjVjMDEyOWYzXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt5580390/">The Shape of Water</a></h5>
                         <p>Chance: 97.19%</p>
@@ -128,7 +128,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt5027774/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BZTZjYzU2NTktNTdmNi00OTM0LTg5MDgtNGFjOGMzNjY0MDk5XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX675_CR0,0,675,999_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BZTZjYzU2NTktNTdmNi00OTM0LTg5MDgtNGFjOGMzNjY0MDk5XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX675_CR0,0,675,999_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt5027774/">Three Billboards Outside Ebbing, Missouri</a></h5>
                         <p>Chance: 1.98%</p>
@@ -140,18 +140,7 @@
                <li> Critics’ Choice Awards (CCA) -- best motion picture -- winner </li>
                <li> Washington DC Area Film Critics Awards (WAFCA) -- best acting ensemble -- winner </li>
             </div>
-            <div class="3u 12u$(small)">
-<script type="text/javascript">
-(function(d, s, id){
-  var js,
-      fjs = d.getElementsByTagName(s)[0],
-      r = Math.floor(new Date().getTime() / 1000000);
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id; js.async=1;
-  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'os-widget-jssdk'));
-</script><div class="os_poll" data-path="/polls/2490275" id="os-widget-2490275"></div>
+            <div class="3u 12u$(small)"><div class="os_poll" data-path="/polls/2490275" id="os-widget-2490275"></div>
             </div>
          </div>
       </section>
@@ -163,7 +152,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt5013056/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt5013056/">Christopher Nolan <br>(Dunkirk)</a></h5>
                         <p>Chance: 0.02%</p>
@@ -172,7 +161,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt4925292/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX677_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX677_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt4925292/">Greta Gerwig <br> 
                            (Lady Bird)</a>
@@ -183,7 +172,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt5580390/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BNGNiNWQ5M2MtNGI0OC00MDA2LWI5NzEtMmZiYjVjMDEyOWYzXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BNGNiNWQ5M2MtNGI0OC00MDA2LWI5NzEtMmZiYjVjMDEyOWYzXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt5580390/">Guillermo del Toro <br>
                            (The Shape of Water)</a>
@@ -194,7 +183,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt5052448/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt5052448/">Jordan Peele <br>(Get Out)</a></h5>
                         <p>Chance: 0.00%</p>
@@ -203,7 +192,7 @@
                   <div class="2u 8u$(small)" align="center">
                      <span class="image object">
                         <a href="http://www.imdb.com/title/tt5776858/" class="image">
-                        <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxODcwOTU2Nl5BMl5BanBnXkFtZTgwOTUzNjY2NDM@._V1_SY1000_SX675_AL_.jpg" alt="" />
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTUxODcwOTU2Nl5BMl5BanBnXkFtZTgwOTUzNjY2NDM@._V1_SY1000_SX675_AL_.jpg" alt="" />
                         </a>
                         <h5><a href="http://www.imdb.com/title/tt5776858/">Paul Thomas Anderson <br> 
                            (Phantom Thread)</a>
@@ -217,18 +206,7 @@
                <li>British Academy of Film and Television Arts (BAFTA) -- best cinematography -- winner </li>
                <li>British Academy of Film and Television Arts (BAFTA) -- best film -- winner </li>
             </div>
-            <div class="3u 12u$(small)">
-<script type="text/javascript">
-(function(d, s, id){
-  var js,
-      fjs = d.getElementsByTagName(s)[0],
-      r = Math.floor(new Date().getTime() / 1000000);
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id; js.async=1;
-  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'os-widget-jssdk'));
-</script><div class="os_poll" data-path="/polls/2490276" id="os-widget-2490276"></div>
+            <div class="3u 12u$(small)"><div class="os_poll" data-path="/polls/2490276" id="os-widget-2490276"></div>
             </div>
             </div>
       </section>
@@ -240,7 +218,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="https://www.imdb.com/name/nm0000358/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2NDY2NDc1Ml5BMl5BanBnXkFtZTcwNjAyMjkwOQ@@._V1_SY1000_CR0,0,759,1000_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMjE2NDY2NDc1Ml5BMl5BanBnXkFtZTcwNjAyMjkwOQ@@._V1_SY1000_CR0,0,759,1000_AL_.jpg" alt="" />
       </a>
       <h5><a href="https://www.imdb.com/name/nm0000358/">Daniel Day-Lewis <br>(Phantom Thread)</a></h5>
       <p>Chance: 1.84%</p>
@@ -249,7 +227,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm2257207/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BOTk1MzgzOTg5OV5BMl5BanBnXkFtZTcwNDQ4NjMxOA@@._V1_SY1000_CR0,0,681,1000_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BOTk1MzgzOTg5OV5BMl5BanBnXkFtZTcwNDQ4NjMxOA@@._V1_SY1000_CR0,0,681,1000_AL_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm2257207/">Daniel Kaluuya <br> 
       (Get Out)</a></h5>
@@ -259,7 +237,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0000243/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjE5NDU2Mzc3MV5BMl5BanBnXkFtZTcwNjAwNTE5OQ@@._V1_SY1000_SX750_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMjE5NDU2Mzc3MV5BMl5BanBnXkFtZTcwNjAwNTE5OQ@@._V1_SY1000_SX750_AL_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0000243/">Denzel Washington <br>
       (Roman J. Israel, Esq.)</a></h5>
@@ -269,7 +247,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0000198/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc3NTM4MzQ5MV5BMl5BanBnXkFtZTcwOTE4MDczNw@@._V1_SY1000_CR0,0,678,1000_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMTc3NTM4MzQ5MV5BMl5BanBnXkFtZTcwOTE4MDczNw@@._V1_SY1000_CR0,0,678,1000_AL_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0000198/">Gary Oldman <br>(Darkest Hour)</a></h5>
       <p>Chance: 87.87%</p>
@@ -278,7 +256,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm3154303/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BOWU1Nzg0M2ItYjEzMi00ODliLThkODAtNGEyYzRkZTBmMmEzXkEyXkFqcGdeQXVyNDk2Mzk2NDg@._V1_SY1000_CR0,0,755,1000_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BOWU1Nzg0M2ItYjEzMi00ODliLThkODAtNGEyYzRkZTBmMmEzXkEyXkFqcGdeQXVyNDk2Mzk2NDg@._V1_SY1000_CR0,0,755,1000_AL_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm3154303/">Timothée Chalamet <br> 
       (Call Me by Your Name)</a></h5>
@@ -291,18 +269,7 @@
       <li> British Academy of Film and Television Arts (BAFTA) -- best film -- winner </li>
       <li> British Academy of Film and Television Arts (BAFTA) -- best leading actor -- winner </li>
       </div>
-      <div class="3u 12u$(small)">
-<script type="text/javascript">
-(function(d, s, id){
-  var js,
-      fjs = d.getElementsByTagName(s)[0],
-      r = Math.floor(new Date().getTime() / 1000000);
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id; js.async=1;
-  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'os-widget-jssdk'));
-</script><div class="os_poll" data-path="/polls/2490277" id="os-widget-2490277"></div>
+      <div class="3u 12u$(small)"><div class="os_poll" data-path="/polls/2490277" id="os-widget-2490277"></div>
       </div>
       </div>
       </section>
@@ -315,7 +282,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0000531/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjI3NzgxNjYzOF5BMl5BanBnXkFtZTgwNTIxMjExNzE@._V1_SY1000_CR0,0,830,1000_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI3NzgxNjYzOF5BMl5BanBnXkFtZTgwNTIxMjExNzE@._V1_SY1000_CR0,0,830,1000_AL_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0000531/">Frances McDormand <br>(Three Billboards Outside Ebbing, Missouri)</a></h5>
       <p>Chance: 99.98%</p>
@@ -324,7 +291,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm3053338/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxNDcwMzU2Nl5BMl5BanBnXkFtZTcwNDc4NzkzOQ@@._V1_SY999_SX750_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMTgxNDcwMzU2Nl5BMl5BanBnXkFtZTcwNDc4NzkzOQ@@._V1_SY999_SX750_AL_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm3053338/">Margot Robbie <br> 
       (I, Tonya)</a></h5>
@@ -334,7 +301,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0000658/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU4Mjk5MDExOF5BMl5BanBnXkFtZTcwOTU1MTMyMw@@._V1_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMTU4Mjk5MDExOF5BMl5BanBnXkFtZTcwOTU1MTMyMw@@._V1_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0000658/">Meryl Streep <br>
       (The Post)</a></h5>
@@ -344,7 +311,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm1020089/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BODE4MDE0MDEzMl5BMl5BanBnXkFtZTgwNjI1NTU5MDE@._V1_SY1000_CR0,0,765,1000_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BODE4MDE0MDEzMl5BMl5BanBnXkFtZTgwNjI1NTU5MDE@._V1_SY1000_CR0,0,765,1000_AL_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm1020089/">Sally Hawkins <br>(The Shape of Water)</a></h5>
       <p>Chance: 0.00%</p>
@@ -353,7 +320,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm1519680/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjExNTM5NDE4NV5BMl5BanBnXkFtZTcwNzczMzEzOQ@@._V1_SY1000_CR0,0,664,1000_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMjExNTM5NDE4NV5BMl5BanBnXkFtZTcwNzczMzEzOQ@@._V1_SY1000_CR0,0,664,1000_AL_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm1519680/">Saoirse Ronan <br> 
       (Lady Bird)</a></h5>
@@ -366,18 +333,7 @@
       <li>British Academy of Film and Television Arts (BAFTA) -- best leading actress -- winner </li>
       <li>Golden Globe Awards (GG) -- best actress, motion picture drama -- winner </li>
       </div>
-      <div class="3u 12u$(small)">
-      	<script type="text/javascript">
-(function(d, s, id){
-  var js,
-      fjs = d.getElementsByTagName(s)[0],
-      r = Math.floor(new Date().getTime() / 1000000);
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id; js.async=1;
-  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'os-widget-jssdk'));
-</script><div class="os_poll" data-path="/polls/2490279" id="os-widget-2490279"></div>
+      <div class="3u 12u$(small)"><div class="os_poll" data-path="/polls/2490279" id="os-widget-2490279"></div>
       </div>
       </div>
       </section>
@@ -390,7 +346,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0001626/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5MzQ5MDY3NF5BMl5BanBnXkFtZTcwNzMxOTU5Ng@@._V1_SY1000_CR0,0,700,1000_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMTU5MzQ5MDY3NF5BMl5BanBnXkFtZTcwNzMxOTU5Ng@@._V1_SY1000_CR0,0,700,1000_AL_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0001626/">Christopher Plummer <br>(All the Money in the World)</a></h5>
       <p>Chance: 1.35%</p>
@@ -399,7 +355,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0420955/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMzM5MzA4NDcyN15BMl5BanBnXkFtZTcwMDkwNjQzMg@@._V1_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMzM5MzA4NDcyN15BMl5BanBnXkFtZTcwMDkwNjQzMg@@._V1_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0420955/">Richard Jenkins <br> 
       (The Shape of Water)</a></h5>
@@ -409,7 +365,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0005377/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2NTM3MzE5NF5BMl5BanBnXkFtZTcwMjg4NDMwNA@@._V1_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMTc2NTM3MzE5NF5BMl5BanBnXkFtZTcwMjg4NDMwNA@@._V1_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0005377/">Sam Rockwell<br>
       (Three Billboards Outside Ebbing, Missouri)</a></h5>
@@ -419,7 +375,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0000353/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTcyNjU2MTYyM15BMl5BanBnXkFtZTgwMjY5MDY4NDE@._V1_SY1000_CR0,0,799,1000_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMTcyNjU2MTYyM15BMl5BanBnXkFtZTgwMjY5MDY4NDE@._V1_SY1000_CR0,0,799,1000_AL_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0000353/">Willem Dafoe<br>(The Florida Project)</a></h5>
       <p>Chance: 3.62%</p>
@@ -428,7 +384,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0000437/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU3NDc2ODc4MF5BMl5BanBnXkFtZTcwODk2MzAyMg@@._V1_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMTU3NDc2ODc4MF5BMl5BanBnXkFtZTcwODk2MzAyMg@@._V1_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0000437/">Woody Harrelson<br>
       (Three Billboards Outside Ebbing, Missouri)</a></h5>
@@ -441,18 +397,7 @@
 <li>British Academy of Film and Television Arts (BAFTA) -- best supporting actor -- winner  </li>
 <li>Screen Actors Guild Awards (SAG) -- outstanding male actor supporting role -- winner  </li>
       </div>
-      <div class="3u 12u$(small)">
-<script type="text/javascript">
-(function(d, s, id){
-  var js,
-      fjs = d.getElementsByTagName(s)[0],
-      r = Math.floor(new Date().getTime() / 1000000);
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id; js.async=1;
-  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'os-widget-jssdk'));
-</script><div class="os_poll" data-path="/polls/2490282" id="os-widget-2490282"></div>
+      <div class="3u 12u$(small)"><div class="os_poll" data-path="/polls/2490282" id="os-widget-2490282"></div>
       </div>
       </div>
       </section>
@@ -465,7 +410,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0005049/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjAyNjc2NzgxM15BMl5BanBnXkFtZTgwODQyMjM1MjE@._V1_SY1000_CR0,0,730,1000_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMjAyNjc2NzgxM15BMl5BanBnXkFtZTgwODQyMjM1MjE@._V1_SY1000_CR0,0,730,1000_AL_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0005049/">Allison Janney<br>(I, Tonya)</a></h5>
       <p>Chance: 100.00%</p>
@@ -474,7 +419,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0582418/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc1NDA1NDA5N15BMl5BanBnXkFtZTcwODAyNTU3MQ@@._V1_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMTc1NDA1NDA5N15BMl5BanBnXkFtZTcwODAyNTU3MQ@@._V1_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0582418/">Laurie Metcalf <br> (Lady Bird)</a></h5>
       <p>Chance: 0.00%</p>
@@ -483,7 +428,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0544334/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3NTU0OTc1OF5BMl5BanBnXkFtZTcwNzU5MTA3NA@@._V1_SY1000_CR0,0,638,1000_AL_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMTQ3NTU0OTc1OF5BMl5BanBnXkFtZTcwNzU5MTA3NA@@._V1_SY1000_CR0,0,638,1000_AL_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0544334/">Lesley Manville<br>(Phantom Thread)</a></h5>
       <p>Chance: 0.00%</p>
@@ -492,7 +437,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0004763" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2MzAzMDMxNl5BMl5BanBnXkFtZTYwNjQwMjY1._V1_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMTc2MzAzMDMxNl5BMl5BanBnXkFtZTYwNjQwMjY1._V1_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0004763">Mary J. Blige<br>(Mudbound)</a></h5>
       <p>Chance: 0.00%</p>
@@ -501,7 +446,7 @@
       <div class="2u 8u$(small)" align="center">
       <span class="image object">
       <a href="http://www.imdb.com/name/nm0818055/" class="image">
-      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTg0MjcwMjcxNl5BMl5BanBnXkFtZTcwMjkwODg0Ng@@._V1_.jpg" alt="" />
+      <img src="https://m.media-amazon.com/images/M/MV5BMTg0MjcwMjcxNl5BMl5BanBnXkFtZTcwMjkwODg0Ng@@._V1_.jpg" alt="" />
       </a>
       <h5><a href="http://www.imdb.com/name/nm0818055/">Octavia Spencer<br> (The Shape of Water)</a></h5>
       <p>Chance: 0.00%</p>
@@ -513,18 +458,7 @@
       <li>British Academy of Film and Television Arts (BAFTA) -- best supporting actress -- winner </li>
       <li>Critics’ Choice Awards (CCA) -- best supporting actress -- winner </li>
       </div>
-      <div class="3u 12u$(small)">
-<script type="text/javascript">
-(function(d, s, id){
-  var js,
-      fjs = d.getElementsByTagName(s)[0],
-      r = Math.floor(new Date().getTime() / 1000000);
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id; js.async=1;
-  js.src = "https://www.opinionstage.com/assets/loader.js?" + r;
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'os-widget-jssdk'));
-</script><div class="os_poll" data-path="/polls/2490283" id="os-widget-2490283"></div>
+      <div class="3u 12u$(small)"><div class="os_poll" data-path="/polls/2490283" id="os-widget-2490283"></div>
       </div>
       </div>
       </section>
@@ -875,10 +809,10 @@
             <h2>Menu</h2>
          </header>
          <ul>
-            <li><a href="../index.html#banner">Homepage</a></li>
-            <li><a href="../index.html#news">Latest News</a></li>
+            <li><a href="../index.html#about">Homepage</a></li>
+            <li><a href="../index.html#research">Latest News</a></li>
             <li><a href="../index.html#research">Research & Service</a></li>
-            <li><a href="../index.html#misc">Misc.</a></li>
+            <li><a href="../index.html#service">Misc.</a></li>
          </ul>
       </nav>
    </div>
@@ -886,29 +820,7 @@
 
 </div>
 
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/skel.min.js"></script>
-<script src="../assets/js/util.js"></script>
-<script src="../assets/js/main.js"></script>
 
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=11132224; 
-var sc_invisible=1; 
-var sc_security="d310e9da"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-   "https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-   scJsHost+
-   "statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript>
-<div class="statcounter"><a title="shopify
-   analytics" href="http://statcounter.com/shopify/"
-   target="_blank"><img class="statcounter"
-   src="//c.statcounter.com/11132224/0/d310e9da/1/"
-   alt="shopify analytics"></a>
-</div>
-</noscript>
-   </body>
+   <script src="../assets/js/oscar-nav.js"></script>
+</body>
 </html>
