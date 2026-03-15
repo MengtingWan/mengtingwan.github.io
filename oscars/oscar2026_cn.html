@@ -92,9 +92,9 @@
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
-  padding: 4px 12px;
+  padding: 5px 14px;
   font-family: var(--sans);
-  font-size: .78rem;
+  font-size: .88rem;
   font-weight: 500;
   color: var(--text-muted);
   cursor: pointer;
@@ -114,9 +114,9 @@
   flex-wrap: wrap;
 }
 .stab {
-  padding: 3px 10px;
-  border-radius: 4px;
-  font-size: .7rem;
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: .8rem;
   font-weight: 500;
   color: var(--text-muted);
   background: var(--bg-warm);
@@ -136,35 +136,53 @@
 .panel { display: none; }
 .panel.on { display: block; }
 
-/* ── Commentary ── */
-.commentary {
+/* ── Source line ── */
+.source-line {
   font-size: .82rem;
   color: var(--text-muted);
-  margin: 0 0 .6em;
+  margin: 0 0 .8em;
   padding: 0;
 }
-.commentary a {
+.source-line a {
   color: var(--gold);
 }
+
+/* ── Commentary / Preface ── */
 .commentary-details {
-  margin: 0 0 1.2em;
+  margin: 0 0 1.8em;
   background: var(--bg-warm);
   border: 1px solid var(--border-light);
+  border-left: 3px solid var(--gold);
   border-radius: 4px;
 }
 .commentary-details summary {
-  font-size: .82rem;
-  color: var(--text-light);
-  padding: .5em .8em;
+  font-family: var(--serif);
+  font-size: 1.05em;
+  font-weight: 600;
+  color: var(--gold);
+  padding: .7em 1em;
 }
 .commentary-details > div {
-  padding: .4em 1em 1em;
-  font-size: .86rem;
+  padding: .5em 1.2em 1.2em;
+  font-size: .93rem;
   color: var(--text);
-  line-height: 1.85;
+  line-height: 1.9;
 }
 .commentary-details > div p {
-  margin-bottom: .7em;
+  margin-bottom: .8em;
+}
+.commentary-details > div em {
+  color: var(--text-light);
+}
+.preface-hint {
+  font-family: var(--sans);
+  font-size: .75em;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-style: italic;
+}
+.commentary-details[open] .preface-hint {
+  display: none;
 }
 
 /* ── Nominee Grid ── */
@@ -257,14 +275,14 @@
 }
 .nbody { padding: 5px 7px 7px; }
 .nname {
-  font-size: .76rem;
+  font-size: .82rem;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.3;
   color: var(--charcoal);
 }
 .ncard.win .nname { color: var(--gold); font-weight: 700; }
 .nfilm {
-  font-size: .65rem;
+  font-size: .72rem;
   color: var(--text-light);
   font-style: italic;
   overflow: hidden;
@@ -704,9 +722,9 @@
 </div>
 
 <!-- ── Commentary (compact) ── -->
-<p class="commentary"><a href="https://github.com/MengtingWan/oscar/tree/master">源代码</a>. 代码和网页由Mengting提示、Claude Code生成。</p>
+<p class="source-line"><a href="https://github.com/MengtingWan/oscar/tree/master">源代码</a> &middot; 代码和网页由Mengting提示、Claude Code生成。</p>
 <details class="commentary-details">
-  <summary>评论</summary>
+  <summary>序言 <span class="preface-hint">（点击展开）</span></summary>
   <div><p>九年前我还在读博士的时候，第一次想到可以做一个用机器学习预测奥斯卡的小项目。做了几轮之后方法逐渐稳定，这个项目也就慢慢停了下来。ChatGPT 出现之后，我在 2023 年初又简单试了一次：用一个丐版的 GPT-3.5，加上一些手写的 context，做 zero-shot prompting，没有接任何外部工具，结果和以前用传统 ML pipeline 做出来的效果其实差不多。</p><p>今年重新做这个项目，是想试试最近这一波 coding agent 到底能做到什么程度。我基本把整个流程交给了一个 agent（Claude Code）：爬取历年的颁奖季数据、做 feature engineering、训练模型、通过 web search 做一些定性分析，最后生成一个网站展示结果。今年的 repo 和网站基本都是 AI agent 写的，不过需要我大量的提示、引导和修正。</p><p>坦白说，整体并没有比我自己做快很多。做网站确实是 agent 非常擅长的一件事，但数据和机器学习流程里的大多数步骤，仍然需要我不断指导、用自然语言一起调试、反复追问，以及解释背后的数学逻辑。某种程度上这可能也和我自己的基线有关——从本科到博士我已经被训练做这样的事情太多年，对传统 workflow 有很强的"肌肉记忆"。</p><p>虽然已经毕业很久了，但我其实一直挺关心数据科学相关的高等教育会怎么发展。奥斯卡预测这样的项目其实是非常好的课程作业，因为它几乎完整覆盖了数据科学从头到尾的流程，而学生来做的体验肯定会和我很不一样。但当 AI agent 开始自动完成越来越多实现细节时，我们需要培养的核心能力可能也会发生变化：不再只是实现模型，而是提出正确的问题、选择合理的技术方向、设计可靠的评估方法，以及解释结果。学生可能不仅需要学会怎么做模型，也需要学会怎么引导 agent，以及批判性地看它产出的东西。基础仍然重要，但深度和判断力可能会更重要，而未来形成的"肌肉记忆"也可能会很不一样。</p><p><em>ps: 既然这次跑下来并没有比我自己做快多少，于是我把这个流程做成了一个 agent skill，方便以后自动化运行（可能是在一步步把自己替换掉…）</em></p></div>
 </details>
 
