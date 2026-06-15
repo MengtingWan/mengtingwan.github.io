@@ -43,6 +43,10 @@ body {
 	line-height: 1.7;
 	color: var(--text);
 	background: var(--bg);
+	background-image:
+		radial-gradient(circle at 0% 0%, rgba(139, 38, 53, 0.035), transparent 38%),
+		radial-gradient(circle at 100% 12%, rgba(139, 38, 53, 0.025), transparent 32%);
+	background-attachment: fixed;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -64,6 +68,18 @@ h2 {
 	margin-bottom: 0.15em;
 	padding-bottom: 0.35em;
 	border-bottom: 1px solid var(--border);
+	position: relative;
+}
+
+/* Decorative accent marker beneath section headings */
+h2::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	width: 2.4em;
+	height: 2px;
+	background: var(--accent);
 }
 
 h3 {
@@ -182,19 +198,34 @@ a:hover {
 /* Separator between nav and icons */
 .header-icons {
 	display: flex;
-	gap: 0.75em;
+	gap: 0.5em;
 	padding-left: 1.5em;
 	border-left: 1px solid var(--border);
 }
 
 .header-icons a {
-	color: var(--text-muted);
-	font-size: 0.95em;
-	transition: color 0.15s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	color: var(--accent);
+	font-size: 0.78em;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+	padding: 0.32em 0.7em;
+	border: 1px solid rgba(139, 38, 53, 0.25);
+	border-radius: 5px;
+	background: var(--accent-faint);
+	transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.header-icons a i {
+	font-size: 1.05em;
 }
 
 .header-icons a:hover {
-	color: var(--accent);
+	color: #fff;
+	background: var(--accent);
+	border-color: var(--accent);
 }
 
 /* ── About section ─────────────────────────────────────────── */
@@ -212,6 +243,13 @@ a:hover {
 	background: var(--bg-warm);
 	border: 1px solid var(--border);
 	border-radius: 4px;
+	box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.about-photo:hover {
+	box-shadow: 0 10px 30px rgba(139, 38, 53, 0.14);
+	transform: translateY(-2px);
 }
 
 .about-photo img {
@@ -243,12 +281,29 @@ section {
 	padding: 2.5em 0;
 }
 
-/* Divider — short centered rule, not full width */
+/* Divider — short centered ornament, not full width */
 .divider {
 	border: none;
-	width: 4em;
-	border-top: 1px solid var(--border);
+	width: 100%;
 	margin: 0 auto;
+	text-align: center;
+	height: 1px;
+	background: linear-gradient(to right, transparent, var(--border) 30%, var(--border) 70%, transparent);
+	position: relative;
+}
+
+.divider::after {
+	content: "\00A7";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: var(--bg);
+	padding: 0 0.6em;
+	color: var(--accent);
+	font-family: var(--serif);
+	font-size: 1.1em;
+	font-style: italic;
 }
 
 .section-note {
@@ -264,15 +319,18 @@ section {
 
 .pub-list > li {
 	padding: 1em 1.2em;
-	margin-bottom: 0.4em;
+	margin-bottom: 0.55em;
 	border-radius: 4px;
 	background: var(--bg-warm);
+	border: 1px solid var(--border-light);
 	border-left: 2px solid var(--border);
-	transition: border-color 0.2s ease;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .pub-list > li:hover {
 	border-left-color: var(--accent);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+	transform: translateX(2px);
 }
 
 .pub-title {
@@ -326,11 +384,14 @@ section {
 }
 
 .pub-venue {
-	font-size: 0.75em;
-	font-weight: 500;
+	font-size: 0.72em;
+	font-weight: 600;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
-	color: var(--text-muted);
+	color: var(--accent);
+	background: var(--accent-faint);
+	padding: 0.18em 0.6em;
+	border-radius: 3px;
 }
 
 .pub-links {
@@ -451,6 +512,7 @@ section {
 	.header-icons {
 		border-left: none;
 		padding-left: 0;
+		flex-wrap: wrap;
 	}
 
 	.about {
